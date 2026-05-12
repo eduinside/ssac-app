@@ -1,26 +1,236 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @import "tailwindcss";
 
+/* ============================================================
+   어휘싹 · Design Tokens
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary — 새싹 그린 */
+  --color-primary-50:  #eef9f3;
+  --color-primary-100: #d6f0e2;
+  --color-primary-200: #aee2c6;
+  --color-primary-300: #7ccfa3;
+  --color-primary-400: #4cb982;
+  --color-primary-500: #2ea268;
+  --color-primary-600: #1f8554;
+  --color-primary-700: #185f3e;
+
+  /* Secondary — 따뜻한 오렌지 */
+  --color-secondary-100: #fff0d9;
+  --color-secondary-300: #ffcd80;
+  --color-secondary-500: #f59e3c;
+  --color-secondary-700: #b86a18;
+
+  /* Section — 만나기 (분홍) */
+  --section-meet-bg:   #ffe6ec;
+  --section-meet-soft: #fff3f6;
+  --section-meet-line: #ffb8c7;
+  --section-meet-ink:  #c43a64;
+
+  /* Section — 짐작하기 (노랑) */
+  --section-guess-bg:   #fff4c9;
+  --section-guess-soft: #fffae5;
+  --section-guess-line: #f5d65b;
+  --section-guess-ink:  #946a05;
+
+  /* Section — 탐구하기 (민트) */
+  --section-explore-bg:   #d6f3ec;
+  --section-explore-soft: #ecf9f5;
+  --section-explore-line: #84d8c1;
+  --section-explore-ink:  #16785f;
+
+  /* Section — 활용하기 (보라) */
+  --section-apply-bg:   #e7e1ff;
+  --section-apply-soft: #f3effc;
+  --section-apply-line: #b3a6ee;
+  --section-apply-ink:  #5b3fb0;
+
+  /* Sibling brands */
+  --brand-vocab-ink:    #1f8554;
+  --brand-vocab-bg:     #d6f0e2;
+  --brand-vocab-soft:   #eef9f3;
+  --brand-concept-ink:  #1f6aa8;
+  --brand-concept-bg:   #d4e8f7;
+  --brand-concept-soft: #eef5fb;
+  --brand-reading-ink:  #b85a32;
+  --brand-reading-bg:   #fbdccd;
+  --brand-reading-soft: #fcefe7;
+  --brand-english-ink:  #5e3fb0;
+  --brand-english-bg:   #e0d7f6;
+  --brand-english-soft: #f1ebfb;
+
+  /* Surfaces */
+  --bg-app:     #fbfaf7;
+  --bg-surface: #ffffff;
+  --bg-muted:   #f4f2ee;
+  --bg-sunken:  #ecebe6;
+
+  /* Ink scale */
+  --ink-900: #1f2024;
+  --ink-700: #3c3f47;
+  --ink-500: #6b6f78;
+  --ink-400: #9aa0aa;
+  --ink-300: #c2c6cd;
+  --ink-200: #e3e5ea;
+  --ink-100: #f1f2f5;
+
+  /* Status */
+  --color-success: #2ea268;
+  --color-warning: #e0a217;
+  --color-danger:  #d8553f;
+
+  /* Typography */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+               system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+  /* Shadows */
+  --shadow-1:   0 1px 2px rgba(31,32,36,.04), 0 1px 1px rgba(31,32,36,.03);
+  --shadow-2:   0 4px 10px rgba(31,32,36,.06), 0 1px 2px rgba(31,32,36,.04);
+  --shadow-3:   0 8px 24px rgba(31,32,36,.08), 0 2px 4px rgba(31,32,36,.04);
+  --shadow-pop: 0 12px 28px rgba(46,162,104,.18);
+
+  /* Motion */
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-50:  var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-700: var(--color-secondary-700);
+
+  --color-bg-app:     var(--bg-app);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-muted:   var(--bg-muted);
+  --color-bg-sunken:  var(--bg-sunken);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-400: var(--ink-400);
+  --color-ink-300: var(--ink-300);
+  --color-ink-200: var(--ink-200);
+  --color-ink-100: var(--ink-100);
+
+  --color-success: var(--color-success);
+  --color-danger:  var(--color-danger);
+
+  --font-sans: var(--font-sans);
+
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 999px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink-900);
+  background: var(--bg-app);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ============================================================
+   Flashcard flip animation
+   ============================================================ */
+.flashcard-wrap { perspective: 1200px; }
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.42s var(--ease-out);
+}
+.flashcard-inner.is-flipped { transform: rotateY(180deg); }
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flashcard-back { transform: rotateY(180deg); }
+
+/* ============================================================
+   App Shell — 반응형 사이드바 레이아웃 (768px+)
+   ============================================================ */
+.app-shell { display: block; min-height: 100dvh; }
+.app-shell-sidebar { display: none; }
+
+@media (min-width: 768px) {
+  .app-shell {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100dvh;
+    background: var(--bg-app);
+  }
+  .app-shell-sidebar {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    padding: 20px 12px 20px 16px;
+    border-right: 1px solid var(--ink-200);
+    background: var(--bg-surface);
+    overflow-y: auto;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ============================================================
+   Phone Shell — 모바일: 430px 프레임 / 태블릿+: 투명 확장
+   ============================================================ */
+.phone-shell-outer {
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    radial-gradient(1200px 600px at -10% -20%, var(--color-primary-50) 0%, transparent 60%),
+    radial-gradient(900px 600px at 110% 0%, var(--section-guess-soft) 0%, transparent 55%),
+    var(--bg-sunken);
+}
+.phone-shell-inner {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100dvh;
+  background: var(--bg-app);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .phone-shell-outer {
+    display: block;
+    background: transparent;
+    min-height: 100dvh;
+  }
+  .phone-shell-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    background: transparent;
+  }
 }

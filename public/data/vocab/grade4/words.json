@@ -1,0 +1,403 @@
+{
+  "version": "2026.1",
+  "contentType": "vocab",
+  "grade": 4,
+  "words": [
+    {
+      "id": "v-g4-001",
+      "word": "가르치다",
+      "grade": 4,
+      "order": 1,
+      "page": 1,
+      "pos": "동사",
+      "definition": "지식이나 기술, 방법 등을 알게 하거나 익히게 하다.",
+      "examples": ["선생님이 수학을 가르치다.", "어머니가 요리 방법을 가르치다."],
+      "similarWords": ["교육하다", "지도하다", "알려주다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "선생님이 무언가를 알려줄 때 어떤 말을 쓸까요?",
+          "dialogue": ["선생님: 오늘은 덧셈을 가르쳐 줄게요.", "학생: 감사합니다, 선생님!"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "prompt": "'가르치다'의 뜻을 짐작해 보세요.",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'가르치다'의 뜻으로 알맞은 것은?",
+            "options": ["배우고 익히다", "알게 하거나 익히게 하다", "물건을 만들다", "친구를 도와주다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "지식이나 기술, 방법 등을 알게 하거나 익히게 하다.",
+          "examples": ["선생님이 수학을 가르치다.", "선배가 후배에게 노래를 가르치다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "fillBlank",
+            "prompt": "빈칸에 알맞은 말을 써 보세요.",
+            "blanks": ["선생님이 우리에게 그림 그리는 방법을 ___."],
+            "answers": ["가르치셨습니다"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-002",
+      "word": "가리키다",
+      "grade": 4,
+      "order": 2,
+      "page": 3,
+      "pos": "동사",
+      "definition": "손가락이나 물건의 끝 등으로 어떤 대상의 위치나 방향을 알리다.",
+      "examples": ["손으로 하늘을 가리키다.", "선생님이 지도에서 서울을 가리키다."],
+      "similarWords": ["지목하다", "지시하다", "가르키다(X)"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "무언가의 위치를 알려줄 때 어떻게 하나요?",
+          "dialogue": ["민준: 저기가 우리 학교야.", "수아: 어디? 어디를 가리키는 거야?"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'가리키다'의 뜻으로 알맞은 것은?",
+            "options": ["크게 소리 지르다", "위치나 방향을 알리다", "빠르게 달리다", "조용히 앉아 있다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "손가락이나 물건의 끝 등으로 어떤 대상의 위치나 방향을 알리다.",
+          "examples": ["시계가 12시를 가리키다.", "나침반이 북쪽을 가리키다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "'가리키다'를 사용하여 짧은 문장을 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-003",
+      "word": "감상하다",
+      "grade": 4,
+      "order": 3,
+      "page": 5,
+      "pos": "동사",
+      "definition": "예술 작품을 이해하고 즐기며 평가하다.",
+      "examples": ["미술관에서 그림을 감상하다.", "음악회에서 연주를 감상하다."],
+      "similarWords": ["관람하다", "즐기다", "감촉하다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "그림이나 음악을 보고 느낄 때 뭐라고 할까요?",
+          "dialogue": ["지우: 이 그림 정말 아름답다.", "선생님: 맞아, 우리 같이 그림을 감상해 볼까?"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'감상하다'의 뜻으로 알맞은 것은?",
+            "options": ["예술 작품을 이해하고 즐기다", "음식을 맛있게 먹다", "친구와 이야기하다", "책상을 정리하다"],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "예술 작품을 이해하고 즐기며 평가하다.",
+          "examples": ["우리는 영화를 감상했다.", "박물관에서 조각 작품을 감상하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "fillBlank",
+            "prompt": "빈칸에 알맞은 말을 써 보세요.",
+            "blanks": ["음악 시간에 우리는 베토벤의 음악을 ___."],
+            "answers": ["감상했습니다"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-004",
+      "word": "결정하다",
+      "grade": 4,
+      "order": 4,
+      "page": 7,
+      "pos": "동사",
+      "definition": "어떤 일이나 문제를 어떻게 할지 분명히 정하다.",
+      "examples": ["여행 날짜를 결정하다.", "어떤 반을 선택할지 결정하다."],
+      "similarWords": ["정하다", "결심하다", "확정하다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "중요한 것을 선택할 때 어떤 말을 쓸까요?",
+          "dialogue": ["엄마: 어느 학원에 다닐지 결정했니?", "아이: 네, 수학 학원으로 결정했어요."]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'결정하다'의 뜻으로 알맞은 것은?",
+            "options": ["나중으로 미루다", "분명히 정하다", "잊어버리다", "크게 외치다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "어떤 일이나 문제를 어떻게 할지 분명히 정하다.",
+          "examples": ["대표를 투표로 결정하다.", "소풍 장소를 결정하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "최근에 무언가를 결정한 경험을 '결정하다'를 사용하여 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-005",
+      "word": "겸손하다",
+      "grade": 4,
+      "order": 5,
+      "page": 9,
+      "pos": "형용사",
+      "definition": "남을 높이고 자기 자신을 낮추는 마음이 있다.",
+      "examples": ["그는 실력이 뛰어나도 겸손하다.", "겸손한 태도로 인사하다."],
+      "similarWords": ["겸허하다", "낮추다", "수수하다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "잘난 척하지 않고 낮은 자세로 있을 때 어떤 말을 쓸까요?",
+          "dialogue": ["친구: 너 달리기 정말 잘하더라!", "나: 아니야, 아직 많이 부족해. 겸손해야지."]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'겸손하다'의 뜻으로 알맞은 것은?",
+            "options": ["자기 자신을 낮추다", "크게 자랑하다", "빠르게 달리다", "큰 소리로 말하다"],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "남을 높이고 자기 자신을 낮추는 마음이 있다.",
+          "examples": ["그는 항상 겸손하게 행동한다.", "칭찬을 받아도 겸손한 모습을 보이다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "겸손한 사람의 특징을 '겸손하다'를 사용하여 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-006",
+      "word": "공통점",
+      "grade": 4,
+      "order": 6,
+      "page": 11,
+      "pos": "명사",
+      "definition": "둘 이상의 사물이나 사람 사이에 서로 같은 점.",
+      "examples": ["두 그림의 공통점을 찾아보자.", "우리의 공통점은 독서를 좋아한다는 것이다."],
+      "similarWords": ["같은 점", "유사점", "공유점"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "두 가지를 비교할 때 같은 점을 뭐라고 할까요?",
+          "dialogue": ["선생님: 사과와 배의 공통점은 무엇일까요?", "학생: 둘 다 과일이에요!"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'공통점'의 뜻으로 알맞은 것은?",
+            "options": ["다른 점", "서로 같은 점", "특이한 점", "불편한 점"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "둘 이상의 사물이나 사람 사이에 서로 같은 점.",
+          "examples": ["고양이와 강아지의 공통점은 동물이라는 것이다.", "두 이야기의 공통점을 발표하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "fillBlank",
+            "prompt": "빈칸에 알맞은 말을 써 보세요.",
+            "blanks": ["연필과 볼펜의 ___은 글씨를 쓸 수 있다는 것입니다."],
+            "answers": ["공통점"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-007",
+      "word": "관련짓다",
+      "grade": 4,
+      "order": 7,
+      "page": 15,
+      "pos": "동사",
+      "definition": "어떤 것과 다른 것을 서로 연결하거나 관계를 맺다.",
+      "examples": ["이 사건을 다른 사건과 관련짓다.", "새 지식을 이전에 배운 것과 관련짓다."],
+      "similarWords": ["연결하다", "결부시키다", "연관짓다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "두 가지를 서로 연결할 때 어떤 말을 쓸까요?",
+          "dialogue": ["선생님: 이 단어를 여러분의 경험과 관련지어 생각해 보세요.", "학생: 제 경험과 관련지으면 더 잘 이해돼요!"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'관련짓다'의 뜻으로 알맞은 것은?",
+            "options": ["따로 분리하다", "서로 연결하거나 관계를 맺다", "크게 확대하다", "강하게 반대하다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "어떤 것과 다른 것을 서로 연결하거나 관계를 맺다.",
+          "examples": ["과학 현상을 일상생활과 관련짓다.", "두 사건을 서로 관련지어 설명하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "'관련짓다'를 사용하여 배운 것을 생활과 연결하는 문장을 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-008",
+      "word": "관찰하다",
+      "grade": 4,
+      "order": 8,
+      "page": 17,
+      "pos": "동사",
+      "definition": "사물이나 현상을 주의 깊게 살펴보다.",
+      "examples": ["식물의 자람을 관찰하다.", "개미의 행동을 오랫동안 관찰하다."],
+      "similarWords": ["살펴보다", "조사하다", "들여다보다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "과학 실험에서 주의 깊게 볼 때 어떤 말을 쓸까요?",
+          "dialogue": ["선생님: 오늘은 꽃이 피는 과정을 관찰해 볼게요.", "학생: 매일 꼼꼼하게 관찰할게요!"]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'관찰하다'의 뜻으로 알맞은 것은?",
+            "options": ["빠르게 지나치다", "주의 깊게 살펴보다", "소리를 듣다", "냄새를 맡다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "사물이나 현상을 주의 깊게 살펴보다.",
+          "examples": ["현미경으로 세포를 관찰하다.", "날씨 변화를 매일 관찰하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "fillBlank",
+            "prompt": "빈칸에 알맞은 말을 써 보세요.",
+            "blanks": ["과학 시간에 씨앗이 싹트는 과정을 ___."],
+            "answers": ["관찰했습니다"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g4-009",
+      "word": "기록하다",
+      "grade": 4,
+      "order": 9,
+      "page": 19,
+      "pos": "동사",
+      "definition": "주요한 사실이나 내용을 적어 남기다.",
+      "examples": ["일기를 기록하다.", "실험 결과를 기록하다."],
+      "similarWords": ["적다", "작성하다", "메모하다"],
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "중요한 내용을 글로 남길 때 어떤 말을 쓸까요?",
+          "dialogue": ["엄마: 오늘 배운 것을 기록해 두면 나중에 도움이 될 거야.", "아이: 네, 노트에 기록할게요."]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'기록하다'의 뜻으로 알맞은 것은?",
+            "options": ["내용을 잊어버리다", "사실이나 내용을 적어 남기다", "큰 소리로 읽다", "빨리 뛰다"],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기",
+          "definition": "주요한 사실이나 내용을 적어 남기다.",
+          "examples": ["역사적 사건을 기록하다.", "날씨를 매일 기록하다."]
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "기록하는 것이 왜 중요한지 '기록하다'를 사용하여 써 보세요."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": "2026.1",
+  "contentType": "vocab-review",
+  "grade": 4,
+  "reviews": [
+    {
+      "id": "v-g4-r01",
+      "grade": 4,
+      "order": 1,
+      "page": 13,
+      "title": "다섯고개 01",
+      "coversPages": "1쪽~12쪽",
+      "coversItems": ["v-g4-001", "v-g4-002", "v-g4-003", "v-g4-004", "v-g4-005", "v-g4-006"],
+      "videoUrl": "",
+      "quizzes": [
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㄹㅊㄷ",
+          "answer": "가르치다",
+          "relatedItemId": "v-g4-001"
+        },
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㄹㅋㄷ",
+          "answer": "가리키다",
+          "relatedItemId": "v-g4-002"
+        },
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㅅㅎㄷ",
+          "answer": "감상하다",
+          "relatedItemId": "v-g4-003"
+        }
+      ]
+    },
+    {
+      "id": "v-g4-r02",
+      "grade": 4,
+      "order": 2,
+      "page": 14,
+      "title": "다섯고개 02",
+      "coversPages": "13쪽~19쪽",
+      "coversItems": ["v-g4-007", "v-g4-008", "v-g4-009"],
+      "videoUrl": "",
+      "quizzes": [
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㄹㅈㄷ",
+          "answer": "관련짓다",
+          "relatedItemId": "v-g4-007"
+        },
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㅊㅎㄷ",
+          "answer": "관찰하다",
+          "relatedItemId": "v-g4-008"
+        },
+        {
+          "kind": "initialSound",
+          "hint": "ㄱㄹㅎㄷ",
+          "answer": "기록하다",
+          "relatedItemId": "v-g4-009"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "version": "2026.1",
+  "lastUpdated": "2026-05-12",
+  "contents": {
+    "vocab": {
+      "label": "어휘싹",
+      "icon": "🌱",
+      "enabled": true,
+      "groupBy": "grade",
+      "groups": [
+        {
+          "key": "grade4",
+          "label": "4학년",
+          "grade": 4,
+          "wordCount": 9,
+          "reviewCount": 2,
+          "files": ["vocab/grade4/words.json", "vocab/grade4/reviews.json"]
+        }
+      ]
+    },
+    "concept": {
+      "label": "개념싹",
+      "icon": "💡",
+      "enabled": false,
+      "groupBy": "grade-semester-subject",
+      "groups": []
+    },
+    "reading": {
+      "label": "독해싹",
+      "icon": "📖",
+      "enabled": false,
+      "groupBy": "grade-band",
+      "groups": []
+    },
+    "english": {
+      "label": "영어싹",
+      "icon": "🔤",
+      "enabled": false,
+      "groupBy": "grade",
+      "groups": []
+    }
+  }
+}
