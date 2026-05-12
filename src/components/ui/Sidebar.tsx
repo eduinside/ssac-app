@@ -49,7 +49,7 @@ export function Sidebar() {
             pathname === `/vocab/grade/${g.grade}` ||
             pathname.startsWith(`/vocab/word/v-g${g.grade}`) ||
             pathname.startsWith(`/vocab/review/v-g${g.grade}`);
-          const hasData = g.grade === 4; // 현재 grade4만 데이터 존재
+          const hasData = g.grade === 1;
 
           return (
             <Link

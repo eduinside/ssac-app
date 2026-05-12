@@ -1,21 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, Star, ChevronDown, Lock, ArrowRight, Play } from "lucide-react";
+import { Search, Star, ChevronDown, Lock, Check, Play } from "lucide-react";
 import { PhoneShell } from "@/components/ui/PhoneShell";
 import { IconButton } from "@/components/ui/IconButton";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { BottomSheet } from "@/components/ui/BottomSheet";
 import { ToastProvider } from "@/components/ui/Toast";
+import { storage } from "@/lib/storage";
+import { loadVocabGrade, gradeFromId } from "@/lib/content";
+import type { ListItem } from "@/types/vocab";
 
 const GRADES = [
-  { grade: 1, color: "meet",    words: 28, reviews: 7,  done: 0, total: 35 },
-  { grade: 2, color: "guess",   words: 30, reviews: 8,  done: 5, total: 38 },
-  { grade: 3, color: "explore", words: 32, reviews: 9,  done: 0, total: 41 },
-  { grade: 4, color: "apply",   words: 9,  reviews: 2,  done: 3, total: 11 },
-  { grade: 5, color: "meet",    words: 34, reviews: 10, done: 0, total: 44 },
-  { grade: 6, color: "guess",   words: 30, reviews: 8,  done: 0, total: 38 },
+  { grade: 1, color: "meet", words: 63, reviews: 20, total: 83 },
 ] as const;
 
 const SECTION_COLORS: Record<string, { soft: string; ink: string; line: string; bg: string }> = {
@@ -31,8 +29,64 @@ const SIBLINGS = [
   { key: "english", label: "영어싹", tag: "영상으로 배워요",      mark: "🔤", bg: "var(--brand-english-bg)", ink: "var(--brand-english-ink)" },
 ];
 
+interface RecentItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  href: string;
+  completed: boolean;
+  itemType: "word" | "review";
+}
+
 export default function HomePage() {
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [completedByGrade, setCompletedByGrade] = useState<Record<number, number>>({});
+  const [recentItems, setRecentItems] = useState<RecentItem[]>([]);
+
+  useEffect(() => {
+    storage.getAllProgress().then(async (allProgress) => {
+      // 학년별 완료 수
+      const counts: Record<number, number> = {};
+      for (const p of allProgress) {
+        if (p.completed) {
+          const g = gradeFromId(p.id);
+          counts[g] = (counts[g] ?? 0) + 1;
+        }
+      }
+      setCompletedByGrade(counts);
+
+      // 가장 최근 완료 1개 + 가장 최근 미완료 방문 1개
+      const lastCompleted = allProgress
+        .filter((p) => p.completed && p.completedAt)
+        .sort((a, b) => (b.completedAt! > a.completedAt! ? 1 : -1))[0];
+      const lastViewed = allProgress
+        .filter((p) => !p.completed && p.lastViewedAt)
+        .sort((a, b) => (b.lastViewedAt! > a.lastViewedAt! ? 1 : -1))[0];
+      const withView = [lastCompleted, lastViewed].filter(Boolean) as typeof allProgress;
+
+      if (withView.length === 0) return;
+
+      const grades = [...new Set(withView.map((p) => gradeFromId(p.id)))];
+      const vocabByGrade: Record<number, ListItem[]> = {};
+      await Promise.all(
+        grades.map(async (g) => {
+          try { vocabByGrade[g] = await loadVocabGrade(g); } catch {}
+        })
+      );
+
+      const recent: RecentItem[] = withView.flatMap((p) => {
+        const g = gradeFromId(p.id);
+        const item = (vocabByGrade[g] ?? []).find((i) => i.id === p.id);
+        if (!item) return [];
+        if (item.itemType === "word") {
+          return [{ id: p.id, title: item.word, subtitle: item.definition, href: `/vocab/word/${p.id}`, completed: p.completed, itemType: "word" }];
+        }
+        return [{ id: p.id, title: item.title, subtitle: item.coversPages, href: `/vocab/review/${p.id}`, completed: p.completed, itemType: "review" }];
+      });
+
+      setRecentItems(recent);
+    });
+  }, []);
 
   return (
     <PhoneShell>
@@ -78,7 +132,7 @@ export default function HomePage() {
       </header>
 
       {/* Scrollable body */}
-      <div className="flex-1 overflow-y-auto scrollbar-hide px-5 pb-28 flex flex-col gap-6">
+      <div className="flex-1 overflow-y-auto scrollbar-hide px-5 pb-10 flex flex-col gap-6">
 
         {/* Welcome */}
         <section className="flex flex-col gap-1">
@@ -93,47 +147,56 @@ export default function HomePage() {
           <p className="text-sm" style={{ color: "var(--ink-500)" }}>학년을 선택해 어휘 학습을 시작해요</p>
         </section>
 
-        {/* Continue card */}
-        <Link href="/vocab/word/v-g4-003" className="no-underline">
-          <div
-            className="rounded-[28px] p-[18px] flex flex-col gap-3 overflow-hidden relative cursor-pointer"
-            style={{
-              background: "radial-gradient(140% 100% at 100% 0%, var(--color-primary-100) 0%, transparent 55%), linear-gradient(160deg, #fff 0%, var(--color-primary-50) 100%)",
-              border: "1px solid var(--color-primary-200)",
-              boxShadow: "var(--shadow-2)",
-            }}
-          >
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-[.08em]" style={{ color: "var(--color-primary-700)" }}>
-                이어서 학습하기
-              </span>
-              <span
-                className="inline-flex items-center gap-1 h-6 px-2.5 rounded-full text-[11px] font-semibold"
-                style={{ background: "white", border: "1px solid var(--color-primary-200)", color: "var(--color-primary-700)" }}
-              >
-                <Play size={9} fill="currentColor" /> 4학년
-              </span>
+        {/* Recent history */}
+        {recentItems.length > 0 && (
+          <section>
+            <h2 className="text-[17px] font-bold mb-3" style={{ letterSpacing: "-.015em" }}>최근 학습</h2>
+            <div className="flex flex-col gap-2">
+              {recentItems.map((item) => (
+                <Link key={item.id} href={item.href} className="no-underline">
+                  <div
+                    className="flex items-center gap-3 px-3.5 py-3 rounded-[14px] transition-all duration-[120ms] active:scale-[.995]"
+                    style={{
+                      background: item.completed ? "var(--color-primary-50)" : "var(--bg-surface)",
+                      border: `1px solid ${item.completed ? "var(--color-primary-200)" : "var(--ink-200)"}`,
+                      boxShadow: "var(--shadow-1)",
+                    }}
+                  >
+                    {/* Icon */}
+                    <span
+                      className="w-9 h-9 rounded-[10px] grid place-items-center shrink-0"
+                      style={{
+                        background: item.itemType === "review" ? "var(--section-explore-bg)" : item.completed ? "var(--color-primary-100)" : "var(--bg-muted)",
+                        color: item.itemType === "review" ? "var(--section-explore-ink)" : item.completed ? "var(--color-primary-700)" : "var(--ink-500)",
+                      }}
+                    >
+                      {item.itemType === "review"
+                        ? <Play size={14} fill="currentColor" />
+                        : item.completed
+                          ? <Check size={14} strokeWidth={2.8} />
+                          : <span className="text-[12px] font-bold">가</span>
+                      }
+                    </span>
+                    {/* Text */}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[15px] font-bold leading-tight truncate" style={{ color: "var(--ink-900)", letterSpacing: "-.01em" }}>
+                        {item.title}
+                      </p>
+                      <p className="text-[12px] mt-0.5 truncate" style={{ color: "var(--ink-500)" }}>
+                        {item.subtitle}
+                      </p>
+                    </div>
+                    {item.completed && (
+                      <span className="text-[11px] font-bold px-2 py-0.5 rounded-full shrink-0" style={{ background: "var(--color-primary-100)", color: "var(--color-primary-700)" }}>
+                        완료
+                      </span>
+                    )}
+                  </div>
+                </Link>
+              ))}
             </div>
-            <div>
-              <p className="text-[28px] font-extrabold leading-none" style={{ letterSpacing: "-.03em" }}>감상하다</p>
-              <p className="text-[13px] mt-1" style={{ color: "var(--ink-700)" }}>예술 작품을 이해하고 즐기며 평가하다.</p>
-            </div>
-            <div className="flex items-center gap-3 mt-1">
-              <div className="flex-1 flex flex-col gap-1.5">
-                <div className="flex justify-between text-[11px] font-semibold" style={{ color: "var(--ink-700)" }}>
-                  <span>3 / 11 완료</span><span>27%</span>
-                </div>
-                <ProgressBar value={27} height={6} />
-              </div>
-              <button
-                className="shrink-0 h-10 px-4 rounded-full text-white font-bold text-[13px] inline-flex items-center gap-1.5 transition-transform active:translate-y-0.5"
-                style={{ background: "var(--color-primary-500)", boxShadow: "0 3px 0 var(--color-primary-700)" }}
-              >
-                계속 <ArrowRight size={14} />
-              </button>
-            </div>
-          </div>
-        </Link>
+          </section>
+        )}
 
         {/* Grade grid */}
         <section>
@@ -141,7 +204,8 @@ export default function HomePage() {
           <div className="flex flex-col gap-3">
             {GRADES.map((g) => {
               const c = SECTION_COLORS[g.color];
-              const pct = g.total > 0 ? Math.round((g.done / g.total) * 100) : 0;
+              const done = completedByGrade[g.grade] ?? 0;
+              const pct = g.total > 0 ? Math.round((done / g.total) * 100) : 0;
               return (
                 <Link key={g.grade} href={`/vocab/grade/${g.grade}`} className="no-underline">
                   <div
@@ -170,7 +234,7 @@ export default function HomePage() {
                     <div className="flex flex-col gap-1 min-w-0">
                       <div className="flex items-center justify-between gap-2">
                         <span className="text-[18px] font-extrabold" style={{ letterSpacing: "-.02em" }}>{g.grade}학년 어휘싹</span>
-                        {g.done > 0 && (
+                        {done > 0 && (
                           <span className="h-[22px] px-2 rounded-full text-[11px] font-bold inline-flex items-center shrink-0"
                             style={{ background: "rgba(255,255,255,.7)", border: "1px solid rgba(0,0,0,.06)" }}>
                             {pct}% 완료
@@ -182,7 +246,7 @@ export default function HomePage() {
                     <div style={{ gridColumn: "1 / -1" }}>
                       <ProgressBar value={pct} height={5} color={c.ink} bgColor="rgba(255,255,255,.6)" />
                       <div className="flex justify-between text-[11px] font-semibold mt-1.5 opacity-80">
-                        <span>{g.done} / {g.total} 완료</span><span>{pct}%</span>
+                        <span>{done} / {g.total} 완료</span><span>{pct}%</span>
                       </div>
                     </div>
                   </div>
@@ -192,44 +256,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Family strip */}
-        <section>
-          <h2 className="text-[17px] font-bold mb-3" style={{ letterSpacing: "-.015em" }}>어휘싹 가족</h2>
-          <div className="flex flex-col gap-2.5">
-            {SIBLINGS.map((s) => (
-              <button
-                key={s.key}
-                onClick={() => setSheetOpen(true)}
-                className="grid items-center gap-3 p-3 pr-3.5 rounded-[14px] border border-dashed cursor-pointer text-left transition-all active:scale-[.99]"
-                style={{ gridTemplateColumns: "44px 1fr auto", background: "var(--bg-surface)", borderColor: "var(--ink-200)" }}
-              >
-                <span className="w-11 h-11 rounded-[14px] grid place-items-center text-lg font-extrabold" style={{ background: s.bg, color: s.ink }}>{s.mark}</span>
-                <span className="min-w-0">
-                  <span className="block text-[14px] font-bold" style={{ color: "var(--ink-900)" }}>{s.label}</span>
-                  <span className="block text-[11px] font-semibold" style={{ color: "var(--ink-500)" }}>{s.tag}</span>
-                </span>
-                <span className="inline-flex items-center gap-1 h-[22px] px-2.5 rounded-full text-[11px] font-bold whitespace-nowrap"
-                  style={{ background: "var(--bg-muted)", color: "var(--ink-500)" }}>
-                  <Lock size={11} /> 곧 만나요
-                </span>
-              </button>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      {/* Bottom CTA */}
-      <div className="absolute left-0 right-0 bottom-0 px-5 pb-6 pt-3.5 pointer-events-none"
-        style={{ background: "linear-gradient(180deg, rgba(251,250,247,0) 0%, var(--bg-app) 30%)" }}>
-        <Link href="/vocab/grade/4" className="pointer-events-auto block">
-          <button
-            className="w-full h-[52px] rounded-full text-white font-bold text-base flex items-center justify-center gap-2 transition-transform active:translate-y-0.5"
-            style={{ background: "var(--color-primary-500)", boxShadow: "0 4px 0 var(--color-primary-700), var(--shadow-pop)" }}
-          >
-            <Play size={16} fill="currentColor" />
-            4학년 이어서 학습
-          </button>
-        </Link>
       </div>
 
       {/* Module switcher bottom sheet */}

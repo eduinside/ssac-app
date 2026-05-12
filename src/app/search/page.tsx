@@ -62,21 +62,27 @@ export default function SearchPage() {
   const [docs, setDocs] = useState<WordDoc[]>([]);
   const [filterGrade, setFilterGrade] = useState<number | null>(null);
 
-  // Load all words from grade4 (MVP: only grade 4 data exists)
+  // Load all words from available grades via manifest
   useEffect(() => {
-    fetch("/data/vocab/grade4/words.json")
+    fetch("/data/manifest.json")
       .then((r) => r.json())
-      .then((data) => {
-        setDocs(
-          data.words.map((w: { id: string; word: string; definition: string; grade: number; page: number; pos?: string }) => ({
-            id: w.id,
-            word: w.word,
-            definition: w.definition,
-            grade: w.grade,
-            page: w.page,
-            pos: w.pos,
-          }))
+      .then(async (manifest) => {
+        const groups: { grade: number; files: string[] }[] = manifest.contents?.vocab?.groups ?? [];
+        const allDocs: WordDoc[] = [];
+        await Promise.all(
+          groups.map(async (g) => {
+            const wordsFile = g.files.find((f: string) => f.endsWith("words.json"));
+            if (!wordsFile) return;
+            const res = await fetch(`/data/${wordsFile}`);
+            if (!res.ok) return;
+            const data = await res.json();
+            data.words.forEach((w: { id: string; word: string; definition: string; grade: number; page: number; pos?: string }) => {
+              allDocs.push({ id: w.id, word: w.word, definition: w.definition, grade: w.grade, page: w.page, pos: w.pos });
+            });
+          })
         );
+        allDocs.sort((a, b) => a.grade - b.grade || a.page - b.page);
+        setDocs(allDocs);
       });
   }, []);
 

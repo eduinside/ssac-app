@@ -136,56 +136,37 @@ export default function ReviewClient({ id }: Props) {
           </p>
         </header>
 
-        {/* Video placeholder */}
-        <div
-          className="relative aspect-video rounded-[20px] overflow-hidden cursor-pointer"
-          style={{
-            background: "linear-gradient(140deg, #1f8554 0%, #16785f 50%, #1c4a4a 100%)",
-            boxShadow: "var(--shadow-2)",
-          }}
-          role="button"
-          tabIndex={0}
-          aria-label="영상 재생"
-        >
-          {/* film strip texture */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{ background: "repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 2px, transparent 2px 12px)" }}
+        {/* Video */}
+        {review.videoUrl ? (
+          <video
+            src={review.videoUrl}
+            controls
+            className="w-full rounded-[20px]"
+            style={{ background: "#000", boxShadow: "var(--shadow-2)", display: "block" }}
           />
-          <span
-            className="absolute left-3.5 top-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.06em] text-white px-2.5 py-1 rounded-full"
-            style={{ background: "rgba(0,0,0,.32)", backdropFilter: "blur(6px)" }}
+        ) : (
+          <div
+            className="relative aspect-video rounded-[20px] overflow-hidden"
+            style={{
+              background: "linear-gradient(140deg, #1f8554 0%, #16785f 50%, #1c4a4a 100%)",
+              boxShadow: "var(--shadow-2)",
+            }}
           >
-            <svg viewBox="0 0 24 24" width={11} height={11} fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round">
-              <rect x="3" y="6" width="18" height="12" rx="2"/>
-              <path d="M10 9l5 3-5 3z" fill="currentColor"/>
-            </svg>
-            영상 보기
-          </span>
-          <span
-            className="absolute right-3.5 top-3 text-[11px] font-bold text-white px-2.5 py-1 rounded-full"
-            style={{ background: "rgba(0,0,0,.32)", backdropFilter: "blur(6px)", fontVariantNumeric: "tabular-nums" }}
-          >
-            04:32
-          </span>
-          {/* Play button */}
-          <span
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] rounded-full grid place-items-center bg-white/95"
-            style={{ color: "var(--section-explore-ink)", boxShadow: "0 14px 36px rgba(0,0,0,.30)" }}
-          >
-            <Play size={28} fill="currentColor" style={{ marginLeft: 3 }} />
-          </span>
-          {/* Caption */}
-          <div className="absolute left-3.5 bottom-3 right-3.5 flex items-center justify-between text-white text-[12px] font-semibold">
-            <span className="opacity-90 truncate">
-              {review.coversItems.slice(0, 4).join(" · ")}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: "repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 2px, transparent 2px 12px)" }}
+            />
+            <span
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] rounded-full grid place-items-center bg-white/95"
+              style={{ color: "var(--section-explore-ink)", boxShadow: "0 14px 36px rgba(0,0,0,.30)" }}
+            >
+              <Play size={28} fill="currentColor" style={{ marginLeft: 3 }} />
             </span>
-            <span className="flex items-center gap-1 opacity-85">
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "#b8f0d8", boxShadow: "0 0 8px rgba(184,240,216,.8)" }} />
-              HD
-            </span>
+            <p className="absolute left-1/2 top-1/2 mt-10 -translate-x-1/2 text-white/70 text-[12px] font-semibold whitespace-nowrap">
+              영상 준비 중
+            </p>
           </div>
-        </div>
+        )}
 
         {/* Quiz section */}
         <div className="flex items-baseline justify-between pt-1.5">

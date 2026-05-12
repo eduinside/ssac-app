@@ -259,12 +259,21 @@ function SectionContent({
       )}
 
       {/* Activity: fillBlank — ___ 위치에 인라인 입력 */}
-      {section.activity?.kind === "fillBlank" && section.activity.blanks && (
+      {section.activity?.kind === "fillBlank" && (() => {
+        const act = section.activity!;
+        // blanks 필드가 없으면 prompt를 빈칸 문장으로 사용
+        const hasBlanks = (act.blanks?.length ?? 0) > 0;
+        const sentences: string[] = hasBlanks
+          ? act.blanks!
+          : act.prompt?.includes("___") ? [act.prompt] : [];
+        if (sentences.length === 0) return null;
+        return (
         <div className="flex flex-col gap-3">
-          {section.activity.prompt && (
-            <p className="text-[14px] font-semibold" style={{ color: "var(--ink-700)" }}>{section.activity.prompt}</p>
+          {/* blanks 필드가 있을 때만 prompt를 문맥 레이블로 표시 */}
+          {hasBlanks && act.prompt && (
+            <p className="text-[14px] font-semibold" style={{ color: "var(--ink-700)" }}>{act.prompt}</p>
           )}
-          {section.activity.blanks.map((blank, i) => {
+          {sentences.map((blank, i) => {
             const parts = blank.split("___");
             const isChecked = blankResults !== null;
             const isCorrect = blankResults?.[i] ?? false;
@@ -346,7 +355,8 @@ function SectionContent({
             </div>
           )}
         </div>
-      )}
+        );
+      })()}
 
       {/* Similar words */}
       {section.type === "learn" && word.similarWords && word.similarWords.length > 0 && (

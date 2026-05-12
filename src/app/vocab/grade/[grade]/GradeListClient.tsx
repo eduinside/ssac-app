@@ -137,11 +137,13 @@ export default function GradeListClient({ grade }: Props) {
                 return (
                   <Link key={item.id} href={`/vocab/review/${item.id}`} className="no-underline">
                     <div
-                      className="grid items-center gap-3 p-2.5 pr-3.5 rounded-[14px] cursor-pointer transition-all duration-[120ms] active:scale-[.995]"
+                      className="grid items-center gap-3 p-2.5 pr-3 rounded-[14px] cursor-pointer transition-all duration-[120ms] active:scale-[.995]"
                       style={{
                         gridTemplateColumns: "56px 1fr auto",
-                        background: "linear-gradient(120deg, var(--section-explore-soft) 0%, #fff 100%)",
-                        border: "1px solid var(--section-explore-line)",
+                        background: isDone
+                          ? "linear-gradient(120deg, var(--color-primary-50) 0%, #fff 100%)"
+                          : "linear-gradient(120deg, var(--section-explore-soft) 0%, #fff 100%)",
+                        border: `1px solid ${isDone ? "var(--color-primary-200)" : "var(--section-explore-line)"}`,
                         boxShadow: "var(--shadow-1)",
                       }}
                     >
@@ -166,14 +168,38 @@ export default function GradeListClient({ grade }: Props) {
                         <div className="flex items-center gap-1.5 text-[12px] font-semibold" style={{ color: "var(--section-explore-ink)" }}>
                           <span>{item.quizzes.length}문항</span>
                           <span className="w-[3px] h-[3px] rounded-full" style={{ background: "var(--section-explore-line)" }} />
-                          <span>약 {Math.ceil(item.quizzes.length * 1.5)}분</span>
-                          <span className="w-[3px] h-[3px] rounded-full" style={{ background: "var(--section-explore-line)" }} />
                           <span>{item.page}쪽</span>
+                          {isDone && (
+                            <>
+                              <span className="w-[3px] h-[3px] rounded-full" style={{ background: "var(--section-explore-line)" }} />
+                              <span style={{ color: "var(--color-primary-700)", fontWeight: 600 }}>완료</span>
+                            </>
+                          )}
                         </div>
                       </div>
-                      <span style={{ color: "var(--section-explore-ink)", opacity: .7 }}>
-                        <ChevronRight size={18} strokeWidth={2.4} />
-                      </span>
+                      {/* Actions */}
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          onClick={(e) => toggleCompleted(item.id, e)}
+                          className="w-8 h-8 rounded-full grid place-items-center cursor-pointer border-0 transition-all duration-[120ms] active:scale-90 shrink-0"
+                          aria-label={isDone ? "완료 취소" : "완료 표시"}
+                          style={
+                            isDone
+                              ? { background: "var(--color-primary-500)", boxShadow: "0 2px 8px rgba(46,162,104,.4)" }
+                              : { background: "transparent", outline: "2px solid var(--ink-200)", outlineOffset: "-2px" }
+                          }
+                        >
+                          {isDone && <Check size={15} strokeWidth={3} color="white" />}
+                        </button>
+                        <button
+                          onClick={(e) => toggleFavorite(item.id, e)}
+                          className="w-8 h-8 rounded-[10px] grid place-items-center cursor-pointer border-0 bg-transparent transition-all duration-[120ms] active:scale-90"
+                          aria-label={isFav ? "즐겨찾기 해제" : "즐겨찾기"}
+                          style={{ color: isFav ? "var(--color-secondary-500)" : "var(--ink-300)" }}
+                        >
+                          <Star size={17} strokeWidth={2} fill={isFav ? "currentColor" : "none"} />
+                        </button>
+                      </div>
                     </div>
                   </Link>
                 );

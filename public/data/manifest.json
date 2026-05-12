@@ -9,12 +9,15 @@
       "groupBy": "grade",
       "groups": [
         {
-          "key": "grade4",
-          "label": "4학년",
-          "grade": 4,
-          "wordCount": 9,
-          "reviewCount": 2,
-          "files": ["vocab/grade4/words.json", "vocab/grade4/reviews.json"]
+          "key": "grade1",
+          "label": "1학년",
+          "grade": 1,
+          "wordCount": 63,
+          "reviewCount": 20,
+          "files": [
+            "vocab/grade1/words.json",
+            "vocab/grade1/reviews.json"
+          ]
         }
       ]
     },

@@ -205,10 +205,7 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background:
-    radial-gradient(1200px 600px at -10% -20%, var(--color-primary-50) 0%, transparent 60%),
-    radial-gradient(900px 600px at 110% 0%, var(--section-guess-soft) 0%, transparent 55%),
-    var(--bg-sunken);
+  background: var(--bg-app);
 }
 .phone-shell-inner {
   width: 100%;

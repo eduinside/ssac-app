@@ -1,7 +1,5 @@
 import ReviewClient from "./ReviewClient";
 
-export const runtime = "edge";
-
 interface Props {
   params: Promise<{ id: string }>;
 }
