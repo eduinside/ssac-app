@@ -1,6 +1,6 @@
 "use client";
 
-import { openDB, type DBSchema, type IDBPDatabase } from "idb";
+import type { DBSchema, IDBPDatabase } from "idb";
 import type { Progress } from "@/types/vocab";
 
 interface EduDB extends DBSchema {
@@ -16,8 +16,9 @@ interface EduDB extends DBSchema {
 
 let dbPromise: Promise<IDBPDatabase<EduDB>> | null = null;
 
-function getDB() {
+async function getDB() {
   if (!dbPromise) {
+    const { openDB } = await import("idb");
     dbPromise = openDB<EduDB>("ssac-app", 1, {
       upgrade(db) {
         db.createObjectStore("progress", { keyPath: "id" });
