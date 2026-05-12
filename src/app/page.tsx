@@ -74,7 +74,7 @@ export default function HomePage() {
         })
       );
 
-      const recent: RecentItem[] = withView.flatMap((p) => {
+      const recent: RecentItem[] = withView.flatMap((p): RecentItem[] => {
         const g = gradeFromId(p.id);
         const item = (vocabByGrade[g] ?? []).find((i) => i.id === p.id);
         if (!item) return [];
