@@ -1,0 +1,2334 @@
+{
+  "version": "2026.1",
+  "contentType": "vocab",
+  "grade": 3,
+  "words": [
+    {
+      "id": "v-g3-001",
+      "grade": 3,
+      "order": 1,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나서 이야기를 했어요."
+      ],
+      "similarWords": [],
+      "page": 3,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "아, 내일 친구 생일파티도 가고 싶고, 발표 준비도 해야 하는데… 어떡하지?",
+            "음, 둘 다 하고 싶지만 시간이 부족하네.",
+            "맞아. 머리속이 복잡해. 갈등돼."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-001-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘갈등’이라는 말을 하거나 들어본 적이 있나요? 다음 상황에서 ‘갈등’의 뜻을 짐작해 봅시다.",
+            "options": [
+              "서로 다른 생각이 충돌하는 것",
+              "친구를 만나는 것",
+              "상대방을 이해하는 것",
+              "즐겁게 노는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 글을 읽고, 내용을 간추려 빈칸에 알맞은 말을 써 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-002",
+      "grade": 3,
+      "order": 2,
+      "word": "감각적",
+      "pos": "형용사",
+      "definition": "감각적인 느낌이나 감정을 불러일으키는 특성이나 성질을 말해요.",
+      "examples": [
+        "달콤한 딸기 향기가 코끝을 간질였다.",
+        "이 그림은 감각적 표현이 뛰어나요."
+      ],
+      "similarWords": [
+        "감각적인",
+        "느낌이 있는",
+        "감수성이 풍부한"
+      ],
+      "page": 4,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '감각적'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "지민: 이번 그림, 정말 감각적이야.",
+            "민수: 응, 색감이 참 놀라워."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-002-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'감각적'의 의미에 가장 가까운 것을 고르세요.",
+            "options": [
+              "감정을 느끼게 하는",
+              "맛이 있는",
+              "보기에 예쁜",
+              "크기가 큰"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "감각적이라는 말을 사용해서 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-003",
+      "grade": 3,
+      "order": 3,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "서로 일정한 장소나 시간에서 처음 보거나, 다시 만나는 것.",
+      "examples": [
+        "친구를 만나러 갑니다.",
+        "약속 장소에서 만나자."
+      ],
+      "similarWords": [],
+      "page": 6,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "얼마 전에 그림 대회에 참여했어.",
+            "오, 그래? 대회 결과가 언제 나와?",
+            "내일 공개된다!"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-003-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 활동에서 '공개'의 의미를 짐작해 보세요.",
+            "options": [
+              "남들이 보는 것",
+              "조용한 곳",
+              "비밀",
+              "아침"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "그림 대회는 어떤 활동일지 생각해 보고 글로 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-004",
+      "grade": 3,
+      "order": 4,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "다른 사람이나 사물과 처음으로 서로 알게 되거나, 다시 만나는 것",
+      "examples": [
+        "친구를 학교에서 만났어요.",
+        "약속 시간에 늦지 않게 만났어요."
+      ],
+      "similarWords": [
+        "접하다",
+        "귀띔하다"
+      ],
+      "page": 9,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘 학교에서 누구를 만났어요?",
+            "학생: 친구를 만났어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-004-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 그림이나 상황에 맞는 '만나다'의 의미를 고르세요.",
+            "options": [
+              "처음으로 만나는 것",
+              "헤어지는 것",
+              "아직 만나지 않은 일",
+              "쉽게 만지는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "오늘 친구를 ___ 만났어요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-005",
+      "grade": 3,
+      "order": 5,
+      "word": "기준",
+      "pos": "명사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "모든 학생들은 같은 기준에 맞춰 평가받아요."
+      ],
+      "similarWords": [],
+      "page": 11,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "지금이야! 그림을 어떤 기준으로 나눴어요?",
+            "사람이 탈 수 없는 것으로 기준을 세웠어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-005-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘기준’이라는 말을 하거나 들어본 적이 있나요? 다음 상황에서 ‘기준’의 뜻을 짐작해 봅시다.",
+            "options": [
+              "동물과 식물을 나누는 기준",
+              "기준을 세우다",
+              "기준을 바꾸다",
+              "기준을 놓다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘기준’의 뜻을 짐작하며, 어울리는 표현을 찾아 모두 색칠해 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-006",
+      "grade": 3,
+      "order": 6,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 13,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-006-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 그림은 무엇을 의미할까요?",
+            "options": [
+              "친구와 약속하다",
+              "학교에 가다",
+              "만나다",
+              "공부하다"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동을 통해 '만나다'라는 단어의 의미를 써보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-007",
+      "grade": 3,
+      "order": 7,
+      "word": "깨닫다",
+      "pos": "동사",
+      "definition": "(사람이 이치나 진리를) 이해하여 참뜻을 알게 된다. / (사람이 사실을) 모르고 있다가 알게 되다.",
+      "examples": [
+        "동생이 뒤에서 있는 것을 깨닫고 놀랐다.",
+        "나는 위인전을 읽고 교훈을 깨닫게 되었다."
+      ],
+      "similarWords": [],
+      "page": 16,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '깨닫다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 너는 왜 이렇게 행동이 달라졌니?",
+            "아들: 수업 시간에 선생님 말씀을 듣다가 내가 몰랐던 사실을 깨닫게 되었어요."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 활동의 의미와 가장 가까운 것을 고르세요.",
+            "options": [
+              "무언가를 이해하다",
+              "무언가를 잃다",
+              "무언가를 만들다",
+              "무언가를 잊다"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '깨닫다'의 의미를 실제 상황에서 써보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-008",
+      "grade": 3,
+      "order": 8,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나러 갔어요."
+      ],
+      "similarWords": [],
+      "page": 19,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "시험 잘 봤어?",
+            "생각보다 시험이 어려워서 당황했어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-008-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 중 '당황하다'의 의미로 알맞은 것은 무엇일까요?",
+            "options": [
+              "깜짝 놀라다",
+              "당황하다",
+              "기쁘다",
+              "슬프다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "그림을 보고 '만나다'와 비슷한 말을 찾아 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-009",
+      "grade": 3,
+      "order": 9,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 21,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 친구를 만나는 곳에 대해 이야기할 거예요.",
+            "아이: 제가 친구를 만나는 곳은 학교예요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-009-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 중 '만나다'의 의미에 가장 알맞은 것을 고르세요.",
+            "options": [
+              "서로 만나거나 마주치는 것",
+              "내가 혼자 와 있는 것",
+              "책을 읽는 것",
+              "음식을 먹는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 빈칸에 알맞은 말을 넣으세요. 나는 ___을(를) 좋아해요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-010",
+      "grade": 3,
+      "order": 10,
+      "word": "되돌아보다",
+      "pos": "동사",
+      "definition": "‘되돌아보다’라는 말은 하던 일을 멈추고 다시 돌아가거나 예전 일을 다시 생각하는 것을 의미해요.",
+      "examples": [
+        "지난 주말에 여행 사진을 보고 옛날 기억을 되돌아보았어요."
+      ],
+      "similarWords": [
+        "돌아보다",
+        "회상하다"
+      ],
+      "page": 22,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '되돌아보다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "어제 학교 다녀오는 길에 내가 다녔던 유치원을 되돌아봤어.",
+            "왜?",
+            "그때 친구들이랑 놀던 생각이 나서.",
+            "나도 예전 사진을 보며 옛날을 되돌아보는 게 좋아."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 선택지 중 ‘되돌아보다’의 의미에 가장 가까운 설명을 고르세요.",
+            "options": [
+              "앞으로 나아가다",
+              "예전 일을 생각하며 다시 돌아보다",
+              "멀리 돌아보다",
+              "계속 걷다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "fillBlank",
+            "blanks": "나는 지난 날들이 그리워서 예전 사진을 보며 ___.",
+            "answers": [
+              "되돌아보았다"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-011",
+      "grade": 3,
+      "order": 11,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만났어요."
+      ],
+      "similarWords": [],
+      "page": 24,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "운동장에서 친구를 찾으려고 뒤를 돌아봤어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-011-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘만나다’는 어떤 의미일까요?",
+            "options": [
+              "누군가와 함께 있는 것",
+              "어떤 장소에 가는 것",
+              "사람을 찾아서 함께 있는 것",
+              "멀리서 보는 것"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에 대한 안내 문장을 두 번째 이미지에서 그대로 추출"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-012",
+      "grade": 3,
+      "order": 12,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [
+        "만나뱄다",
+        "초대하다"
+      ],
+      "page": 29,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-012-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'만나다'의 의미에 가장 가까운 말을 고르세요.",
+            "options": [
+              "헤어지다",
+              "같이 가다",
+              "만나다",
+              "잃어버리다"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 섹션의 활동 안내 문장을 두번째이미지에서 그대로 추출"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-013",
+      "grade": 3,
+      "order": 13,
+      "word": "변감아",
+      "pos": "명사",
+      "definition": "지금부터 야구에 관해서 설명하겠습니다. 야구는 9명씩 이루어진 두 팀이 9회씩 공격과 수비를 각각 번갈아 가며 승패를 겨루는 구기 종목입니다. 공격하는 쪽은 상대편 투수가 던진 공을 배트로 치고 1, 2, 3루를 돌아 본루(홈)로 돌아오면 1점을 얻습니다.",
+      "examples": [
+        "야구는 9명씩 이루어진 두 팀이 9회씩 경기를 치른다."
+      ],
+      "similarWords": [],
+      "page": 33,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "야구는 9명씩 이루어진 두 팀이 9회씩 공과 수비를 각각 번갈아 가며 승패를 겨루는 구기 종목입니다.",
+            "공격하는 쪽은 상대편 투수가 던진 공을 배트로 치고 1, 2, 3루를 돌아 본루(홈)로 돌아오면 1점을 얻습니다."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-013-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'변감아'라는 말을 하거나 들어본 적이 있나요?",
+            "options": [
+              "네, 자주 들어요.",
+              "가끔 들어봐요.",
+              "처음 들어봐요.",
+              "알지 못해요."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘변감아’의 뜻을 짐작하며 대신 쓸 수 있는 낱말을 찾아 ○ 표에 써 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-014",
+      "grade": 3,
+      "order": 14,
+      "word": "간추리다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "많은 자료를 간추려서 중요한 것만 남긴다."
+      ],
+      "similarWords": [
+        "요약하다",
+        "축약하다"
+      ],
+      "page": 35,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '간추리다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님, 1학년 동생들에게 소개할 우리 학교 자랑거리에 대해 모두 썼어요.",
+            "어디 보자. 자세히 잘 썼구나. 그런데 1학년 동생들이 보기에는 글이 너무 길지 않을까?"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-014-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘간추리다’라는 말을 하거나 들어본 적이 있나요? 다음 상황에서 ‘간추리다’의 뜻을 짐작해 보세요.",
+            "options": [
+              "많은 내용을 간단하게 정리한다.",
+              "길게 이야기를 늘어놓는다.",
+              "물건을 다 모은다.",
+              "길을 찾는다."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 문장을 읽고 ‘간추리다’의 의미를 생각해서 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-015",
+      "grade": 3,
+      "order": 15,
+      "word": "분리하다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "플라스틱은 플라스틱 수거함에 분리할게.",
+        "나는 유리를 분리하여 버릴게."
+      ],
+      "similarWords": [],
+      "page": 35,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "플라스틱은 플라스틱 수거함에 분리할게.",
+            "그럼 나는 유리를 분리하여 버릴게."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-015-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 활동에서 '분리하다'의 의미는 무엇일까요?",
+            "options": [
+              "같이 합치는 것",
+              "서로 다르게 나누는 것",
+              "함께 모으는 것",
+              "일찍 일어나는 것"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘분리하다’는 말을 쓰면서 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-016",
+      "grade": 3,
+      "order": 16,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나러 공원에 갔다."
+      ],
+      "similarWords": [],
+      "page": 37,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "아이: 오늘 누구를 만났어요?",
+            "선생님: 친구를 만났어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-016-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 보기 중 ‘만나다’의 의미와 가장 비슷한 것을 고르세요.",
+            "options": [
+              "헤어지다",
+              "만나다",
+              "보다",
+              "잊다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘만나다’라는 말을 사용해서 이야기 내용을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-017",
+      "grade": 3,
+      "order": 17,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 39,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "아빠: 우리 오늘 뭐 할까?",
+            "엄마: 오늘은 공원에서 산책하고, 나중에 아이스크림 먹자.",
+            "아이: 좋아요! 공원에서 만나요!"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-017-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아이가 '만나요!'라고 말했을 때, 아이가 하고 싶어 하는 일은 무엇일까요?",
+            "options": [
+              "공원을 간다",
+              "만나는 것이다",
+              "아이스크림을 산다",
+              "책을 읽는다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘만나다’라는 말을 사용하여 친구를 처음 만난 이야기를 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-018",
+      "grade": 3,
+      "order": 18,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 41,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 오늘 친구들을 어디서 만났니?",
+            "아이: 공원에서 만났어요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-018-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 그림의 내용을 보고 '만나다'의 의미를 올바르게 고르세요.",
+            "options": [
+              "책을 읽는 것",
+              "사람들이 함께 보는 것",
+              "사람들이 서로 만나는 것",
+              "무엇인가를 찾는 것"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나다'라는 단어를 사용해서 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-019",
+      "grade": 3,
+      "order": 19,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "선생님을 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 42,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "화영이: 왜 속상하지? 무슨 일이 있니?",
+            "엄마: 잘 못해서 부모님께 꾸지람을 들었단다."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-019-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "화영이의 말에서 '상황'이 무엇인지 짐작해 보세요.",
+            "options": [
+              "화영이가 속상한 이유는 공부를 잘해서이다.",
+              "화영이가 속상한 이유는 친구와 싸워서이다.",
+              "화영이가 속상한 이유는 시험을 못 봐서이다.",
+              "화영이가 속상한 이유는 그림을 그리다 넘어졌기 때문이다."
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "화영이와 엄마가 대화하는 내용을 보고 '상황'의 의미를 생각해 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-020",
+      "grade": 3,
+      "order": 20,
+      "word": "실감 나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "이 이야기를 들으니 정말 실감 났어요."
+      ],
+      "similarWords": [],
+      "page": 47,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 상황에서 ‘실감 나다’의 뜻을 짐작해 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-020-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘실감 나다’라는 말을 하거나 들어본 적이 있나요? 다음 중 맞는 것을 고르세요.",
+            "options": [
+              "사람들이 정말 느낄 때 쓰는 말이다.",
+              "책을 읽을 때 나오는 말이다.",
+              "운동할 때 하는 말이다.",
+              "잔디밭에 앉아 있을 때 하는 말이다."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘실감 나다’라는 말을 사용한 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-021",
+      "grade": 3,
+      "order": 21,
+      "word": "예상하다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "내일이 비 올지 예상했어요."
+      ],
+      "similarWords": [],
+      "page": 49,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '예상하다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "내일이 기다리던 현장체험학습인데. 비가 올 것 같아.",
+            "예상대로 비가 오면 안전에 더 유의해야겠네."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-021-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 상황에서 '예상하다'의 뜻을 짐작해 보세요.",
+            "options": [
+              "비가 올 것을 생각하다",
+              "꽃이 피는 것을 본다",
+              "맛있는 음식을 먹는다",
+              "잠이 오지 않는다"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 문장에서 '예상하다'의 뜻에 맞게 내용을 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-022",
+      "grade": 3,
+      "order": 22,
+      "word": "원인",
+      "pos": "명사",
+      "definition": "원인이라는 말은 어떤 일이 일어난 이유를 말해요. 어떤 일이 일어나기 전에 미리 생각하는 것도 원인과 관련이 있어요.",
+      "examples": [
+        "아버지와 함께 꽃집에 들러 토마토 모종을 샀다.",
+        "작년에 토마토 열매를 얻지 못한 원인이 물을 충분히 안 줘서라고 생각해요."
+      ],
+      "similarWords": [],
+      "page": 50,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 상황에서 '원인'의 뜻을 짐작해 봅시다.",
+          "dialogue": [
+            "아버지와 함께 꽃집에 들러 토마토 모종을 샀다.",
+            "작년에 토마토 열매를 얻지 못한 원인이 물을 충분히 안 줘서라고 생각해요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-022-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘원인’이라는 말이 무엇일지 생각해 봅시다.",
+            "options": [
+              "어떤 일이 일어난 이유",
+              "공부하는 방법",
+              "친구와의 약속",
+              "좋아하는 음식을 먹는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘원인’에 대해 배운 내용을 떠올리며 글을 써 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-023",
+      "grade": 3,
+      "order": 23,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "나는 친구를 만났어요."
+      ],
+      "similarWords": [],
+      "page": 52,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 어떻게 캠페인을 할지 의견을 말해 주세요.",
+            "선생님: 포스터를 그려서 복도에 게시하면 좋겠습니다."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-023-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 상황에서 ‘의견’의 뜻을 짐작해 봅시다.",
+            "options": [
+              "의견이란 말을 하거나 들어본 적이 있나요?",
+              "내가 생각하는 것을 말하는 것",
+              "무언가를 같이 하는 것",
+              "편하게 쉬는 것"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘의견’이라는 말을 하거나 들어본 적이 있나요? 다음 상황에서 ‘의견’의 뜻을 짐작해 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-024",
+      "grade": 3,
+      "order": 24,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 54,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 새 친구를 만날 거예요.",
+            "친구: 안녕! 만나서 반가워."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "prompt": "이 대화를 읽고 '만나요'는 무슨 뜻일까 짐작해 보세요.",
+            "options": [
+              "헤어지는 말이다.",
+              "만나는 인사다.",
+              "가려고 하는 말이다.",
+              "걱정하는 말이다."
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "아래 문장을 보고 '만나라'의 뜻을 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-025",
+      "grade": 3,
+      "order": 25,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "우리는 공원에서 친구를 만났어요."
+      ],
+      "similarWords": [],
+      "page": 57,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "지하철을 이용해. 그러면 오래 안 걸려."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-025-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 대화 속에서 '이용하다'의 의미를 짐작해 보세요.",
+            "options": [
+              "이용한다는 말은 '타거나 쓰거나 하는 것을 허락하다'라는 의미예요.",
+              "이용한다는 말은 '어떤 것을 하거나 써서 목적을 이루다'라는 의미예요.",
+              "이용한다는 말은 '놓거나 버리다'라는 의미예요.",
+              "이용한다는 말은 '걷거나 뛰다'라는 의미예요."
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나다'라는 말을 사용해서 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-026",
+      "grade": 3,
+      "order": 26,
+      "word": "익히다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "피아노 연주를 익히다."
+      ],
+      "similarWords": [],
+      "page": 61,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '익히다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 피아노 연습을 열심히 해볼 거예요.",
+            "학생: 네, 선생님! 피아노 연습을 익히는 게 어렵지 않아요!"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-026-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "피아노 연습을 자주 하면 무엇이 좋아질까요?",
+            "options": [
+              "연주가 좋아지다.",
+              "음악을 싫어지다.",
+              "하다가 그만두다.",
+              "새 악기를 사다."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '익히다'와 관련된 문장을 자신만의 것으로 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-027",
+      "grade": 3,
+      "order": 27,
+      "word": "인상 깊다",
+      "pos": "형용사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "제주도에 놀러 갔는데 아름다운 바다 풍경이 인상 깊었어요."
+      ],
+      "similarWords": [],
+      "page": 62,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 인상 깊었던 일이 있을까?",
+            "아빠: 제주도에 놀러 갔는데 아름다운 바다 풍경이 인상 깊었어요.",
+            "아이: 와, 저도 가보고 싶어요!"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-027-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "인상 깊다라는 말의 뜻은 어떻게 하는 것이 가장 적절할까요?",
+            "options": [
+              "어떤 일이 기억에 강하게 남는 것",
+              "기분이 별로 좋지 않은 것",
+              "어떤 일을 하기 싫은 것",
+              "웃음이 나는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "인상 깊었던 일을 글로 써 보는 공부를 해 봅시다. 인상 깊었던 일을 떠올려 보세요. 어떤 일이 있었나요?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-028",
+      "grade": 3,
+      "order": 28,
+      "word": "인상 깊다",
+      "pos": "형용사",
+      "definition": "‘인상 깊다’의 뜻을 알아봅시다.",
+      "examples": [
+        "책에서 가장 인상 깊은 인물은 누구였니?"
+      ],
+      "similarWords": [],
+      "page": 64,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '인상 깊다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘 읽은 이야기를 생각하면서 어떤 부분이 인상 깊었어요?",
+            "학생: 저는 주인공이 용감하게 행동한 부분이 인상 깊었어요."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘인상 깊다’의 의미로 알맞은 것을 고르세요.",
+            "options": [
+              "무엇이 크다는 의미이다.",
+              "매우 재미있거나 기억에 남는 것",
+              "가격이 비싸다는 의미",
+              "밖에서 자라는 것"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘인상 깊다’의 뜻에 맞게 자신이 경험한 일을 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-029",
+      "grade": 3,
+      "order": 29,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나다.",
+        "학교에서 선생님을 만나다."
+      ],
+      "similarWords": [],
+      "page": 67,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-029-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 그림은 무엇을 하고 있는 것 같나요?",
+            "options": [
+              "사람들이 서로 만나요.",
+              "사람들이 학교에 가요.",
+              "사람들이 운동해요.",
+              "사람들이 먹어요."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나다'라는 단어를 바르게 사용해서 문장을 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-030",
+      "grade": 3,
+      "order": 30,
+      "word": "만나기",
+      "pos": "동사",
+      "definition": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+      "examples": [
+        "나는 친구를 만났어요."
+      ],
+      "similarWords": [],
+      "page": 69,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "여자아이는 교실 문을 열고 친구를 봅니다.",
+            "남자아이: 안녕! 오랜만이야.",
+            "여자아이: 정말 오랜만이야! 잘 지냈어?"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-030-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 대화에서 '만나기'의 의미는 무엇일까요?",
+            "options": [
+              "친구를 보기 위해 만나는 것",
+              "운동을 하는 것",
+              "책을 읽는 것",
+              "놀이터에 가는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 활동을 읽고, '만나기'와 관련된 자신의 경험을 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-031",
+      "grade": 3,
+      "order": 31,
+      "word": "만나기",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나기 위해 학교에 갔어요."
+      ],
+      "similarWords": [],
+      "page": 70,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 친구를 만나기 전에 할 일이 있어요.",
+            "학생: 네, 어떤 일이죠?"
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 상황에서 '만나기'의 의미는 무엇일까요?",
+            "options": [
+              "친구와 만나는 것",
+              "책을 읽는 것",
+              "공부하는 것",
+              "음악을 듣는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나기'라는 단어를 사용해서 자신의 이야기를 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-032",
+      "grade": 3,
+      "order": 32,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 75,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 우리 오늘 친구를 만날까?",
+            "아이: 네, 좋아요!"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-032-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아래 보기에서 '만나다'의 의미에 가장 가까운 것을 고르세요.",
+            "options": [
+              "멀리 가다",
+              "처음 만나다",
+              "조금 걷다",
+              "어디에 가다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동은 '만나다'의 의미를 활용하여 자신의 경험을 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-033",
+      "grade": 3,
+      "order": 33,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 77,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 오늘 친구를 만났니?",
+            "아이: 네, 공원에서 친구를 만났어요."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "아이가 '만났어요'라고 말했는데, 어떤 의미일까요?",
+            "options": [
+              "함께 있었다",
+              "우연히 봤다",
+              "서로 만났다",
+              "갔었다"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "다음 문장에서 '만나다'의 의미를 생각해서 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-034",
+      "grade": 3,
+      "order": 34,
+      "word": "포함하다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "이 책에는 많은 내용이 포함되어 있어요."
+      ],
+      "similarWords": [],
+      "page": 79,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '포함하다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님, 현장체험학습 준비물이 뭐예요?",
+            "도시락, 물, 모자 그리고 돗자리가 필요해요.",
+            "돗자리가 꼭 챙겨야 해요?"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-034-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "‘포함하다’라는 말을 하거나 들어본 적이 있나요? 다음 중 맞는 것을 고르세요.",
+            "options": [
+              "이 책에는 많은 내용이 포함되어 있어요.",
+              "우유는 식품에 포함되지 않아요.",
+              "책상에는 서랍이 포함되어 있어요.",
+              "이 노트에는 그림이 포함되어 있어요."
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘포함하다’라는 말을 문장으로 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-035",
+      "grade": 3,
+      "order": 35,
+      "word": "표시",
+      "pos": "명사",
+      "definition": "길에 있는 표지판은 우리가 주의할 것을 표시해요.",
+      "examples": [
+        "길에 있는 표지판은 우리가 주의할 것을 표시해요."
+      ],
+      "similarWords": [],
+      "page": 81,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 표지판을 읽고 우리가 주의할 것을 짐작해 봐요.",
+          "dialogue": [
+            "길에 있는 표지판은 우리가 주의할 것을 표시해요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-035-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 표지판은 무엇을 알려주는 것일까요?",
+            "options": [
+              "어린이 보호 구역",
+              "속도 제한",
+              "횡단보도",
+              "공사 구역"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 표지판이 의미하는 것을 자유롭게 적어보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-036",
+      "grade": 3,
+      "order": 36,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 공원에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 83,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-036-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 그림을 보고 ‘만나다’의 의미는 무엇일까요?",
+            "options": [
+              "누군가와 함께 있을 때",
+              "누군가를 처음 만났을 때",
+              "멀리서 보는 것",
+              "헤어질 때"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나다'의 뜻을 써보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-037",
+      "grade": 3,
+      "order": 37,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "다음 대화를 읽고 '만나다'의 의미를 짐작해 봐요.",
+      "examples": [
+        "친구와 학교에서 만나요."
+      ],
+      "similarWords": [],
+      "page": 84,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "엄마: 오늘 친구들과 어디서 만나?",
+            "학생: 우리 공원에서 만나요."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 활동에서 '만나다'의 뜻은 무엇일까요?",
+            "options": [
+              "어디에서 기다리다",
+              "서로 인사를 하다",
+              "같은 곳에 가다",
+              "같이 모여서 이야기하다"
+            ],
+            "correctIndex": 2
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 섹션의 활동을 따라 '만나다'에 대해 자유롭게 적어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-038",
+      "grade": 3,
+      "order": 38,
+      "word": "해당하다",
+      "pos": "동사",
+      "definition": "상황이나 내용이 어떤 것과 맞거나 일치한다는 의미입니다.",
+      "examples": [
+        "이 문제는 학생 모두에게 해당됩니다."
+      ],
+      "similarWords": [
+        "맞다",
+        "적합하다"
+      ],
+      "page": 87,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '해당하다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 이번 시험 결과가 모두 이 규칙에 해당하는 것 같네요.",
+            "학생: 그러면 이건 우리가 해야 할 일에 해당하는 거군요?"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-038-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 상황에서 '해당하다'의 의미는 무엇일까요?",
+            "options": [
+              "어울리다",
+              "맞다",
+              "적합하다",
+              "틀리다"
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 단어를 사용하여 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-039",
+      "grade": 3,
+      "order": 39,
+      "word": "헤아리다",
+      "pos": "동사",
+      "definition": "미루어 짐작하거나 가늠하여 살피다.",
+      "examples": [
+        "내 마음을 헤아리기 어렵다."
+      ],
+      "similarWords": [],
+      "page": 90,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '헤아리다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "아빠, 인도에서는 손으로 밥을 먹는대요.",
+            "이상한 것이 아니라 다른 거라다. 나라마다 다른 형태의 문화가 있지."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-039-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 중 '헤아리다'의 의미가 가장 가까운 것은 무엇일까요?",
+            "options": [
+              "살피다",
+              "만나다",
+              "떠들다",
+              "쉬다"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "단어 '헤아리다'를 사용하여 문장을 만들어 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-040",
+      "grade": 3,
+      "order": 40,
+      "word": "활용하다",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "온라인 학습을 활용했어요."
+      ],
+      "similarWords": [],
+      "page": 93,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '활용하다'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 온라인 학습을 활용해서 공부해 볼 거예요.",
+            "학생: 네, 선생님. 온라인 강의를 활용해서 공부할게요."
+          ]
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'활용하다'의 의미에 가장 가까운 것은 무엇일까요?",
+            "options": [
+              "이용하다",
+              "버리다",
+              "잊다",
+              "그만두다"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘활용하다’의 뜻을 모르겠어요. 자신의 말로 써 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-041",
+      "grade": 3,
+      "order": 41,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "다음을 알아봅시다.",
+      "examples": [
+        "친구를 만나서 영화관에 갔어요."
+      ],
+      "similarWords": [],
+      "page": 95,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "이야기: 이기고 있는데 갑자기 왜 뒈어?"
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-041-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "다음 상황에서 '흐름'의 뜻을 짐작해 봅시다.",
+            "options": [
+              "'흐름'은 이와 같아요. 한 명이 퇴장당해서 경기가 바뀌었어요.",
+              "'흐름'은 이와 같아요. 강물이 흘러가듯 사건이 계속 진행돼요.",
+              "'흐름'은 이와 같아요. 사람들이 많이 와서 북적여요.",
+              "'흐름'은 이와 같아요. 날씨가 좋아서 기분이 좋아요."
+            ],
+            "correctIndex": 1
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "‘흐름’의 뜻을 짐작하며 빈칸에 공통으로 들어갈 낱말을 써 봅시다."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-042",
+      "grade": 3,
+      "order": 42,
+      "word": "만나기",
+      "pos": "동사",
+      "definition": "더 알아보기 섹션의 뜻풀이",
+      "examples": [
+        "친구를 만나서 이야기를 했어요."
+      ],
+      "similarWords": [],
+      "page": 97,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade3/v-g3-042-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "'만나기'의 뜻은 무엇일까요?",
+            "options": [
+              "서로 만나는 것",
+              "먹는 것",
+              "달리기",
+              "공부하는 것"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동에서는 '만나기'의 뜻에 대해 이야기해 보세요."
+          }
+        }
+      ]
+    },
+    {
+      "id": "v-g3-043",
+      "grade": 3,
+      "order": 43,
+      "word": "만나다",
+      "pos": "동사",
+      "definition": "서로 처음 만나거나 다시 만나는 것에 대해 배워요.",
+      "examples": [
+        "나는 친구를 학교에서 만났어요."
+      ],
+      "similarWords": [],
+      "page": 98,
+      "sections": [
+        {
+          "type": "meet",
+          "title": "만나기",
+          "prompt": "다음 대화를 읽고 '○○○'의 의미를 짐작해 봐요.",
+          "dialogue": [
+            "선생님: 오늘은 친구를 만나는 연습을 해볼 거예요.",
+            "아이: 네! 좋아요."
+          ],
+          "imageUrl": "/images/vocab/grade3/v-g3-043-meet.webp"
+        },
+        {
+          "type": "think",
+          "title": "짐작하기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "multipleChoice",
+            "prompt": "이 그림은 무엇을 하고 있는 모습일까요?",
+            "options": [
+              "친구가 만나는 모습",
+              "책을 읽는 모습",
+              "공부하는 모습",
+              "운동하는 모습"
+            ],
+            "correctIndex": 0
+          }
+        },
+        {
+          "type": "learn",
+          "title": "더 알아보기"
+        },
+        {
+          "type": "practice",
+          "title": "익히기",
+          "imageUrl": "",
+          "activity": {
+            "kind": "freeWrite",
+            "prompt": "이 활동은 '만나다'라는 단어를 사용해서 말을 만들어 보는 활동입니다."
+          }
+        }
+      ]
+    }
+  ]
+}

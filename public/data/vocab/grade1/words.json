@@ -25,6 +25,7 @@
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'가로지르다'의 의미로 옳은 것을 고르세요.",
@@ -44,6 +45,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 공원을 ___ 친구 집에 놀러 갔다.",
@@ -72,11 +74,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "이 단어를 사용하는 문장을 생각해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-002-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "간신히의 의미는 무엇일까요?",
@@ -96,6 +100,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 ___ 겨우 숙제를 끝냈다.",
@@ -126,11 +131,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "거루다라는 단어를 읽어 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-003-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "거루다는 어떤 행동일까요?",
@@ -150,6 +157,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "거루다라는 말을 문장에서 사용해 보세요."
@@ -174,11 +182,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "서로 처음 만나는 활동입니다. 친구나 가족을 만나보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-004-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 '만나다'의 의미에 가장 가까운 것은 무엇일까요?",
@@ -198,6 +208,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "나는 ___에서 친구를 만납니다."
@@ -221,12 +232,15 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [
+            "○○: 간신히"
+          ]
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "걷다의 의미는 무엇일까?",
@@ -246,6 +260,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "걷다의 뜻을 글로 적으세요."
@@ -275,6 +290,7 @@
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'공손하다'의 뜻으로 알맞은 것을 고르세요.",
@@ -294,6 +310,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘공손하다’의 뜻을 보고 문장을 만들어 보세요."
@@ -319,11 +336,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "선생님이 보여주는 그림에서 진짜와 가짜를 구별해 볼까요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-007-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "이 그림은 무엇일까요?",
@@ -343,6 +362,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "이 활동에서는 성질이나 종류에 따라 갈라놓는 것을 구별한다고 생각해 봅시다."
@@ -366,12 +386,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-008-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘꾸러미’의 뜻으로 알맞은 것을 고르세요.",
@@ -391,6 +413,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "‘꾸러미’와 비슷한 말을 아래에서 세 가지 찾아 써 봅시다.",
@@ -426,11 +449,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "내가 제일 좋아하는 곰들이 인형에 구멍이 나서 할머니께서 깨매주셨다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-009-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "그림을 보고 ‘깨매다’의 뜻을 고르세요.",
@@ -450,6 +475,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "옷을 ___게 깁거나 찢어진 곳을 고친다. (답: 깨매다)"
@@ -473,14 +499,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": [
-            "우와! 내가 물고기를 낚았어!"
-          ]
+          "prompt": "QR코드에 접속해서 초성퀴즈를 풀어봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-010-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘뉴다’의 의미를 고르세요.",
@@ -500,6 +526,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘뉴다’의 뜻에 맞는 문장을 적어보세요."
@@ -525,11 +552,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "여러분이 좋아하는 시를 낭송해 볼까요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-011-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "낭송의 뜻으로 맞는 것은 무엇일까요?",
@@ -549,6 +578,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "여러분이 좋아하는 시를 한 편 낭송해 보세요."
@@ -573,11 +603,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "날개를 보고 어떤 동물이나 곤충이 연상되나요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-012-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "날개는 어디에 쓰일까요?",
@@ -597,6 +629,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "날개는 ___에 사용됩니다."
@@ -621,11 +654,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "이 요리를 보고, 떠오르는 날말을 말해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-013-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 '날말'의 의미와 제일 가까운 것을 고르세요.",
@@ -645,6 +680,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 ___을 배워요.",
@@ -673,11 +709,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "이야기를 시작하며 '누리다'의 뜻을 생각해 봅시다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-014-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'누리다'의 뜻은 무엇일까요?",
@@ -697,6 +735,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "우리는 자연을 ___.",
@@ -728,11 +767,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "내가 눈여겨본 옷이 여기 있네.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-015-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'보다'의 뜻에 가장 가까운 것은 무엇일까요?",
@@ -752,6 +793,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "아래 빈칸에 알맞은 말을 써보세요.\n나는 ___를 좋아해서 자주 본다."
@@ -776,11 +818,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-016-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'다듬다'의 뜻에 가장 가까운 것을 고르세요.",
@@ -800,6 +844,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘다듬다’에 어울리는 말을 찾아 쓰고, 3줄 잔소리 놀이를 해 봅시다."
@@ -824,12 +869,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "‘누리다’에 다양한 발림을 넣어 재미있게 낱말을 읽어 보세요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-017-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'단위'의 뜻을 가장 잘 나타내는 것은?",
@@ -849,6 +896,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "단위의 뜻을 생각하며 적어 보세요."
@@ -872,12 +920,16 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [
+            "눈에 여기보다의 뜻을 읽어 봅시다."
+          ],
+          "imageUrl": "/images/vocab/grade1/v-g1-018-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘닭다’의 뜻을 고르세요.",
@@ -897,6 +949,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "닭다와 비슷한 말을 찾아 미로를 ___ 봅시다.",
@@ -924,12 +977,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-019-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘당다’의 뜻을 고른 것을 선택하세요.",
@@ -949,6 +1004,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "‘당다’와 비슷한 말, 반대말을 찾아 써 보세요.",
@@ -980,11 +1036,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "커피의 대가를 지불해 주세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-020-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘대가’의 의미는 무엇일까?",
@@ -1004,6 +1062,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 노력을 ___.",
@@ -1034,12 +1093,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "‘닭다’와 같이 ‘신’이 받침으로 들어가는 낱말을 찾아 문장을 완성해 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-021-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "대출의 뜻은 무엇일까요?",
@@ -1059,6 +1120,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "대출의 뜻에 맞는 문장을 적어보세요."
@@ -1083,11 +1145,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "불이 났을 때 어떤 행동을 해야 할까요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-022-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "아래 중에서 '대피하다'의 의미에 가장 가까운 것은 무엇일까요?",
@@ -1107,6 +1171,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "위험이 생기면 ___ 위해 빨리 대피해야 한다.",
@@ -1136,12 +1201,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "'대가'의 뜻을 읽어 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-023-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘되풀이하다’의 뜻에 가장 가까운 것을 고르세요.",
@@ -1161,6 +1228,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 이야기를 여러 번 ___.",
@@ -1191,11 +1259,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "이 그림을 보고 '돌보다'의 뜻을 생각해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-024-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "아래 보기 중 '돌보다'의 뜻에 가장 맞는 것은 무엇일까요?",
@@ -1215,6 +1285,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘돌보다’라는 말을 사용하는 문장을 써 보세요."
@@ -1238,12 +1309,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-025-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘드러나다’의 뜻에 가장 어울리는 것은 무엇일까요?",
@@ -1263,6 +1336,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "‘드러나다’는 ___거나 보이지 않던 것이 ___게 되다.",
@@ -1295,11 +1369,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "파리가 황소 엉덩이에서 맴돌다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-026-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "맡돌다의 뜻은 무엇일까?",
@@ -1319,6 +1395,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "파리가 황소 엉덩이에서 ___.",
@@ -1349,11 +1426,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "상황에 따라 ‘머쓱하다’라는 말을 사용하는 장면을 생각해 봅시다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-027-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "아래 그림을 보고 ‘머쓱하다’의 의미로 알맞은 것을 고르세요.",
@@ -1373,6 +1452,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "내가 ___ 때 민망한 기분이 들었다.",
@@ -1402,12 +1482,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-028-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘방치하다’의 뜻을 고르세요.",
@@ -1427,6 +1509,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "내 방에 방치된 물건을 찾아 문장을 완성하세요."
@@ -1450,12 +1533,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-029-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'배열'의 뜻에 맞는 것을 고르세요.",
@@ -1475,6 +1560,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "문장을 읽고 배울 내용을 떠올리며 써 보세요."
@@ -1498,12 +1584,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-030-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'벌초'는 어떤 활동일까? 아래 보기 중 하나를 고르세요.",
@@ -1523,6 +1611,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 ___을 하러 갔어.",
@@ -1549,12 +1638,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-031-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "별명의 의미는 무엇일까요?",
@@ -1574,6 +1665,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "사람의 외모나 성격 따위의 특징을 바탕으로 남들이 ___ 부르는 이름.",
@@ -1604,12 +1696,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "'벌초'의 뜻을 읽어 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-032-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "이 그림은 어떤 부호를 나타낼까요?",
@@ -1629,6 +1723,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "이 부호는 ___를 나타낸다.",
@@ -1659,11 +1754,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "환경을 보호하기 위해서 어떤 일을 해야 할까요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-033-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "쓰레기를 어떻게 버려야 환경을 보호할 수 있을까요?",
@@ -1684,6 +1781,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "다음 문장을 보고 분리배출과 관련된 말을 적어보세요.\n\n\"쓰레기를 올바르게 ___ ___ 해야 환경을 지킬 수 있어요.\""
@@ -1707,12 +1805,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-034-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'붙이다'의 뜻에 맞는 것을 고르세요.",
@@ -1732,6 +1832,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "그림을 벽에 ___.",
@@ -1759,11 +1860,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-035-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘상황’의 뜻과 비슷한 것을 고르세요.",
@@ -1783,6 +1886,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘상황’의 의미에 대해 내가 생각하는 말을 써 보세요."
@@ -1808,11 +1912,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "깊은 산 속 용달샘 누가 와서 먹나요",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-036-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘샘’의 뜻을 보고 알맞은 그림을 고르세요.",
@@ -1831,6 +1937,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘샘’이 무슨 뜻인지 생각해 보고 알맞은 그림에 이어 써보세요."
@@ -1855,11 +1962,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "친구를 만나보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-037-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 '만나다'의 의미에 가장 가까운 것을 고르세요.",
@@ -1879,6 +1988,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "나는 오늘 누구를 만났어요."
@@ -1902,12 +2012,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-038-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "서두르다의 뜻을 고르세요.",
@@ -1927,6 +2039,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 ___ 학교에 갔어요.",
@@ -1960,12 +2073,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-039-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘소복하다’의 뜻을 골라 주세요.",
@@ -1985,6 +2100,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "‘소복하다’의 뜻을 생각하며 다음 빈칸을 채우세요: 장독대 위에 퇴근이 ___ 쌓여 있었다.",
@@ -2015,11 +2131,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "숲을 본 적이 있나요? 어떤 모습인지 떠올려 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-040-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "숲은 어떤 곳일까요?",
@@ -2039,6 +2157,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "숲 속에서 보았거나 듣거나 느낀 것을 적어 보세요."
@@ -2063,11 +2182,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-041-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘실리다’의 의미를 생각해 봅시다.",
@@ -2087,6 +2208,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘실리다’와 어울리는 말을 찾아 문장을 만드세요."
@@ -2110,12 +2232,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-042-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘쓰임’은 어떤 뜻일까?",
@@ -2135,6 +2259,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘쓰임’을 활용하여 말문을 완성해 봅시다."
@@ -2160,11 +2285,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "선생님께서 학생에게 질문하는 모습을 상상해서 이야기해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-043-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘여쭤보다’의 의미로 적절한 것을 고르세요.",
@@ -2184,6 +2311,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘여쭤보다’라는 말을 사용해서 문장을 만들어 보세요."
@@ -2208,11 +2336,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "역사에 관한 인물이나 이야기를 떠올리며 생각해 봅시다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-044-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "역사에 대한 의미는 무엇일까요?",
@@ -2232,6 +2362,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "역사에 대해 자신이 아는 것을 자유롭게 써 보세요."
@@ -2256,12 +2387,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "<보기>에 나오는 말을 이용하여 여러 가지 문장을 완성해 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-045-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "얻다의 뜻과 가장 비슷한 것을 고르세요.",
@@ -2281,6 +2414,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "얻다의 뜻을 적어 보세요."
@@ -2305,11 +2439,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "이삭이 무엇인지 살펴보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-046-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "이삭은 무엇일까요?",
@@ -2329,6 +2465,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "이삭은 ___을 의미합니다.",
@@ -2355,12 +2492,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "이 낱말의 초성이에요",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-047-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "입김이 무엇인지 생각해보세요.",
@@ -2380,6 +2519,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "입김이 나오는 곳은 어디인가요?"
@@ -2403,12 +2543,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-048-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "적용의 의미에 가장 가까운 것은 무엇입니까?",
@@ -2428,6 +2570,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "적용의 뜻을 생각해서 문장을 써 보세요."
@@ -2452,12 +2595,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-049-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "전시하다의 의미로 가장 잘 맞는 것을 고르세요.",
@@ -2477,6 +2622,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "활동 설명 그대로 작성하세요."
@@ -2500,12 +2646,16 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [
+            "안녕! 친구야"
+          ],
+          "imageUrl": "/images/vocab/grade1/v-g1-050-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘점잖다’의 의미에 가장 가까운 것을 고르세요.",
@@ -2525,6 +2675,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘점잖다’의 의미를 생각해서 글로 써보세요."
@@ -2550,11 +2701,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "버스를 탈 때는 차례를 지켜 순서대로 타야 합니다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-051-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 차례의 뜻에 맞는 것은 무엇입니까?",
@@ -2574,6 +2727,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "우리 반 학생들은 모두 차례를 지켜서 ____.",
@@ -2601,11 +2755,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "차별에 대해 생각해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-052-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "차별의 뜻은 무엇일까요?",
@@ -2625,6 +2781,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "차별이 무엇인지 자신의 말로 써 보세요."
@@ -2649,11 +2806,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "어떤 일이 자기에게 일어나는 것",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-053-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "경험이란 무엇일까?",
@@ -2673,6 +2832,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "경험이란 무엇인지 자신의 말을 써 보세요."
@@ -2697,11 +2857,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "전기, 충전하는 모습이나 상황을 생각해 보세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-054-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘충전하다’의 뜻은 무엇일까요?",
@@ -2721,6 +2883,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘충전하다’는 뜻을 생각해서 활동하세요."
@@ -2744,12 +2907,21 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [
+            "일을 잘할까?",
+            "다른 사람 없을까?",
+            "우리 회사는 남자 직원이 많으면 좋아요.",
+            "여자 직원들이 우리 회사 일도 더 잘해요.",
+            "일하는 사람 구별하기",
+            "나이가 많아서 고민해요."
+          ],
+          "imageUrl": "/images/vocab/grade1/v-g1-055-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'침착하다'의 의미를 생각하며 가장 알맞은 것을 고르세요.",
@@ -2769,6 +2941,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘침착하다’의 의미를 생각해서 문장을 만들어 보세요."
@@ -2793,11 +2966,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "누구를 어디에서 만났나요? 쓰거나 말하세요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-056-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 '만나다'의 뜻에 가장 가까운 것은 무엇일까요?",
@@ -2817,6 +2992,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "나는 ___ 친구를 만났어요.",
@@ -2846,12 +3022,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-057-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "'타작'의 뜻은 무엇일까?",
@@ -2875,6 +3053,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "벼나 보리 같은 곡식에서 이삭을 ___ 일",
@@ -2901,12 +3080,14 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-058-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 중 '탐스럽다'의 뜻과 가장 비슷한 것은 무엇일까요?",
@@ -2926,6 +3107,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "'탐스럽다'의 의미를 생각하며 문장을 만들어 보세요."
@@ -2951,11 +3133,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "파악하다는 어떤 내용이나 사람의 성격 등을 충분히 이해하는 것을 말합니다.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-059-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "아래 선택지 중에서 '파악하다'의 뜻과 가장 가까운 것을 고르세요.",
@@ -2975,6 +3159,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "글에서 ___(이해하다)___라는 단어를 찾아서 뜻을 생각해 봅시다.",
@@ -3005,11 +3190,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "햅쌀을 보고 어떤 음식이나 의미가 떠오르나요?",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-060-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "햅쌀은 언제 새로 나는 쌀일까?",
@@ -3029,6 +3216,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "햅쌀로 만든 음식을 적어보세요."
@@ -3053,11 +3241,13 @@
           "type": "meet",
           "title": "만나기",
           "prompt": "산타할아버지는 아이들에게 선물을 주기 위해 눈보라를 헤치며 걸어갔어요.",
-          "dialogue": []
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-061-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "‘헤치다’의 의미와 가장 가까운 것은 무엇일까?",
@@ -3077,6 +3267,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
             "prompt": "어려운 일을 ___고 나아가다.",
@@ -3103,12 +3294,19 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
-          "dialogue": []
+          "prompt": "",
+          "dialogue": [
+            "아~ 배고파. 먹이를 찾아야지",
+            "포도밭이 있잖아 빨리 들어가야지",
+            "암탉! 맛있다. 실컷 먹어야지",
+            "음! 배가 너무 불러서 빠져 나갈 수가 없어"
+          ],
+          "imageUrl": "/images/vocab/grade1/v-g1-062-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "얘기한 것과 비슷한 의미의 말은 무엇일까?",
@@ -3128,6 +3326,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "‘활용’의 의미를 생각해서 간단히 적어 보세요."
@@ -3151,15 +3350,16 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "활동 설명",
+          "prompt": "",
           "dialogue": [
-            "친구: 잠깐만, 밖으로 나와 봐.",
-            "나: 집 전화라서 들고 나갈 수가 없어."
-          ]
+            "해-, 햅- 햇-의 쓰임 알아보기"
+          ],
+          "imageUrl": "/images/vocab/grade1/v-g1-063-meet.webp"
         },
         {
           "type": "think",
           "title": "짐작하기",
+          "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
             "prompt": "다음 문장에서 '휴대'의 뜻에 가장 가까운 것은 무엇일까요?",
@@ -3179,6 +3379,7 @@
         {
           "type": "practice",
           "title": "익히기",
+          "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
             "prompt": "휴대에 대해 들은 내용을 적어보세요."

@@ -14,6 +14,9 @@ import type { ListItem } from "@/types/vocab";
 
 const GRADES = [
   { grade: 1, color: "meet", words: 63, reviews: 20, total: 83 },
+  { grade: 2, color: "guess", words: 60, reviews: 15, total: 75 },
+  { grade: 3, color: "explore", words: 43, reviews: 8, total: 51 },
+  { grade: 4, color: "apply", words: 43, reviews: 7, total: 50 },
 ] as const;
 
 const SECTION_COLORS: Record<string, { soft: string; ink: string; line: string; bg: string }> = {

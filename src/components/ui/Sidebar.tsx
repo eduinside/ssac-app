@@ -49,7 +49,7 @@ export function Sidebar() {
             pathname === `/vocab/grade/${g.grade}` ||
             pathname.startsWith(`/vocab/word/v-g${g.grade}`) ||
             pathname.startsWith(`/vocab/review/v-g${g.grade}`);
-          const hasData = g.grade === 1;
+          const hasData = g.grade >= 1 && g.grade <= 4;
 
           return (
             <Link

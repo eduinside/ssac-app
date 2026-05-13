@@ -101,6 +101,18 @@ function SectionContent({
         </span>
       </div>
 
+      {/* Image (meet / think section) */}
+      {"imageUrl" in section && section.imageUrl && (
+        <div className="relative w-full rounded-[16px] overflow-hidden bg-gray-100">
+          <img
+            src={section.imageUrl}
+            alt={section.type === "meet" ? "만나기 삽화" : "짐작하기 삽화"}
+            className="w-full h-auto"
+            style={{ aspectRatio: "auto" }}
+          />
+        </div>
+      )}
+
       {/* Prompt */}
       {section.prompt && (
         <p className="text-[15px] leading-relaxed" style={{ color: "var(--ink-700)" }}>{section.prompt}</p>

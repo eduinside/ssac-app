@@ -56,12 +56,19 @@ src/
 └── types/
     └── vocab.ts                  # 어휘싹 타입 정의
 
-public/data/
-├── manifest.json                 # 전체 콘텐츠 메타
-└── vocab/
-    └── grade4/
-        ├── words.json            # 단어 데이터
-        └── reviews.json          # 다섯고개 데이터
+public/
+├── data/
+│   ├── manifest.json             # 전체 콘텐츠 메타
+│   └── vocab/
+│       └── grade{N}/             # N = 1~4 (현재 배포)
+│           ├── words.json        # 단어 데이터
+│           └── reviews.json      # 다섯고개 데이터
+└── images/
+    └── vocab/
+        └── grade{N}/
+            ├── {id}-meet.webp     # 만나기 삽화 (자동 추출)
+            ├── {id}-think.webp    # 짐작하기 이미지 (수작업)
+            └── {id}-practice.webp # 익히기 이미지 (수작업)
 ```
 
 ---
@@ -80,6 +87,17 @@ public/data/
 ---
 
 ## 데이터 추가 방법
+
+### 현재 배포 학년
+
+| 학년 | 단어 | 다섯고개 |
+|------|------|---------|
+| 1학년 | 63 | 20 |
+| 2학년 | 60 | 15 |
+| 3학년 | 43 | 8 |
+| 4학년 | 43 | 7 |
+
+데이터는 `cho-ssac-lab/scripts/` 파이프라인으로 PDF에서 추출. 상세 절차는 `PDF_TO_JSON.md` 참고.
 
 ### 새 학년 추가
 
@@ -117,10 +135,10 @@ public/data/
       "examples": ["선생님이 수학을 가르치다."],
       "similarWords": ["교육하다", "지도하다"],
       "sections": [
-        { "type": "meet",     "title": "만나기",      "prompt": "...", "dialogue": [...] },
-        { "type": "think",    "title": "짐작하기",    "activity": { "kind": "multipleChoice", ... } },
+        { "type": "meet",     "title": "만나기",    "prompt": "...", "imageUrl": "/images/vocab/grade{N}/{id}-meet.webp", "dialogue": [...] },
+        { "type": "think",    "title": "짐작하기",  "imageUrl": "",  "activity": { "kind": "multipleChoice", ... } },
         { "type": "learn",    "title": "더 알아보기" },
-        { "type": "practice", "title": "익히기",      "activity": { "kind": "freeWrite", ... } }
+        { "type": "practice", "title": "익히기",    "imageUrl": "",  "activity": { "kind": "freeWrite", ... } }
       ]
     }
   ]
@@ -213,3 +231,15 @@ await storage.getFavorites("v-");   // 어휘싹 전체
 | `--section-explore-ink` | `#16785f` | 탐구하기 (민트) |
 | `--section-apply-ink` | `#5b3fb0` | 활용하기 (보라) |
 | `--bg-app` | `#fbfaf7` | 앱 배경 |
+
+---
+
+## 섹션 이미지 첨부 (수작업)
+
+짐작하기·익히기 섹션 이미지는 수작업으로 첨부:
+
+1. PDF에서 해당 영역 크롭 → WebP(quality=85)로 저장
+2. `public/images/vocab/grade{N}/{id}-think.webp` 또는 `{id}-practice.webp`
+3. `words.json` 해당 섹션의 `imageUrl` 필드에 경로 입력
+
+`imageUrl`이 빈 문자열(`""`)이면 이미지를 렌더링하지 않음.

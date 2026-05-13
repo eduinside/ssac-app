@@ -18,6 +18,39 @@
             "vocab/grade1/words.json",
             "vocab/grade1/reviews.json"
           ]
+        },
+        {
+          "key": "grade2",
+          "label": "2학년",
+          "grade": 2,
+          "wordCount": 60,
+          "reviewCount": 15,
+          "files": [
+            "vocab/grade2/words.json",
+            "vocab/grade2/reviews.json"
+          ]
+        },
+        {
+          "key": "grade3",
+          "label": "3학년",
+          "grade": 3,
+          "wordCount": 43,
+          "reviewCount": 8,
+          "files": [
+            "vocab/grade3/words.json",
+            "vocab/grade3/reviews.json"
+          ]
+        },
+        {
+          "key": "grade4",
+          "label": "4학년",
+          "grade": 4,
+          "wordCount": 43,
+          "reviewCount": 7,
+          "files": [
+            "vocab/grade4/words.json",
+            "vocab/grade4/reviews.json"
+          ]
         }
       ]
     },

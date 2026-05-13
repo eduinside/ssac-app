@@ -10,6 +10,7 @@ export interface Section {
   title: string;
   prompt?: string;
   dialogue?: string[];
+  imageUrl?: string;
   definition?: string;
   examples?: string[];
   sentences?: string[];
