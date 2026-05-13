@@ -97,7 +97,12 @@ public/
 | 3학년 | 43 | 8 |
 | 4학년 | 43 | 7 |
 
-데이터는 `cho-ssac-lab/scripts/` 파이프라인으로 PDF에서 추출. 상세 절차는 `PDF_TO_JSON.md` 참고.
+데이터는 `cho-ssac-lab/scripts/` 파이프라인으로 PDF에서 추출. 상세 절차는 [`docs/PDF_TO_JSON.md`](docs/PDF_TO_JSON.md) 참고.
+
+**학년 활성화 정책**
+- `src/app/page.tsx`의 `GRADES` 배열에 등재된 학년만 홈 화면 그리드에 노출
+- `src/components/ui/Sidebar.tsx`의 `hasData` 조건(`grade >= 1 && grade <= 4`)을 만족하는 학년만 사이드바에서 링크로 동작. 그 외 학년(현재 5·6학년)은 클릭 불가 `<div>`로 렌더링
+- 새 학년 데이터 배포 시 두 파일의 조건을 함께 업데이트할 것
 
 ### 새 학년 추가
 

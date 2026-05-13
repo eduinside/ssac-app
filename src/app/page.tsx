@@ -12,6 +12,28 @@ import { storage } from "@/lib/storage";
 import { loadVocabGrade, gradeFromId } from "@/lib/content";
 import type { ListItem } from "@/types/vocab";
 
+const GREETINGS = [
+  // 새벽 (0–5)
+  { hour: [0, 5],  tag: "늦은 밤에도 어휘 한 입!", body: "잠들기 전 마지막으로", em: "한 단어 어때요?" },
+  // 아침 (6–9)
+  { hour: [6, 9],  tag: "좋은 아침이에요!", body: "오늘 아침도 새 어휘와", em: "하루를 열어요!" },
+  // 오전 (10–11)
+  { hour: [10, 11], tag: "집중력이 최고인 시간!", body: "지금이 딱, 어휘 학습", em: "시작할까요?" },
+  // 점심 (12–13)
+  { hour: [12, 13], tag: "점심 한 입, 어휘 한 입!", body: "짬짬이 배우는 어휘가", em: "오래 남아요" },
+  // 오후 (14–17)
+  { hour: [14, 17], tag: "오후 학습 시간이에요!", body: "오늘은 어떤 어휘를", em: "만나볼까요?" },
+  // 저녁 (18–20)
+  { hour: [18, 20], tag: "하루를 마무리해요!", body: "오늘 배운 어휘를", em: "복습해볼까요?" },
+  // 밤 (21–23)
+  { hour: [21, 23], tag: "오늘 하루 어땠나요?", body: "내일을 위해 어휘 하나만", em: "더 익혀요!" },
+] as const;
+
+function getGreeting() {
+  const h = new Date().getHours();
+  return GREETINGS.find(({ hour }) => h >= hour[0] && h <= hour[1]) ?? GREETINGS[4];
+}
+
 const GRADES = [
   { grade: 1, color: "meet", words: 63, reviews: 20, total: 83 },
   { grade: 2, color: "guess", words: 60, reviews: 15, total: 75 },
@@ -139,15 +161,22 @@ export default function HomePage() {
 
         {/* Welcome */}
         <section className="flex flex-col gap-1">
-          <span className="inline-flex items-center gap-1.5 text-xs font-bold" style={{ color: "var(--color-primary-700)" }}>
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--color-primary-500)", boxShadow: "0 0 0 4px var(--color-primary-100)" }} />
-            오늘도 새로운 어휘 한 입!
-          </span>
-          <h1 className="text-[24px] font-extrabold leading-tight" style={{ letterSpacing: "-.025em" }}>
-            오늘은 어떤 어휘를{" "}
-            <em className="not-italic" style={{ color: "var(--color-primary-600)" }}>만나볼까?</em>
-          </h1>
-          <p className="text-sm" style={{ color: "var(--ink-500)" }}>학년을 선택해 어휘 학습을 시작해요</p>
+          {(() => {
+            const g = getGreeting();
+            return (
+              <>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold" style={{ color: "var(--color-primary-700)" }}>
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--color-primary-500)", boxShadow: "0 0 0 4px var(--color-primary-100)" }} />
+                  {g.tag}
+                </span>
+                <h1 className="text-[24px] font-extrabold leading-tight" style={{ letterSpacing: "-.025em" }}>
+                  {g.body}{" "}
+                  <em className="not-italic" style={{ color: "var(--color-primary-600)" }}>{g.em}</em>
+                </h1>
+                <p className="text-sm" style={{ color: "var(--ink-500)" }}>학년을 선택해 어휘 학습을 시작해요</p>
+              </>
+            );
+          })()}
         </section>
 
         {/* Recent history */}

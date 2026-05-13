@@ -51,17 +51,8 @@ export function Sidebar() {
             pathname.startsWith(`/vocab/review/v-g${g.grade}`);
           const hasData = g.grade >= 1 && g.grade <= 4;
 
-          return (
-            <Link
-              key={g.grade}
-              href={`/vocab/grade/${g.grade}`}
-              className="flex items-center gap-2.5 px-3 py-2.5 rounded-[12px] no-underline transition-all duration-[120ms]"
-              style={
-                active
-                  ? { background: g.bg, border: `1px solid ${g.line}`, color: g.ink }
-                  : { color: "var(--ink-700)" }
-              }
-            >
+          const inner = (
+            <>
               <span
                 className="w-7 h-7 rounded-[8px] grid place-items-center text-[13px] font-extrabold shrink-0"
                 style={{
@@ -80,7 +71,26 @@ export function Sidebar() {
                   준비중
                 </span>
               )}
+            </>
+          );
+
+          return hasData ? (
+            <Link
+              key={g.grade}
+              href={`/vocab/grade/${g.grade}`}
+              className="flex items-center gap-2.5 px-3 py-2.5 rounded-[12px] no-underline transition-all duration-[120ms]"
+              style={active ? { background: g.bg, border: `1px solid ${g.line}`, color: g.ink } : { color: "var(--ink-700)" }}
+            >
+              {inner}
             </Link>
+          ) : (
+            <div
+              key={g.grade}
+              className="flex items-center gap-2.5 px-3 py-2.5 rounded-[12px]"
+              style={{ color: "var(--ink-400)" }}
+            >
+              {inner}
+            </div>
           );
         })}
 

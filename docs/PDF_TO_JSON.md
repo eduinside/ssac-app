@@ -443,10 +443,68 @@ for w in extracted_words:
 
 ---
 
-## 5. 알려진 주의사항
+## 5. 검증 체크리스트
+
+### words.json
+
+- [ ] 모든 단어에 `id`, `word`, `grade`, `order`, `page`, `definition` 존재
+- [ ] `id` 형식: `v-gN-XXX` (N=학년, XXX=3자리 순번)
+- [ ] `order`가 `page` 순서와 일치
+- [ ] `sections` 배열에 `meet`, `think`, `learn`, `practice` 4종 모두 포함
+- [ ] `think`·`practice` 섹션에 `imageUrl: ""` 필드 존재 (수작업 이미지 첨부 자리)
+- [ ] `multipleChoice` 활동의 `correctIndex`가 0~3 범위
+- [ ] `fillBlank` 활동의 `blanks`와 `answers` 배열 길이 일치
+- [ ] JSON 유효성: `"`, `\` 등 특수문자 이스케이프 확인
+
+### reviews.json
+
+- [ ] 모든 항목에 `id`, `title`, `page`, `quizzes` 존재
+- [ ] `id` 형식: `v-gN-rXX`
+- [ ] 각 퀴즈의 `hint`가 정답 단어의 초성과 일치
+- [ ] `relatedItemId`가 words.json의 실제 ID를 가리킴
+- [ ] `coversItems`가 해당 다섯고개에서 다루는 단어 ID를 모두 포함
+
+---
+
+## 6. 자주 발생하는 오류 & 대처
+
+| 오류 | 원인 | 대처 |
+|------|------|------|
+| 단어가 누락됨 | PDF 이미지 해상도 낮음 | 200 DPI 이상으로 재변환 |
+| `definition`이 엉뚱한 문장 | 대화문을 뜻으로 혼동 | 프롬프트에 "뜻풀이 문장만" 명시 |
+| `meet.prompt`가 `"활동 설명"` 리터럴 | 프롬프트 예시를 LLM이 그대로 복사 | 예시 값을 `<...>` placeholder 형태로 변경 |
+| `pos`가 비어 있음 | 교재에 품사 미표기 | 표준국어대사전 API로 보완 |
+| 초성 `hint` 오류 | LLM이 받침 처리 실수 | 아래 초성 유틸로 자동 교차 검증 |
+| `sections` 누락 | 단원 구조 파악 실패 | 단원 첫 페이지 이미지를 추가 제공 |
+| JSON 파싱 오류 | 응답에 마크다운 코드블록 포함 | ` ```json ... ``` ` 제거 후 파싱 |
+| 이미지 추출 0건 | `get_image_rects` 반환 없음 | PyMuPDF 버전 확인, `full=True` 옵션 사용 |
+
+---
+
+## 7. 알려진 주의사항
 
 - `answer` 필드는 사용자 입력과 `===` 비교되므로 띄어쓰기·받침 완전 일치 필요.
 - `hint` 초성은 공백 없이 연속 (`"ㄱㄹㅊㄷ"`). 공백 포함 시 UI 글자 간격 깨짐.
-- 삽화가 없는 단어 페이지(텍스트만 있는 경우) `imageUrl` 필드 생략.
+- `imageUrl`이 빈 문자열(`""`)이면 이미지 렌더링 안 함. 삽화 없는 경우 그대로 둘 것.
 - `page` 필드는 목록 혼합 정렬 기준이므로 교재 실제 쪽수와 정확히 일치해야 함.
 - 복수 정답이 필요한 `fillBlank`는 `answers` 배열로 관리하되, 현재 앱 코드는 첫 번째 항목만 비교하므로 코드 수정 필요 시 별도 작업.
+
+---
+
+## 8. 초성 자동 추출 유틸 (검증용)
+
+`hint` 필드 검증 시 사용:
+
+```js
+// cho-ssac-lab/scripts/utils/hangul.js
+function getChosung(str) {
+  const CHO = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
+  return [...str]
+    .map((ch) => {
+      const code = ch.charCodeAt(0) - 0xac00;
+      return code >= 0 && code <= 11171 ? CHO[Math.floor(code / 588)] : "";
+    })
+    .join("");
+}
+// 예: getChosung("가르치다") → "ㄱㄹㅊㄷ"
+```
