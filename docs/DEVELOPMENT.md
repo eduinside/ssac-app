@@ -1,4 +1,4 @@
-# 개발 문서 (DEVELOPMENT.md)
+﻿# 개발 문서 (DEVELOPMENT.md)
 
 > ssac-app — 어휘싹 구현 기록 및 확장 가이드  
 > 마지막 업데이트: 2026-05-12
@@ -106,7 +106,7 @@ await storage.getCompleted("v-g4-")  // 특정 학년만
 | type | 화면 | 색상 테마 |
 |---|---|---|
 | `meet` | 만나기 | 분홍 (section-meet) |
-| `think` | 짐작하기 | 노랑 (section-guess) |
+| `think` | 생각해보기 | 노랑 (section-guess) |
 | `learn` | 더 알아보기 | 민트 (section-explore) |
 | `practice` | 익히기 | 보라 (section-apply) |
 

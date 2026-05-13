@@ -12,7 +12,7 @@ import type { Word, Section } from "@/types/vocab";
 
 const SECTION_STYLE: Record<string, { bg: string; line: string; ink: string; soft: string; label: string }> = {
   meet:     { bg: "var(--section-meet-bg)",    line: "var(--section-meet-line)",    ink: "var(--section-meet-ink)",    soft: "var(--section-meet-soft)",    label: "만나기" },
-  think:    { bg: "var(--section-guess-bg)",   line: "var(--section-guess-line)",   ink: "var(--section-guess-ink)",   soft: "var(--section-guess-soft)",   label: "짐작하기" },
+  think:    { bg: "var(--section-guess-bg)",   line: "var(--section-guess-line)",   ink: "var(--section-guess-ink)",   soft: "var(--section-guess-soft)",   label: "생각해보기" },
   learn:    { bg: "var(--section-explore-bg)", line: "var(--section-explore-line)", ink: "var(--section-explore-ink)", soft: "var(--section-explore-soft)", label: "더 알아보기" },
   practice: { bg: "var(--section-apply-bg)",   line: "var(--section-apply-line)",   ink: "var(--section-apply-ink)",   soft: "var(--section-apply-soft)",   label: "익히기" },
 };
@@ -106,7 +106,7 @@ function SectionContent({
         <div className="relative w-full rounded-[16px] overflow-hidden bg-gray-100">
           <img
             src={section.imageUrl}
-            alt={section.type === "meet" ? "만나기 삽화" : "짐작하기 삽화"}
+            alt={section.type === "meet" ? "만나기 삽화" : "생각해보기 삽화"}
             className="w-full h-auto"
             style={{ aspectRatio: "auto" }}
           />

@@ -1,4 +1,4 @@
-{
+﻿{
   "version": "2026.1",
   "contentType": "vocab",
   "grade": 3,
@@ -29,7 +29,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -88,7 +88,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -144,7 +144,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -202,7 +202,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -256,7 +256,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -307,7 +307,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -361,7 +361,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -415,7 +415,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -469,7 +469,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -527,7 +527,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -583,7 +583,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -637,7 +637,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -691,7 +691,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -747,7 +747,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -802,7 +802,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -856,7 +856,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -911,7 +911,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -965,7 +965,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1019,7 +1019,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1070,7 +1070,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1124,7 +1124,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1179,7 +1179,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1233,7 +1233,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1286,7 +1286,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "prompt": "이 대화를 읽고 '만나요'는 무슨 뜻일까 짐작해 보세요.",
@@ -1338,7 +1338,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1392,7 +1392,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1447,7 +1447,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1500,7 +1500,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1552,7 +1552,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1607,7 +1607,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1660,7 +1660,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1714,7 +1714,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1767,7 +1767,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1822,7 +1822,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1875,7 +1875,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1926,7 +1926,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -1979,7 +1979,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2036,7 +2036,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2090,7 +2090,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2143,7 +2143,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2196,7 +2196,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2247,7 +2247,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
@@ -2301,7 +2301,7 @@
         },
         {
           "type": "think",
-          "title": "짐작하기",
+          "title": "생각해보기",
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",

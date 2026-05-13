@@ -1,4 +1,4 @@
-# 싹 앱 (ssac-app)
+﻿# 싹 앱 (ssac-app)
 
 초등학생을 위한 어휘 학습 PWA. **어휘싹**을 시작으로 개념싹·독해싹·영어싹으로 확장 가능한 멀티 콘텐츠 구조.
 
@@ -67,7 +67,7 @@ public/
     └── vocab/
         └── grade{N}/
             ├── {id}-meet.webp     # 만나기 삽화 (자동 추출)
-            ├── {id}-think.webp    # 짐작하기 이미지 (수작업)
+            ├── {id}-think.webp    # 생각해보기 이미지 (수작업)
             └── {id}-practice.webp # 익히기 이미지 (수작업)
 ```
 
@@ -78,7 +78,7 @@ public/
 ```
 /                          홈 (학년 선택 + 모듈 스위처)
 /vocab/grade/[grade]       학년 어휘 목록
-/vocab/word/[id]           단어 상세 (만나기→짐작하기→더알아보기→익히기)
+/vocab/word/[id]           단어 상세 (만나기→생각해보기→더알아보기→익히기)
 /vocab/review/[id]         다섯고개 (영상 + 초성 퀴즈)
 /search                    통합 검색
 /favorites                 즐겨찾기
@@ -141,7 +141,7 @@ public/
       "similarWords": ["교육하다", "지도하다"],
       "sections": [
         { "type": "meet",     "title": "만나기",    "prompt": "...", "imageUrl": "/images/vocab/grade{N}/{id}-meet.webp", "dialogue": [...] },
-        { "type": "think",    "title": "짐작하기",  "imageUrl": "",  "activity": { "kind": "multipleChoice", ... } },
+        { "type": "think",    "title": "생각해보기",  "imageUrl": "",  "activity": { "kind": "multipleChoice", ... } },
         { "type": "learn",    "title": "더 알아보기" },
         { "type": "practice", "title": "익히기",    "imageUrl": "",  "activity": { "kind": "freeWrite", ... } }
       ]
@@ -232,7 +232,7 @@ await storage.getFavorites("v-");   // 어휘싹 전체
 | `--color-primary-500` | `#2ea268` | 새싹 그린 (CTA) |
 | `--color-secondary-500` | `#f59e3c` | 오렌지 (즐겨찾기) |
 | `--section-meet-ink` | `#c43a64` | 만나기 (분홍) |
-| `--section-guess-ink` | `#946a05` | 짐작하기 (노랑) |
+| `--section-guess-ink` | `#946a05` | 생각해보기 (노랑) |
 | `--section-explore-ink` | `#16785f` | 탐구하기 (민트) |
 | `--section-apply-ink` | `#5b3fb0` | 활용하기 (보라) |
 | `--bg-app` | `#fbfaf7` | 앱 배경 |
@@ -241,7 +241,7 @@ await storage.getFavorites("v-");   // 어휘싹 전체
 
 ## 섹션 이미지 첨부 (수작업)
 
-짐작하기·익히기 섹션 이미지는 수작업으로 첨부:
+생각해보기·익히기 섹션 이미지는 수작업으로 첨부:
 
 1. PDF에서 해당 영역 크롭 → WebP(quality=85)로 저장
 2. `public/images/vocab/grade{N}/{id}-think.webp` 또는 `{id}-practice.webp`

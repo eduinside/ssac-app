@@ -1,4 +1,4 @@
-# PDF → JSON 파이프라인 설계
+﻿# PDF → JSON 파이프라인 설계
 
 > 어휘싹 교재 PDF를 앱 데이터 JSON + 이미지 에셋으로 변환하는 전 과정 문서.  
 > 작업 시간 단축 전략 포함.
@@ -24,7 +24,7 @@ PDF 원본
   │     ├─▶ [Step 3b] 만나기 이미지 크롭 → WebP 변환
   │     │       → public/images/vocab/grade{N}/{id}-meet.webp
   │     │
-  │     └─▶ [Step 3c] 짐작하기 이미지 크롭 → WebP 변환 (수작업 또는 자동)
+  │     └─▶ [Step 3c] 생각해보기 이미지 크롭 → WebP 변환 (수작업 또는 자동)
   │               → public/images/vocab/grade{N}/{id}-think.webp
   │
   └─▶ 다섯고개 페이지
@@ -48,7 +48,7 @@ PDF 원본
 | 섹션 | 이미지 역할 | 파일명 규칙 | 추출 방식 |
 |------|------------|------------|----------|
 | **만나기** (meet) | 단어가 쓰인 장면 삽화 | `{id}-meet.webp` | 자동 (PDF 내장 이미지) |
-| **짐작하기** (think) | 문제 보기 또는 보조 삽화 | `{id}-think.webp` | 수작업 첨부 |
+| **생각해보기** (think) | 문제 보기 또는 보조 삽화 | `{id}-think.webp` | 수작업 첨부 |
 | **익히기** (practice) | 활동 지시문 보조 삽화 | `{id}-practice.webp` | 수작업 첨부 |
 
 세 섹션 모두 `Section.imageUrl` 필드에 경로를 저장. 이미지가 없으면 필드 생략.
@@ -219,7 +219,7 @@ pip install pymupdf pillow anthropic
 ```json
 {
   "type": "think",
-  "title": "짐작하기",
+  "title": "생각해보기",
   "imageUrl": "/images/vocab/grade1/v-g1-001-think.webp",
   "activity": {
     "kind": "multipleChoice",
@@ -253,16 +253,16 @@ public/
     └── vocab/
         └── grade{N}/
             ├── v-g1-001-meet.webp      ← 만나기 삽화 (자동 추출)
-            ├── v-g1-001-think.webp     ← 짐작하기 이미지 (수작업 첨부)
+            ├── v-g1-001-think.webp     ← 생각해보기 이미지 (수작업 첨부)
             ├── v-g1-001-practice.webp  ← 익히기 이미지 (수작업 첨부)
             ├── v-g1-002-meet.webp
             └── ...
 ```
 
-**수작업 첨부 절차 (짐작하기 / 익히기)**:
+**수작업 첨부 절차 (생각해보기 / 익히기)**:
 1. PDF에서 해당 페이지 이미지 영역 직접 크롭
 2. `public/images/vocab/grade{N}/{id}-{섹션}.webp` 로 저장 (WebP, quality=85)
-   - 짐작하기: `{id}-think.webp`
+   - 생각해보기: `{id}-think.webp`
    - 익히기: `{id}-practice.webp`
 3. 해당 단어의 섹션에 `"imageUrl": "/images/vocab/grade{N}/{id}-{섹션}.webp"` 추가
 
@@ -379,7 +379,7 @@ def batch_extract(image_dir: str, page_type: str, max_workers: int = 4):
 def detect_page_type(text: str) -> str:
     if "다섯고개" in text:
         return "review"
-    if any(kw in text for kw in ["만나기", "짐작하기", "익히기"]):
+    if any(kw in text for kw in ["만나기", "생각해보기", "익히기"]):
         return "word"
     return "other"
 ```
