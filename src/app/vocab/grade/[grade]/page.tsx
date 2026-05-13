@@ -1,5 +1,7 @@
 import GradeListClient from "./GradeListClient";
 
+export const runtime = "edge";
+
 interface Props {
   params: Promise<{ grade: string }>;
 }
