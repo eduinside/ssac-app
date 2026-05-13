@@ -42,26 +42,26 @@
       "page": 16,
       "coversPages": "7쪽~14쪽 다시보기",
       "coversItems": [
+        "v-g1-004",
         "v-g1-005",
-        "v-g1-006",
-        "v-g1-007"
+        "v-g1-006"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/37684543_1811986381_mp4.mp4",
       "quizzes": [
         {
-          "hint": "ㄱ다",
-          "answer": "걷다",
-          "relatedItemId": "v-g1-005"
+          "hint": "ㄱㄷ",
+          "answer": "겪다",
+          "relatedItemId": "v-g1-004"
         },
         {
           "hint": "ㄱㅅ하다",
           "answer": "공손하다",
-          "relatedItemId": "v-g1-006"
+          "relatedItemId": "v-g1-005"
         },
         {
           "hint": "ㄱㅂ하다",
           "answer": "구별하다",
-          "relatedItemId": "v-g1-007"
+          "relatedItemId": "v-g1-006"
         }
       ]
     },
@@ -73,26 +73,26 @@
       "page": 31,
       "coversPages": "17쪽~22쪽 다시보기",
       "coversItems": [
+        "v-g1-007",
         "v-g1-008",
-        "v-g1-009",
-        "v-g1-010"
+        "v-g1-009"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/35267366_1781607205_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㄲㄹㅁ",
           "answer": "꾸러미",
-          "relatedItemId": "v-g1-008"
+          "relatedItemId": "v-g1-007"
         },
         {
           "hint": "ㄲㅁ다",
           "answer": "꿰매다",
-          "relatedItemId": "v-g1-009"
+          "relatedItemId": "v-g1-008"
         },
         {
           "hint": "ㄴ다",
           "answer": "낚다",
-          "relatedItemId": "v-g1-010"
+          "relatedItemId": "v-g1-009"
         }
       ]
     },
@@ -104,26 +104,26 @@
       "page": 32,
       "coversPages": "23쪽~30쪽 다시보기",
       "coversItems": [
+        "v-g1-010",
         "v-g1-011",
-        "v-g1-012",
-        "v-g1-013"
+        "v-g1-012"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/35414119_1761548395_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㄴㅅ",
           "answer": "낭송",
-          "relatedItemId": "v-g1-011"
+          "relatedItemId": "v-g1-010"
         },
         {
           "hint": "ㄴㄱ",
-          "answer": "날개",
-          "relatedItemId": "v-g1-012"
+          "answer": "낱개",
+          "relatedItemId": "v-g1-011"
         },
         {
           "hint": "ㄴㅁ",
           "answer": "낱말",
-          "relatedItemId": "v-g1-013"
+          "relatedItemId": "v-g1-012"
         }
       ]
     },
@@ -135,26 +135,26 @@
       "page": 45,
       "coversPages": "33쪽~38쪽 다시보기",
       "coversItems": [
+        "v-g1-013",
         "v-g1-014",
-        "v-g1-015",
-        "v-g1-016"
+        "v-g1-015"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/36232833_1820916224_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㄴㄹ다",
           "answer": "누리다",
-          "relatedItemId": "v-g1-014"
+          "relatedItemId": "v-g1-013"
         },
         {
           "hint": "ㄴㅇㄱ보다",
           "answer": "눈여겨보다",
-          "relatedItemId": "v-g1-015"
+          "relatedItemId": "v-g1-014"
         },
         {
           "hint": "ㄷㄷ다",
           "answer": "다듬다",
-          "relatedItemId": "v-g1-016"
+          "relatedItemId": "v-g1-015"
         }
       ]
     },
@@ -166,26 +166,26 @@
       "page": 46,
       "coversPages": "39쪽~44쪽 다시보기",
       "coversItems": [
+        "v-g1-016",
         "v-g1-017",
-        "v-g1-018",
-        "v-g1-019"
+        "v-g1-018"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/42908145_1752026552_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㄷㅇ",
           "answer": "단위",
+          "relatedItemId": "v-g1-016"
+        },
+        {
+          "hint": "ㄷㄷ",
+          "answer": "닳다",
           "relatedItemId": "v-g1-017"
         },
         {
           "hint": "ㄷ다",
-          "answer": "닮다",
-          "relatedItemId": "v-g1-018"
-        },
-        {
-          "hint": "ㄷ다",
           "answer": "닿다",
-          "relatedItemId": "v-g1-019"
+          "relatedItemId": "v-g1-018"
         }
       ]
     },
@@ -197,26 +197,26 @@
       "page": 59,
       "coversPages": "47쪽~52쪽 다시보기",
       "coversItems": [
+        "v-g1-019",
         "v-g1-020",
-        "v-g1-021",
-        "v-g1-022"
+        "v-g1-021"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/38259673_1801799921_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㄷㄱ",
           "answer": "대가",
-          "relatedItemId": "v-g1-020"
+          "relatedItemId": "v-g1-019"
         },
         {
           "hint": "ㄷㅊ",
           "answer": "대출",
-          "relatedItemId": "v-g1-021"
+          "relatedItemId": "v-g1-020"
         },
         {
           "hint": "ㄷㅍ하다",
           "answer": "대피하다",
-          "relatedItemId": "v-g1-022"
+          "relatedItemId": "v-g1-021"
         }
       ]
     },
@@ -228,26 +228,26 @@
       "page": 60,
       "coversPages": "53쪽~58쪽 다시보기",
       "coversItems": [
+        "v-g1-022",
         "v-g1-023",
-        "v-g1-024",
-        "v-g1-025"
+        "v-g1-024"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/36094531_1820726010_mp4.mp4",
       "quizzes": [
         {
-          "hint": "ㄷㅍㅇ하다",
-          "answer": "되풀이하다",
-          "relatedItemId": "v-g1-023"
+          "hint": "ㄷㅍㅇ되다",
+          "answer": "되풀이되다",
+          "relatedItemId": "v-g1-022"
         },
         {
-          "hint": "ㄷ보다",
-          "answer": "돌보다",
-          "relatedItemId": "v-g1-024"
+          "hint": "ㄷㄹ보다",
+          "answer": "둘러보다",
+          "relatedItemId": "v-g1-023"
         },
         {
           "hint": "ㄷㄹ나다",
           "answer": "드러나다",
-          "relatedItemId": "v-g1-025"
+          "relatedItemId": "v-g1-024"
         }
       ]
     },
@@ -259,26 +259,26 @@
       "page": 73,
       "coversPages": "61쪽~66쪽 다시보기",
       "coversItems": [
+        "v-g1-025",
         "v-g1-026",
-        "v-g1-027",
-        "v-g1-028"
+        "v-g1-027"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/39323454_1753671589_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅁㄷ다",
           "answer": "맴돌다",
-          "relatedItemId": "v-g1-026"
+          "relatedItemId": "v-g1-025"
         },
         {
           "hint": "ㅁㅆ하다",
           "answer": "머쓱하다",
-          "relatedItemId": "v-g1-027"
+          "relatedItemId": "v-g1-026"
         },
         {
           "hint": "ㅂㅊ하다",
           "answer": "방치하다",
-          "relatedItemId": "v-g1-028"
+          "relatedItemId": "v-g1-027"
         }
       ]
     },
@@ -290,26 +290,26 @@
       "page": 74,
       "coversPages": "67쪽~72쪽 다시보기",
       "coversItems": [
+        "v-g1-028",
         "v-g1-029",
-        "v-g1-030",
-        "v-g1-031"
+        "v-g1-030"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/36603489_1774963183_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅂㅇ",
           "answer": "배열",
-          "relatedItemId": "v-g1-029"
+          "relatedItemId": "v-g1-028"
         },
         {
           "hint": "ㅂㅊ",
           "answer": "벌초",
-          "relatedItemId": "v-g1-030"
+          "relatedItemId": "v-g1-029"
         },
         {
           "hint": "ㅂㅁ",
           "answer": "별명",
-          "relatedItemId": "v-g1-031"
+          "relatedItemId": "v-g1-030"
         }
       ]
     },
@@ -321,26 +321,26 @@
       "page": 89,
       "coversPages": "75쪽~80쪽 다시보기",
       "coversItems": [
+        "v-g1-031",
         "v-g1-032",
-        "v-g1-033",
-        "v-g1-034"
+        "v-g1-033"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/37784207_1746971654_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅂㅎ",
           "answer": "부호",
-          "relatedItemId": "v-g1-032"
+          "relatedItemId": "v-g1-031"
         },
         {
           "hint": "ㅂㄹㅂㅊ",
           "answer": "분리배출",
-          "relatedItemId": "v-g1-033"
+          "relatedItemId": "v-g1-032"
         },
         {
           "hint": "ㅂㅇ다",
           "answer": "붙이다",
-          "relatedItemId": "v-g1-034"
+          "relatedItemId": "v-g1-033"
         }
       ]
     },
@@ -352,26 +352,26 @@
       "page": 90,
       "coversPages": "81쪽~88쪽 다시보기",
       "coversItems": [
+        "v-g1-034",
         "v-g1-035",
-        "v-g1-036",
-        "v-g1-038"
+        "v-g1-036"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/43979632_1789787319_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅅㅎ",
           "answer": "상황",
-          "relatedItemId": "v-g1-035"
+          "relatedItemId": "v-g1-034"
         },
         {
           "hint": "ㅅ",
           "answer": "샘",
-          "relatedItemId": "v-g1-036"
+          "relatedItemId": "v-g1-035"
         },
         {
           "hint": "ㅅㄷㄹ다",
           "answer": "서두르다",
-          "relatedItemId": "v-g1-038"
+          "relatedItemId": "v-g1-036"
         }
       ]
     },
@@ -383,26 +383,26 @@
       "page": 103,
       "coversPages": "91쪽~96쪽 다시보기",
       "coversItems": [
-        "v-g1-039",
-        "v-g1-040",
-        "v-g1-041"
+        "v-g1-037",
+        "v-g1-038",
+        "v-g1-039"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/43919559_1763002670_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅅㅂ하다",
           "answer": "소복하다",
-          "relatedItemId": "v-g1-039"
+          "relatedItemId": "v-g1-037"
         },
         {
           "hint": "ㅅㅇ오르다",
           "answer": "솟아오르다",
-          "relatedItemId": "v-g1-040"
+          "relatedItemId": "v-g1-038"
         },
         {
           "hint": "ㅅㄹ다",
           "answer": "실리다",
-          "relatedItemId": "v-g1-041"
+          "relatedItemId": "v-g1-039"
         }
       ]
     },
@@ -414,26 +414,26 @@
       "page": 104,
       "coversPages": "97쪽~102쪽 다시보기",
       "coversItems": [
-        "v-g1-042",
-        "v-g1-043",
-        "v-g1-044"
+        "v-g1-040",
+        "v-g1-041",
+        "v-g1-042"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/43919559_1763002670_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅆㅇ",
           "answer": "쓰임",
-          "relatedItemId": "v-g1-042"
+          "relatedItemId": "v-g1-040"
         },
         {
           "hint": "ㅇㅉㅇ보다",
-          "answer": "여쭤보다",
-          "relatedItemId": "v-g1-043"
+          "answer": "여쭈어보다",
+          "relatedItemId": "v-g1-041"
         },
         {
           "hint": "ㅇㅅ",
           "answer": "역사",
-          "relatedItemId": "v-g1-044"
+          "relatedItemId": "v-g1-042"
         }
       ]
     },
@@ -445,26 +445,26 @@
       "page": 117,
       "coversPages": "105쪽~110쪽 다시보기",
       "coversItems": [
-        "v-g1-045",
-        "v-g1-046",
-        "v-g1-047"
+        "v-g1-043",
+        "v-g1-044",
+        "v-g1-045"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/39099178_1826561563_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅇㄷ다",
           "answer": "엿듣다",
-          "relatedItemId": "v-g1-045"
+          "relatedItemId": "v-g1-043"
         },
         {
           "hint": "ㅇㅅ",
           "answer": "이삭",
-          "relatedItemId": "v-g1-046"
+          "relatedItemId": "v-g1-044"
         },
         {
           "hint": "ㅇㄱ",
           "answer": "입김",
-          "relatedItemId": "v-g1-047"
+          "relatedItemId": "v-g1-045"
         }
       ]
     },
@@ -476,26 +476,26 @@
       "page": 118,
       "coversPages": "111쪽~116쪽 다시보기",
       "coversItems": [
-        "v-g1-048",
-        "v-g1-049",
-        "v-g1-050"
+        "v-g1-046",
+        "v-g1-047",
+        "v-g1-048"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/37161016_1791910875_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅈㅇ",
           "answer": "적용",
-          "relatedItemId": "v-g1-048"
+          "relatedItemId": "v-g1-046"
         },
         {
           "hint": "ㅈㅅ하다",
           "answer": "전시하다",
-          "relatedItemId": "v-g1-049"
+          "relatedItemId": "v-g1-047"
         },
         {
           "hint": "ㅈㅈ다",
           "answer": "점잖다",
-          "relatedItemId": "v-g1-050"
+          "relatedItemId": "v-g1-048"
         }
       ]
     },
@@ -507,26 +507,26 @@
       "page": 133,
       "coversPages": "119쪽~124쪽 다시보기",
       "coversItems": [
-        "v-g1-051",
-        "v-g1-052",
-        "v-g1-053"
+        "v-g1-049",
+        "v-g1-050",
+        "v-g1-051"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/36200793_1791304362_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅊㄹ",
           "answer": "차례",
-          "relatedItemId": "v-g1-051"
+          "relatedItemId": "v-g1-049"
         },
         {
           "hint": "ㅊㅂ",
           "answer": "차별",
-          "relatedItemId": "v-g1-052"
+          "relatedItemId": "v-g1-050"
         },
         {
           "hint": "ㅊㅎ",
           "answer": "체험",
-          "relatedItemId": "v-g1-053"
+          "relatedItemId": "v-g1-051"
         }
       ]
     },
@@ -538,26 +538,26 @@
       "page": 134,
       "coversPages": "125쪽~132쪽 다시보기",
       "coversItems": [
-        "v-g1-054",
-        "v-g1-055",
-        "v-g1-057"
+        "v-g1-052",
+        "v-g1-053",
+        "v-g1-054"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/39250506_1743084716_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅊㅈ하다",
           "answer": "충전하다",
-          "relatedItemId": "v-g1-054"
+          "relatedItemId": "v-g1-052"
         },
         {
           "hint": "ㅊㅊ하다",
           "answer": "침착하다",
-          "relatedItemId": "v-g1-055"
+          "relatedItemId": "v-g1-053"
         },
         {
           "hint": "ㅌㅈ",
           "answer": "타작",
-          "relatedItemId": "v-g1-057"
+          "relatedItemId": "v-g1-054"
         }
       ]
     },
@@ -569,26 +569,26 @@
       "page": 147,
       "coversPages": "135쪽~140쪽 다시보기",
       "coversItems": [
-        "v-g1-058",
-        "v-g1-059",
-        "v-g1-060"
+        "v-g1-055",
+        "v-g1-056",
+        "v-g1-057"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/39600333_1797748555_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅌ스럽다",
           "answer": "탐스럽다",
-          "relatedItemId": "v-g1-058"
+          "relatedItemId": "v-g1-055"
         },
         {
           "hint": "ㅍㅇ하다",
           "answer": "파악하다",
-          "relatedItemId": "v-g1-059"
+          "relatedItemId": "v-g1-056"
         },
         {
           "hint": "ㅎㅆ",
           "answer": "햅쌀",
-          "relatedItemId": "v-g1-060"
+          "relatedItemId": "v-g1-057"
         }
       ]
     },
@@ -600,26 +600,26 @@
       "page": 148,
       "coversPages": "141쪽~146쪽 다시보기",
       "coversItems": [
-        "v-g1-061",
-        "v-g1-062",
-        "v-g1-063"
+        "v-g1-058",
+        "v-g1-059",
+        "v-g1-060"
       ],
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/38965093_1745925255_mp4.mp4",
       "quizzes": [
         {
           "hint": "ㅎㅊ다",
           "answer": "헤치다",
-          "relatedItemId": "v-g1-061"
+          "relatedItemId": "v-g1-058"
         },
         {
           "hint": "ㅎㅇ",
           "answer": "활용",
-          "relatedItemId": "v-g1-062"
+          "relatedItemId": "v-g1-059"
         },
         {
           "hint": "ㅎㄷ",
           "answer": "휴대",
-          "relatedItemId": "v-g1-063"
+          "relatedItemId": "v-g1-060"
         }
       ]
     }

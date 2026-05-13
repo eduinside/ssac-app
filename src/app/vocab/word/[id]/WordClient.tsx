@@ -94,7 +94,7 @@ function SectionContent({
       {/* Eyebrow */}
       <div className="flex items-center gap-2">
         <span
-          className="h-6 px-3 rounded-full text-[11px] font-bold uppercase tracking-[.06em]"
+          className="h-6 px-3 rounded-full text-[11px] font-bold uppercase tracking-[.06em] leading-none flex items-center"
           style={{ background: style.bg, color: style.ink }}
         >
           {section.title}
@@ -103,12 +103,11 @@ function SectionContent({
 
       {/* Image (meet / think section) */}
       {"imageUrl" in section && section.imageUrl && (
-        <div className="relative w-full rounded-[16px] overflow-hidden bg-gray-100">
+        <div className="relative mx-auto max-w-sm rounded-[16px] overflow-hidden bg-white">
           <img
             src={section.imageUrl}
             alt={section.type === "meet" ? "만나기 삽화" : "생각해보기 삽화"}
             className="w-full h-auto"
-            style={{ aspectRatio: "auto" }}
           />
         </div>
       )}

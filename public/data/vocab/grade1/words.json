@@ -9,9 +9,9 @@
       "order": 1,
       "word": "가로지르다",
       "pos": "동사",
-      "definition": "어떤 곳을 가로 등 등의 방황으로 질러서 지나가다.",
+      "definition": "어떤 곳을 가로로 건너가거나 지나가다.",
       "examples": [
-        "나는 공원을 가로질러 친구 집에 놀러 갔다."
+        "강아지가 개울을 가로질러 건너갔다."
       ],
       "similarWords": [],
       "page": 2,
@@ -19,8 +19,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "강아지가 길을 가로질러 달려갑니다.",
-          "dialogue": []
+          "prompt": "강아지가 개울을 가로질러 건너가고 있어요.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-001-meet.webp"
         },
         {
           "type": "think",
@@ -30,7 +31,7 @@
             "kind": "multipleChoice",
             "prompt": "'가로지르다'의 의미로 옳은 것을 고르세요.",
             "options": [
-              "가로를 질러서 지나가다",
+              "가로로 지나가다",
               "하늘에서 떨어지다",
               "달리기를 하다",
               "책을 읽다"
@@ -62,10 +63,10 @@
       "order": 2,
       "word": "간신히",
       "pos": "부사",
-      "definition": "토끼는 간신히 목숨을 건졌다. 우리 가족은 간신히 시간을 내어 영화를 보러 갔다.",
+      "definition": "어떤 일이 거의 실패할 뻔했으나 가까스로 이루어지다.",
       "examples": [
-        "토끼는 간신히 목숨을 건졌다.",
-        "우리 가족은 간신히 시간을 내어 영화를 보러 갔다."
+        "형은 시험에 간신히 합격했다.",
+        "버스가 나갈 때 간신히 탔다."
       ],
       "similarWords": [],
       "page": 4,
@@ -73,7 +74,7 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "이 단어를 사용하는 문장을 생각해 보세요.",
+          "prompt": "이 학생이 간신히 학교에 도착했어요.",
           "dialogue": [],
           "imageUrl": "/images/vocab/grade1/v-g1-002-meet.webp"
         },
@@ -120,9 +121,10 @@
       "order": 3,
       "word": "겨루다",
       "pos": "동사",
-      "definition": "서로 버티어 승부를 다투다. *승부: 이기고 지는 것",
+      "definition": "서로 버티어 승부를 다투다.",
       "examples": [
-        "친구들과 줄다리기 놀이를 하며 거루다를 했어요."
+        "태권도 대회에서 친구와 겨루었다.",
+        "우리는 줄다리기로 겨루었다."
       ],
       "similarWords": [],
       "page": 6,
@@ -130,7 +132,7 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "거루다라는 단어를 읽어 보세요.",
+          "prompt": "두 선수가 태권도에서 겨루고 있어요.",
           "dialogue": [],
           "imageUrl": "/images/vocab/grade1/v-g1-003-meet.webp"
         },
@@ -169,20 +171,23 @@
       "id": "v-g1-004",
       "grade": 1,
       "order": 4,
-      "word": "만나다",
+      "word": "겪다",
       "pos": "동사",
-      "definition": "누군가와 함께 있거나, 어떤 장소에서 사람들을 보거나 알게 될 때 이르는 말입니다.",
+      "definition": "어떤 일을 당하여 치르거나 직접 경험하다.",
       "examples": [
-        "나는 친구를 공원에서 만났어요."
+        "나는 전학을 가서 새로운 일들을 많이 겪었다.",
+        "우리는 겨울의 추위를 겪었다."
       ],
       "similarWords": [],
-      "page": 8,
+      "page": 10,
       "sections": [
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "서로 처음 만나는 활동입니다. 친구나 가족을 만나보세요.",
-          "dialogue": [],
+          "prompt": "할머니가 이런 일들을 많이 겪으셨어요.",
+          "dialogue": [
+            "○○: 간신히"
+          ],
           "imageUrl": "/images/vocab/grade1/v-g1-004-meet.webp"
         },
         {
@@ -191,64 +196,12 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "다음 중 '만나다'의 의미에 가장 가까운 것은 무엇일까요?",
+            "prompt": "'겪다'의 의미로 알맞은 것을 고르세요.",
             "options": [
-              "헤어지는 것",
-              "만남과 함께 함",
-              "잃어버림",
-              "숨거나 피하는 것"
-            ],
-            "correctIndex": 1
-          }
-        },
-        {
-          "type": "learn",
-          "title": "더 알아보기"
-        },
-        {
-          "type": "practice",
-          "title": "익히기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "freeWrite",
-            "prompt": "나는 ___에서 친구를 만납니다."
-          }
-        }
-      ]
-    },
-    {
-      "id": "v-g1-005",
-      "grade": 1,
-      "order": 5,
-      "word": "걷다",
-      "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이",
-      "examples": [
-        "나는 공원에서 걷는다."
-      ],
-      "similarWords": [],
-      "page": 10,
-      "sections": [
-        {
-          "type": "meet",
-          "title": "만나기",
-          "prompt": "",
-          "dialogue": [
-            "○○: 간신히"
-          ]
-        },
-        {
-          "type": "think",
-          "title": "생각해보기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "multipleChoice",
-            "prompt": "걷다의 의미는 무엇일까?",
-            "options": [
-              "걸어서 이동하다",
-              "뛰다",
-              "달리다",
-              "앉아 있다"
+              "어떤 일을 직접 경험하다",
+              "책을 읽다",
+              "음식을 만들다",
+              "잠을 자다"
             ],
             "correctIndex": 0
           }
@@ -263,20 +216,21 @@
           "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
-            "prompt": "걷다의 뜻을 글로 적으세요."
+            "prompt": "'겪다'를 사용한 문장을 써 보세요."
           }
         }
       ]
     },
     {
-      "id": "v-g1-006",
+      "id": "v-g1-005",
       "grade": 1,
-      "order": 6,
+      "order": 5,
       "word": "공손하다",
       "pos": "형용사",
       "definition": "말이나 행동이 겸손하고 예의 바르다.",
       "examples": [
-        "그는 항상 공손하게 말한다."
+        "할아버지께 공손하게 인사했다.",
+        "그 학생은 언제나 공손한 태도를 가지고 있다."
       ],
       "similarWords": [],
       "page": 12,
@@ -284,8 +238,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "선생님께 인사를 했다.",
-          "dialogue": []
+          "prompt": "할아버지께 공손하게 인사하는 모습을 봅시다.",
+          "dialogue": [],
+          "imageUrl": "/images/vocab/grade1/v-g1-005-meet.webp"
         },
         {
           "type": "think",
@@ -295,10 +250,10 @@
             "kind": "multipleChoice",
             "prompt": "'공손하다'의 뜻으로 알맞은 것을 고르세요.",
             "options": [
-              "말이나 행동이 겸손하고 예의 바르다.",
-              "무례하거나 잘못된 행동이다.",
-              "친구를 무시하는 행동이다.",
-              "눈치를 보지 않고 행동한다."
+              "말이나 행동이 겸손하고 예의 바르다",
+              "무례하거나 잘못된 행동이다",
+              "친구를 무시하는 행동이다",
+              "눈치 없이 행동한다"
             ],
             "correctIndex": 0
           }
@@ -319,15 +274,15 @@
       ]
     },
     {
-      "id": "v-g1-007",
+      "id": "v-g1-006",
       "grade": 1,
-      "order": 7,
+      "order": 6,
       "word": "구별하다",
       "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이는 성질이나 종류에 따라 갈라놓는다.",
+      "definition": "성질이나 종류에 따라 갈라놓다.",
       "examples": [
         "진짜와 가짜를 구별하다.",
-        "요즘 옷은 남녀의 구별이 없는 경우가 많다."
+        "색깔에 따라 구별하여 정렬했다."
       ],
       "similarWords": [],
       "page": 14,
@@ -335,9 +290,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "선생님이 보여주는 그림에서 진짜와 가짜를 구별해 볼까요?",
+          "prompt": "선생님이 보여주는 물건들에서 같은 것과 다른 것을 구별해 볼까요?",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-007-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-006-meet.webp"
         },
         {
           "type": "think",
@@ -347,10 +302,10 @@
             "kind": "multipleChoice",
             "prompt": "이 그림은 무엇일까요?",
             "options": [
-              "우주선",
-              "자동차",
-              "꽃",
-              "개"
+              "의자",
+              "책상",
+              "램프",
+              "그릇"
             ],
             "correctIndex": 0
           }
@@ -371,14 +326,14 @@
       ]
     },
     {
-      "id": "v-g1-008",
+      "id": "v-g1-007",
       "grade": 1,
-      "order": 8,
+      "order": 7,
       "word": "꾸러미",
       "pos": "명사",
-      "definition": "‘꾸러미’의 뜻을 읽어 봅시다.",
+      "definition": "한 데 묶거나 꾸러 쓴 물건",
       "examples": [
-        "한 데 묶거나 꾸러 쓴 물건"
+        "엄마가 꾸러미를 들고 있어요."
       ],
       "similarWords": [],
       "page": 18,
@@ -386,9 +341,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "여러 물건을 한 데 묶은 꾸러미를 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-008-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-007-meet.webp"
         },
         {
           "type": "think",
@@ -398,10 +353,10 @@
             "kind": "multipleChoice",
             "prompt": "‘꾸러미’의 뜻으로 알맞은 것을 고르세요.",
             "options": [
-              "한 데 묶거나 꾸러 쓴 물건",
-              "책상 위에 놓인 그림책",
-              "사과와 바나나가 있는 그림",
-              "집 안에 있는 가구"
+              "한 데 묶거나 꾼 물건",
+              "책상 위에 놓인 물건",
+              "나무 위의 새둥지",
+              "집안의 가구"
             ],
             "correctIndex": 0
           }
@@ -432,15 +387,15 @@
       ]
     },
     {
-      "id": "v-g1-009",
+      "id": "v-g1-008",
       "grade": 1,
-      "order": 9,
+      "order": 8,
       "word": "꿰매다",
       "pos": "동사",
-      "definition": "옷 따위의 해지거나 뽑어진 데를 바늘로 찌르거나 깁거나 읽어매다.",
+      "definition": "옷이나 물건의 구멍을 바늘로 깁거나 막다",
       "examples": [
-        "아버지께서 구멍난 양말을 깨매주셨다.",
-        "나는 넘어진서 무릎이 찢어져서 깨매었다."
+        "할머니께서 찢어진 옷을 꿰매주셨다.",
+        "인형의 구멍을 꿰매었다."
       ],
       "similarWords": [],
       "page": 20,
@@ -448,9 +403,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "내가 제일 좋아하는 곰들이 인형에 구멍이 나서 할머니께서 깨매주셨다.",
+          "prompt": "찢어진 인형을 바늘로 꿰매고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-009-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-008-meet.webp"
         },
         {
           "type": "think",
@@ -460,12 +415,12 @@
             "kind": "multipleChoice",
             "prompt": "그림을 보고 ‘깨매다’의 뜻을 고르세요.",
             "options": [
-              "구멍을 막다",
-              "구멍을 내다",
-              "구멍을 깨다",
-              "구멍을 덮다"
+              "구멍을 바늘로 깁다",
+              "구멍을 크게 하다",
+              "옷을 벗다",
+              "옷을 입다"
             ],
-            "correctIndex": 2
+            "correctIndex": 0
           }
         },
         {
@@ -484,14 +439,14 @@
       ]
     },
     {
-      "id": "v-g1-010",
+      "id": "v-g1-009",
       "grade": 1,
-      "order": 10,
+      "order": 9,
       "word": "낚다",
       "pos": "명사",
-      "definition": "생선으로 물고기를 잡거나 매다는 행위 또는 그 물고기.",
+      "definition": "낚시로 물고기를 잡다",
       "examples": [
-        "나는 강에서 뉴다를 했어요."
+        "강에서 물고기를 낚다."
       ],
       "similarWords": [],
       "page": 22,
@@ -499,9 +454,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "QR코드에 접속해서 초성퀴즈를 풀어봅시다.",
+          "prompt": "낚시로 물고기를 잡고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-010-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-009-meet.webp"
         },
         {
           "type": "think",
@@ -511,10 +466,10 @@
             "kind": "multipleChoice",
             "prompt": "‘뉴다’의 의미를 고르세요.",
             "options": [
-              "물고기를 잡거나 잡은 물고기",
-              "큰 새를 잡는 것",
-              "나무를 자르는 것",
-              "음식을 먹는 것"
+              "낚시로 물고기를 잡다",
+              "새를 잡다",
+              "나무를 자르다",
+              "음식을 먹다"
             ],
             "correctIndex": 0
           }
@@ -535,15 +490,14 @@
       ]
     },
     {
-      "id": "v-g1-011",
+      "id": "v-g1-010",
       "grade": 1,
-      "order": 11,
+      "order": 10,
       "word": "낭송",
       "pos": "명사",
-      "definition": "큰 소리를 내어 읽거나 읊음",
+      "definition": "큰 목소리로 시를 읽거나 외우는 것",
       "examples": [
-        "우리는 시 낭송을 하기 전에 잔잔한 음악을 들었다.",
-        "선생님이 시를 낭송하셨다."
+        "학생들이 시를 낭송했다."
       ],
       "similarWords": [],
       "page": 24,
@@ -551,9 +505,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "여러분이 좋아하는 시를 낭송해 볼까요?",
+          "prompt": "시인이 시를 큰 목소리로 낭송하고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-011-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-010-meet.webp"
         },
         {
           "type": "think",
@@ -563,10 +517,10 @@
             "kind": "multipleChoice",
             "prompt": "낭송의 뜻으로 맞는 것은 무엇일까요?",
             "options": [
-              "큰 소리로 읽거나 읊는 것",
-              "작은 소리로 쓰는 것",
-              "조용히 읽는 것",
-              "가사를 쓰는 것"
+              "큰 목소리로 시를 읽다",
+              "작은 목소리로 읽다",
+              "조용히 생각하다",
+              "음악을 듣다"
             ],
             "correctIndex": 0
           }
@@ -587,14 +541,14 @@
       ]
     },
     {
-      "id": "v-g1-012",
+      "id": "v-g1-011",
       "grade": 1,
-      "order": 12,
-      "word": "날개",
+      "order": 11,
+      "word": "낱개",
       "pos": "명사",
-      "definition": "날개는 새나 곤충 등이 하늘을 나는 데 사용하는 몸의 부분입니다.",
+      "definition": "여럿 가운데 따로따로인 한 개",
       "examples": [
-        "새는 날개를 퍼덕이며 하늘을 날아요."
+        "사탕을 낱개로 포장했다."
       ],
       "similarWords": [],
       "page": 26,
@@ -602,9 +556,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "날개를 보고 어떤 동물이나 곤충이 연상되나요?",
+          "prompt": "여러 개가 묶여있지 않고 하나씩 따로 있는 것을 낱개라고 해요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-012-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-011-meet.webp"
         },
         {
           "type": "think",
@@ -612,12 +566,12 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "날개는 어디에 쓰일까요?",
+            "prompt": "'낱개'의 뜻으로 알맞은 것을 고르세요.",
             "options": [
-              "하늘을 날기 위해",
-              "땅에 굴러다니기 위해",
-              "물속에서 헤엄치기 위해",
-              "나무를 잡기 위해"
+              "한 개 한 개 따로 있는 것",
+              "많이 묶여있는 것",
+              "색깔이 다양한 것",
+              "매우 큰 것"
             ],
             "correctIndex": 0
           }
@@ -632,20 +586,20 @@
           "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
-            "prompt": "날개는 ___에 사용됩니다."
+            "prompt": "'낱개'를 넣어 문장을 만들어 보세요."
           }
         }
       ]
     },
     {
-      "id": "v-g1-013",
+      "id": "v-g1-012",
       "grade": 1,
-      "order": 13,
+      "order": 12,
       "word": "낱말",
       "pos": "명사",
-      "definition": "날말은 뜻을 가진 날말의 말입니다.",
+      "definition": "뜻을 가진 가장 작은 말의 단위",
       "examples": [
-        "나는 '날말'을 배워요."
+        "\"집\"은 낱말이다."
       ],
       "similarWords": [],
       "page": 30,
@@ -653,9 +607,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "이 요리를 보고, 떠오르는 날말을 말해 보세요.",
+          "prompt": "음식을 보고 떠오르는 낱말을 말해 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-013-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-012-meet.webp"
         },
         {
           "type": "think",
@@ -665,12 +619,12 @@
             "kind": "multipleChoice",
             "prompt": "다음 중 '날말'의 의미와 제일 가까운 것을 고르세요.",
             "options": [
-              "느낌이 좋은 말",
-              "뜻을 가진 날말",
-              "말을 하는 방법",
-              "일상 이야기"
+              "뜻을 가진 가장 작은 말",
+              "길게 이어진 문장",
+              "영어 단어",
+              "외국말"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -692,15 +646,15 @@
       ]
     },
     {
-      "id": "v-g1-014",
+      "id": "v-g1-013",
       "grade": 1,
-      "order": 14,
+      "order": 13,
       "word": "누리다",
       "pos": "동사",
-      "definition": "생활 속에서 마음껏 즐기거나 맛보다.",
+      "definition": "생활 속에서 마음껏 즐기거나 맛보다",
       "examples": [
-        "즐겁게 노는 것을 누리다.",
-        "맛있게 음식을 누리다."
+        "자연의 아름다움을 누리다.",
+        "맛있는 음식을 누리다."
       ],
       "similarWords": [],
       "page": 34,
@@ -708,9 +662,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "이야기를 시작하며 '누리다'의 뜻을 생각해 봅시다.",
+          "prompt": "자연 속에서 기쁨을 누리고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-014-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-013-meet.webp"
         },
         {
           "type": "think",
@@ -720,10 +674,10 @@
             "kind": "multipleChoice",
             "prompt": "'누리다'의 뜻은 무엇일까요?",
             "options": [
-              "즐기거나 맛보다",
+              "마음껏 즐기거나 맛보다",
               "일하거나 공부하다",
               "걷거나 뛰다",
-              "생각하다"
+              "자고 쉬다"
             ],
             "correctIndex": 0
           }
@@ -747,15 +701,14 @@
       ]
     },
     {
-      "id": "v-g1-015",
+      "id": "v-g1-014",
       "grade": 1,
-      "order": 15,
+      "order": 14,
       "word": "눈여겨보다",
       "pos": "동사",
-      "definition": "깊이 살펴보거나 어떤 것을 목적으로 하여 보는 것",
+      "definition": "자세히 살펴보거나 주의 깊게 보다",
       "examples": [
-        "나는 나무를 봤다.",
-        "그는 영화를 봤다."
+        "나는 그 옷을 눈여겨보고 있다."
       ],
       "similarWords": [
         "보자",
@@ -766,9 +719,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "내가 눈여겨본 옷이 여기 있네.",
+          "prompt": "마음에 드는 옷을 눈여겨보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-015-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-014-meet.webp"
         },
         {
           "type": "think",
@@ -778,12 +731,12 @@
             "kind": "multipleChoice",
             "prompt": "'보다'의 뜻에 가장 가까운 것은 무엇일까요?",
             "options": [
-              "이해하다",
-              "살펴보다",
-              "만나다",
-              "기다리다"
+              "자세히 살펴보다",
+              "빠르게 본다",
+              "눈을 감다",
+              "외면하다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -802,14 +755,15 @@
       ]
     },
     {
-      "id": "v-g1-016",
+      "id": "v-g1-015",
       "grade": 1,
-      "order": 16,
+      "order": 15,
       "word": "다듬다",
       "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이",
+      "definition": "손질하거나 깔끔하게 정리하다",
       "examples": [
-        "머리를 다듬다"
+        "머리를 다듬다.",
+        "방을 다듬다."
       ],
       "similarWords": [],
       "page": 38,
@@ -817,9 +771,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "옷을 다듬어 깔끔하게 정리하고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-016-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-015-meet.webp"
         },
         {
           "type": "think",
@@ -829,12 +783,12 @@
             "kind": "multipleChoice",
             "prompt": "'다듬다'의 뜻에 가장 가까운 것을 고르세요.",
             "options": [
-              "고르다",
-              "손질하다",
-              "깨끗이 하다",
-              "깎다"
+              "손질하거나 정리하다",
+              "더럽히다",
+              "버리다",
+              "찢다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -853,15 +807,15 @@
       ]
     },
     {
-      "id": "v-g1-017",
+      "id": "v-g1-016",
       "grade": 1,
-      "order": 17,
+      "order": 16,
       "word": "단위",
       "pos": "명사",
-      "definition": "길이, 무게, 시간 따위의 수량을 수자로 나타낼 때 기준이 되는 것",
+      "definition": "길이, 무게, 시간 따위를 수자로 나타낼 때 기준이 되는 것",
       "examples": [
-        "길이 단위는 미터이다.",
-        "무게 단위는 킬로그램이다."
+        "미터는 길이의 단위다.",
+        "킬로그램은 무게의 단위다."
       ],
       "similarWords": [],
       "page": 40,
@@ -869,9 +823,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "‘누리다’에 다양한 발림을 넣어 재미있게 낱말을 읽어 보세요.",
+          "prompt": "다양한 단위를 알아보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-017-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-016-meet.webp"
         },
         {
           "type": "think",
@@ -881,12 +835,12 @@
             "kind": "multipleChoice",
             "prompt": "'단위'의 뜻을 가장 잘 나타내는 것은?",
             "options": [
-              "사람이나 동물의 크기",
-              "길이, 무게, 시간 따위의 수량을 나타내는 기준",
-              "과일의 크기",
-              "날짜를 세는 것"
+              "수량을 나타내는 기준",
+              "사람의 크기",
+              "과일의 종류",
+              "날짜를 세는 방법"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -905,14 +859,15 @@
       ]
     },
     {
-      "id": "v-g1-018",
+      "id": "v-g1-017",
       "grade": 1,
-      "order": 18,
-      "word": "닮다",
-      "pos": "명사",
-      "definition": "갈리거나 오래 써서 어떤 물건이 낡아지거나, 그 물건의 길이, 두께, 크기 따위가 줄어든 상태.",
+      "order": 17,
+      "word": "닳다",
+      "pos": "동사",
+      "definition": "오래 써서 낡아지거나 그 크기·두께가 줄어들다",
       "examples": [
-        "닭다와 비슷한 말을 찾아 미로를 탈출해 봅시다."
+        "신발의 밑창이 닳았다.",
+        "동전이 닳아서 글자가 안 보인다."
       ],
       "similarWords": [],
       "page": 42,
@@ -920,11 +875,11 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "오래 사용해서 닳은 신발을 보고 있어요.",
           "dialogue": [
             "눈에 여기보다의 뜻을 읽어 봅시다."
           ],
-          "imageUrl": "/images/vocab/grade1/v-g1-018-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-017-meet.webp"
         },
         {
           "type": "think",
@@ -932,14 +887,14 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "‘닭다’의 뜻을 고르세요.",
+            "prompt": "'닳다'의 뜻으로 알맞은 것을 고르세요.",
             "options": [
-              "닭이 크다",
-              "오래된 물건이 낡다",
-              "맛있는 음식이 있다",
-              "멧돼지가 산다"
+              "오래 써서 낡아지다",
+              "새로워지다",
+              "자라나다",
+              "사라지다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -952,7 +907,7 @@
           "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
-            "prompt": "닭다와 비슷한 말을 찾아 미로를 ___ 봅시다.",
+            "prompt": "닳다와 비슷한 말을 찾아 미로를 ___ 봅시다.",
             "answers": [
               "탈출"
             ]
@@ -961,15 +916,15 @@
       ]
     },
     {
-      "id": "v-g1-019",
+      "id": "v-g1-018",
       "grade": 1,
-      "order": 19,
+      "order": 18,
       "word": "닿다",
       "pos": "명사",
-      "definition": "‘당다’의 의미는 어떤 물체가 다른 물체에 맞물려 사이에 빈틈이 없다. 어떤 곳에 이르다. 소식 따위가 전달된다.",
+      "definition": "어떤 물체가 다른 물체에 접하다, 또는 소식이 전달되다",
       "examples": [
-        "그레. 당다.",
-        "도착점에 먼저 당는 사람이지는 거야."
+        "손이 벽에 닿다.",
+        "소식이 집에 닿다."
       ],
       "similarWords": [],
       "page": 44,
@@ -977,9 +932,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "손이 다른 물체에 닿고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-019-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-018-meet.webp"
         },
         {
           "type": "think",
@@ -989,10 +944,10 @@
             "kind": "multipleChoice",
             "prompt": "‘당다’의 뜻을 고른 것을 선택하세요.",
             "options": [
-              "어떤 물체가 다른 물체에 맞물려 사이에 빈틈이 없다.",
-              "어떤 곳에 이르다.",
-              "소식 따위가 전달된다.",
-              "반대말을 찾으세요."
+              "물체가 다른 것에 접하다",
+              "멀어지다",
+              "내려간다",
+              "올라간다"
             ],
             "correctIndex": 0
           }
@@ -1020,14 +975,14 @@
       ]
     },
     {
-      "id": "v-g1-020",
+      "id": "v-g1-019",
       "grade": 1,
-      "order": 20,
-      "word": "대가",
+      "order": 19,
+      "word": "떠기",
       "pos": "명사",
-      "definition": "더 알아보기 섹션의 뜻풀이: 물건의 값으로 치르는 돈, 또는 노력으로 얻는 결과를 의미한다.",
+      "definition": "뜨거운 물이나 수증기로 인해 떠오르거나 흩어지는 모양",
       "examples": [
-        "그는 열심히 일해서 많은 대가를 얻었다."
+        "김이 떠기한다."
       ],
       "similarWords": [],
       "page": 48,
@@ -1035,9 +990,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "커피의 대가를 지불해 주세요.",
+          "prompt": "물에서 떠오르는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-020-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-019-meet.webp"
         },
         {
           "type": "think",
@@ -1047,10 +1002,10 @@
             "kind": "multipleChoice",
             "prompt": "‘대가’의 의미는 무엇일까?",
             "options": [
-              "물건의 값으로 치르는 돈",
-              "친구와 약속",
-              "운동하는 것",
-              "공부하는 것"
+              "떠오르거나 흩어지다",
+              "가라앉다",
+              "흘러가다",
+              "모이다"
             ],
             "correctIndex": 0
           }
@@ -1077,15 +1032,14 @@
       ]
     },
     {
-      "id": "v-g1-021",
+      "id": "v-g1-020",
       "grade": 1,
-      "order": 21,
-      "word": "대출",
+      "order": 20,
+      "word": "대섯",
       "pos": "명사",
-      "definition": "더 알아보기 섹션의 뜻풀이: 돈이나 물건 따위를 빌려주는 것 또는 빌린 것.",
+      "definition": "여섯 개를 세는 다른 말",
       "examples": [
-        "도서관에서 책을 대출하다.",
-        "은행에서 대출을 받다."
+        "대섯 명이 모였다."
       ],
       "similarWords": [],
       "page": 50,
@@ -1093,9 +1047,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "‘닭다’와 같이 ‘신’이 받침으로 들어가는 낱말을 찾아 문장을 완성해 봅시다.",
+          "prompt": "여섯을 나타내는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-021-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-020-meet.webp"
         },
         {
           "type": "think",
@@ -1105,10 +1059,10 @@
             "kind": "multipleChoice",
             "prompt": "대출의 뜻은 무엇일까요?",
             "options": [
-              "빌려주는 것이나 빌리는 것",
-              "돌려주는 것",
-              "그림을 보는 것",
-              "공부하는 것"
+              "여섯을 나타내는 말",
+              "다섯을 나타내는 말",
+              "일곱을 나타내는 말",
+              "여덟을 나타내는 말"
             ],
             "correctIndex": 0
           }
@@ -1129,14 +1083,14 @@
       ]
     },
     {
-      "id": "v-g1-022",
+      "id": "v-g1-021",
       "grade": 1,
-      "order": 22,
+      "order": 21,
       "word": "대피하다",
       "pos": "동사",
-      "definition": "위험이나 피해를 입지 않도록 일시적으로 피하다.",
+      "definition": "위험한 곳에서 안전한 곳으로 옮기다",
       "examples": [
-        "불이 나면 빨리 안전한 곳으로 대피해야 한다."
+        "불이 나면 빨리 대피해야 한다."
       ],
       "similarWords": [],
       "page": 52,
@@ -1144,9 +1098,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "불이 났을 때 어떤 행동을 해야 할까요?",
+          "prompt": "불이 났을 때 안전한 곳으로 대피하고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-022-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-021-meet.webp"
         },
         {
           "type": "think",
@@ -1156,10 +1110,10 @@
             "kind": "multipleChoice",
             "prompt": "아래 중에서 '대피하다'의 의미에 가장 가까운 것은 무엇일까요?",
             "options": [
-              "위험이나 피해를 입지 않도록 일시적으로 피하다",
-              "공부하고 배운 것을 떠올리다",
-              "무언가를 잃어버리다",
-              "친구를 만나다"
+              "위험한 곳에서 안전한 곳으로 가다",
+              "계속 머물다",
+              "앞으로 가다",
+              "위로 올라가다"
             ],
             "correctIndex": 0
           }
@@ -1186,14 +1140,14 @@
       ]
     },
     {
-      "id": "v-g1-023",
+      "id": "v-g1-022",
       "grade": 1,
-      "order": 23,
-      "word": "되풀이하다",
+      "order": 22,
+      "word": "덮혀있다",
       "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이: '되풀이하다'는 같은 말이나 일이 계속 반복되는 것을 말한다.",
+      "definition": "무언가로 덮여 있는 상태",
       "examples": [
-        "이 이야기를 여러 번 되풀이해서 들었다."
+        "책상이 먼지로 덮혀있다."
       ],
       "similarWords": [],
       "page": 54,
@@ -1201,9 +1155,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "'대가'의 뜻을 읽어 봅시다.",
+          "prompt": "뭔가로 덮혀있는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-023-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-022-meet.webp"
         },
         {
           "type": "think",
@@ -1211,12 +1165,12 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "‘되풀이하다’의 뜻에 가장 가까운 것을 고르세요.",
+            "prompt": "'되풀이되다'의 뜻에 가장 가까운 것을 고르세요.",
             "options": [
-              "같은 말을 여러 번 말한다.",
-              "일이 끊임없이 반복된다.",
-              "처음 하는 일을 시작한다.",
-              "잠을 많이 잔다."
+              "뭔가로 덮혀있다",
+              "열려있다",
+              "닫혀있다",
+              "열린다"
             ],
             "correctIndex": 0
           }
@@ -1231,23 +1185,24 @@
           "imageUrl": "",
           "activity": {
             "kind": "fillBlank",
-            "prompt": "나는 이야기를 여러 번 ___.",
+            "prompt": "같은 실수가 자꾸 ___.",
             "answers": [
-              "되풀이했다"
+              "되풀이되었다"
             ]
           }
         }
       ]
     },
     {
-      "id": "v-g1-024",
+      "id": "v-g1-023",
       "grade": 1,
-      "order": 24,
-      "word": "돌보다",
+      "order": 23,
+      "word": "닭혀있다",
       "pos": "동사",
-      "definition": "남을 돌보고 도움을 주다. 또는 자신을 신경 쓰다.",
+      "definition": "문이나 뚜껑이 닫혀 있는 상태",
       "examples": [
-        "나는 엄마가 아프실 때 도와드렸어요."
+        "문이 닭혀있다.",
+        "상자가 닭혀있다."
       ],
       "similarWords": [
         "보살피다",
@@ -1258,9 +1213,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "이 그림을 보고 '돌보다'의 뜻을 생각해 보세요.",
+          "prompt": "문이 닭혀있는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-024-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-023-meet.webp"
         },
         {
           "type": "think",
@@ -1268,14 +1223,14 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "아래 보기 중 '돌보다'의 뜻에 가장 맞는 것은 무엇일까요?",
+            "prompt": "'둘러보다'의 뜻에 가장 맞는 것을 고르세요.",
             "options": [
-              "아이가 밥을 먹는다.",
-              "엄마가 아기를 돌본다.",
-              "친구에게 선물을 준다.",
-              "집 안을 청소한다."
+              "닫혀있다",
+              "열려있다",
+              "반쯤 열려있다",
+              "부러져있다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -1288,20 +1243,20 @@
           "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
-            "prompt": "‘돌보다’라는 말을 사용하는 문장을 써 보세요."
+            "prompt": "'둘러보다'를 사용한 문장을 써 보세요."
           }
         }
       ]
     },
     {
-      "id": "v-g1-025",
+      "id": "v-g1-024",
       "grade": 1,
-      "order": 25,
-      "word": "드러나다",
+      "order": 24,
+      "word": "도라다",
       "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이",
+      "definition": "동전이 회전하거나 뱅글뱅글 도는 모양",
       "examples": [
-        "그의 잘못이 드러났다."
+        "동전이 도라다."
       ],
       "similarWords": [],
       "page": 58,
@@ -1309,9 +1264,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "동전이 빙글빙글 도는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-025-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-024-meet.webp"
         },
         {
           "type": "think",
@@ -1321,12 +1276,12 @@
             "kind": "multipleChoice",
             "prompt": "‘드러나다’의 뜻에 가장 어울리는 것은 무엇일까요?",
             "options": [
-              "가려있거나 보이지 않던 것이 보이게 되다.",
-              "알려지지 않은 사실이 널리 밝혀지다.",
-              "숨기거나 감춘 것이 드러나다.",
-              "아름다운 것이 드러나다."
+              "회전하거나 돌다",
+              "굴러가다",
+              "멈추다",
+              "떨어지다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -1353,14 +1308,14 @@
       ]
     },
     {
-      "id": "v-g1-026",
+      "id": "v-g1-025",
       "grade": 1,
-      "order": 26,
-      "word": "맴돌다",
+      "order": 25,
+      "word": "없었다",
       "pos": "동사",
-      "definition": "제자리에서 몸을 빙빙 돈다. 일정한 범위 내에서 돌며 회전하는 행동이다.",
+      "definition": "존재하지 않았던 상태, 과거에 없었다",
       "examples": [
-        "나는 돌을 맡돌다."
+        "그런 일은 없었다."
       ],
       "similarWords": [],
       "page": 62,
@@ -1368,9 +1323,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "파리가 황소 엉덩이에서 맴돌다.",
+          "prompt": "황소의 등에서 파리가 없었던 상황을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-026-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-025-meet.webp"
         },
         {
           "type": "think",
@@ -1380,10 +1335,10 @@
             "kind": "multipleChoice",
             "prompt": "맡돌다의 뜻은 무엇일까?",
             "options": [
-              "제자리에서 돌다",
-              "달리기를 하다",
-              "뛰어오르다",
-              "잠을 자다"
+              "존재하지 않았다",
+              "있었다",
+              "나타났다",
+              "사라졌다"
             ],
             "correctIndex": 0
           }
@@ -1410,14 +1365,14 @@
       ]
     },
     {
-      "id": "v-g1-027",
+      "id": "v-g1-026",
       "grade": 1,
-      "order": 27,
+      "order": 26,
       "word": "머쓱하다",
       "pos": "형용사",
-      "definition": "더 알아보기 섹션의 뜻풀이는 어떤 상황에서 마음이 불편하거나 민망해서 어쩔 줄 모를 때를 말한다.",
+      "definition": "마음이 불편하거나 민망해서 어쩔 줄 모르다",
       "examples": [
-        "그 일이 부끄러워서 머쓱했어요."
+        "그 일이 부끄러워 머쓱했다."
       ],
       "similarWords": [],
       "page": 64,
@@ -1425,9 +1380,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "상황에 따라 ‘머쓱하다’라는 말을 사용하는 장면을 생각해 봅시다.",
+          "prompt": "민망한 상황에서 머쓱해하는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-027-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-026-meet.webp"
         },
         {
           "type": "think",
@@ -1437,12 +1392,12 @@
             "kind": "multipleChoice",
             "prompt": "아래 그림을 보고 ‘머쓱하다’의 의미로 알맞은 것을 고르세요.",
             "options": [
+              "불편하고 민망하다",
               "기쁘다",
-              "불편하다",
-              "화나다",
-              "신나다"
+              "화난다",
+              "슬프다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -1467,14 +1422,14 @@
       ]
     },
     {
-      "id": "v-g1-028",
+      "id": "v-g1-027",
       "grade": 1,
-      "order": 28,
-      "word": "방치하다",
+      "order": 27,
+      "word": "반직여다",
       "pos": "동사",
-      "definition": "더 알아보기 섹션의 뜻풀이",
+      "definition": "무언가를 반으로 직여서 펼쳐놓다",
       "examples": [
-        "쓰레기를 골목에 버리면 방치하게 된다."
+        "옷을 반직여 놓다."
       ],
       "similarWords": [],
       "page": 66,
@@ -1482,9 +1437,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "옷을 반으로 접어 펼쳐놓는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-028-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-027-meet.webp"
         },
         {
           "type": "think",
@@ -1494,10 +1449,10 @@
             "kind": "multipleChoice",
             "prompt": "‘방치하다’의 뜻을 고르세요.",
             "options": [
-              "내버려 두다",
-              "아껴 쓰다",
-              "생각하다",
-              "이해하다"
+              "반으로 직여 펼치다",
+              "완전히 접다",
+              "말다",
+              "구겨지다"
             ],
             "correctIndex": 0
           }
@@ -1518,14 +1473,14 @@
       ]
     },
     {
-      "id": "v-g1-029",
+      "id": "v-g1-028",
       "grade": 1,
-      "order": 29,
+      "order": 28,
       "word": "배열",
       "pos": "명사",
-      "definition": "일정한 차례나 간격에 따라 벌여 놓음",
+      "definition": "일정한 순서나 간격에 따라 벌여 놓음",
       "examples": [
-        "글자를 알파벳 순서대로 배열하다."
+        "글자를 가나다라 순서대로 배열하다."
       ],
       "similarWords": [],
       "page": 68,
@@ -1533,9 +1488,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "물건들을 순서대로 배열하는 모습을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-029-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-028-meet.webp"
         },
         {
           "type": "think",
@@ -1545,12 +1500,12 @@
             "kind": "multipleChoice",
             "prompt": "'배열'의 뜻에 맞는 것을 고르세요.",
             "options": [
-              "간격을 두지 않고 무작위로 놓음",
-              "일정한 차례나 간격에 따라 벌여 놓음",
-              "모든 것을 흩어놓음",
-              "반대로 놓음"
+              "순서대로 벌여놓다",
+              "무작위로 놓다",
+              "쌓다",
+              "숨기다"
             ],
-            "correctIndex": 1
+            "correctIndex": 0
           }
         },
         {
@@ -1569,14 +1524,14 @@
       ]
     },
     {
-      "id": "v-g1-030",
+      "id": "v-g1-029",
       "grade": 1,
-      "order": 30,
-      "word": "벌초",
+      "order": 29,
+      "word": "일상",
       "pos": "명사",
-      "definition": "무덤의 풀을 베어 내어 깔끔이 함",
+      "definition": "매일 반복되는 일상적인 생활",
       "examples": [
-        "벌초하러 갔는데 날씨가 참 좋구나!"
+        "일상 속에서 배움이 있다."
       ],
       "similarWords": [],
       "page": 70,
@@ -1584,9 +1539,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "매일의 일상 속에서 일어나는 일들을 보고 있어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-030-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-029-meet.webp"
         },
         {
           "type": "think",
@@ -1596,10 +1551,10 @@
             "kind": "multipleChoice",
             "prompt": "'벌초'는 어떤 활동일까? 아래 보기 중 하나를 고르세요.",
             "options": [
-              "무덤 주변의 풀을 베는 것",
-              "나무를 베는 것",
-              "잔디를 심는 것",
-              "꽃을 피우는 것"
+              "매일의 일상",
+              "특별한 날",
+              "휴일",
+              "축제"
             ],
             "correctIndex": 0
           }
@@ -1623,14 +1578,14 @@
       ]
     },
     {
-      "id": "v-g1-031",
+      "id": "v-g1-030",
       "grade": 1,
-      "order": 31,
+      "order": 30,
       "word": "별명",
       "pos": "명사",
-      "definition": "사람의 외모나 성격 따위의 특징을 바탕으로 남들이 지어 부르는 이름",
+      "definition": "사람의 외모나 성격의 특징을 바탕으로 지어진 이름",
       "examples": [
-        "아버지는 키가 크기 때문에 별명을 '키다리'라고 지었다."
+        "형은 키가 커서 \"키다리\"라는 별명이 있다."
       ],
       "similarWords": [],
       "page": 72,
@@ -1638,9 +1593,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "",
+          "prompt": "친구들의 별명을 생각해 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-031-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-030-meet.webp"
         },
         {
           "type": "think",
@@ -1650,10 +1605,10 @@
             "kind": "multipleChoice",
             "prompt": "별명의 의미는 무엇일까요?",
             "options": [
-              "남들이 지어 부르는 이름",
-              "자신이 지은 이름",
+              "외모나 성격의 특징으로 지어진 이름",
+              "본래의 이름",
               "이름을 바꾸는 것",
-              "이름이 없는 것"
+              "별명을 없애는 것"
             ],
             "correctIndex": 0
           }
@@ -1680,9 +1635,9 @@
       ]
     },
     {
-      "id": "v-g1-032",
+      "id": "v-g1-031",
       "grade": 1,
-      "order": 32,
+      "order": 31,
       "word": "부호",
       "pos": "명사",
       "definition": "일정한 뜻을 나타내기 위해 따로 정하여 쓰는 부호",
@@ -1698,7 +1653,7 @@
           "title": "만나기",
           "prompt": "'벌초'의 뜻을 읽어 봅시다.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-032-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-031-meet.webp"
         },
         {
           "type": "think",
@@ -1738,9 +1693,9 @@
       ]
     },
     {
-      "id": "v-g1-033",
+      "id": "v-g1-032",
       "grade": 1,
-      "order": 33,
+      "order": 32,
       "word": "분리배출",
       "pos": "명사",
       "definition": "음식물이나 재활용품 같은 쓰레기를 나누어 버림. 재활용품: 다시 고치거나 사용하는 방법을 바꾸어서 사용하는 제품.",
@@ -1755,7 +1710,7 @@
           "title": "만나기",
           "prompt": "환경을 보호하기 위해서 어떤 일을 해야 할까요?",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-033-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-032-meet.webp"
         },
         {
           "type": "think",
@@ -1790,9 +1745,9 @@
       ]
     },
     {
-      "id": "v-g1-034",
+      "id": "v-g1-033",
       "grade": 1,
-      "order": 34,
+      "order": 33,
       "word": "붙이다",
       "pos": "동사",
       "definition": "더 알아보기 섹션의 뜻풀이는 어떤 것을 다른 것에 달거나 붙이는 것을 의미합니다.",
@@ -1807,7 +1762,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-034-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-033-meet.webp"
         },
         {
           "type": "think",
@@ -1844,9 +1799,9 @@
       ]
     },
     {
-      "id": "v-g1-035",
+      "id": "v-g1-034",
       "grade": 1,
-      "order": 35,
+      "order": 34,
       "word": "상황",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -1861,7 +1816,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-035-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-034-meet.webp"
         },
         {
           "type": "think",
@@ -1895,9 +1850,9 @@
       ]
     },
     {
-      "id": "v-g1-036",
+      "id": "v-g1-035",
       "grade": 1,
-      "order": 36,
+      "order": 35,
       "word": "샘",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이: 1. 땅에서 물이 솟아 나오는 곳, 그곳에서 나오는 물  2. 샘물이 솟아나는 곳",
@@ -1913,7 +1868,7 @@
           "title": "만나기",
           "prompt": "깊은 산 속 용달샘 누가 와서 먹나요",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-036-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-035-meet.webp"
         },
         {
           "type": "think",
@@ -1946,60 +1901,9 @@
       ]
     },
     {
-      "id": "v-g1-037",
+      "id": "v-g1-036",
       "grade": 1,
-      "order": 37,
-      "word": "만나다",
-      "pos": "동사",
-      "definition": "어떤 사람이나 사물과 함께하는 것을 의미한다.",
-      "examples": [
-        "나는 친구를 만났어요."
-      ],
-      "similarWords": [],
-      "page": 86,
-      "sections": [
-        {
-          "type": "meet",
-          "title": "만나기",
-          "prompt": "친구를 만나보세요.",
-          "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-037-meet.webp"
-        },
-        {
-          "type": "think",
-          "title": "생각해보기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "multipleChoice",
-            "prompt": "다음 중 '만나다'의 의미에 가장 가까운 것을 고르세요.",
-            "options": [
-              "어떤 사람이나 사물과 함께하는 것",
-              "먹거나 마시는 것",
-              "달리기 하는 것",
-              "자는 것"
-            ],
-            "correctIndex": 0
-          }
-        },
-        {
-          "type": "learn",
-          "title": "더 알아보기"
-        },
-        {
-          "type": "practice",
-          "title": "익히기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "freeWrite",
-            "prompt": "나는 오늘 누구를 만났어요."
-          }
-        }
-      ]
-    },
-    {
-      "id": "v-g1-038",
-      "grade": 1,
-      "order": 38,
+      "order": 36,
       "word": "서두르다",
       "pos": "동사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -2014,7 +1918,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-038-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-036-meet.webp"
         },
         {
           "type": "think",
@@ -2054,9 +1958,9 @@
       ]
     },
     {
-      "id": "v-g1-039",
+      "id": "v-g1-037",
       "grade": 1,
-      "order": 39,
+      "order": 37,
       "word": "소복하다",
       "pos": "형용사",
       "definition": "쌓이거나 담긴 물건이 불룩하게 많다.",
@@ -2075,7 +1979,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-039-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-037-meet.webp"
         },
         {
           "type": "think",
@@ -2115,9 +2019,9 @@
       ]
     },
     {
-      "id": "v-g1-040",
+      "id": "v-g1-038",
       "grade": 1,
-      "order": 40,
+      "order": 38,
       "word": "솟아오르다",
       "pos": "명사",
       "definition": "숲은 나무와 풀, 여러 가지 식물이 모여 있는 곳입니다.",
@@ -2132,7 +2036,7 @@
           "title": "만나기",
           "prompt": "숲을 본 적이 있나요? 어떤 모습인지 떠올려 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-040-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-038-meet.webp"
         },
         {
           "type": "think",
@@ -2166,9 +2070,9 @@
       ]
     },
     {
-      "id": "v-g1-041",
+      "id": "v-g1-039",
       "grade": 1,
-      "order": 41,
+      "order": 39,
       "word": "실리다",
       "pos": "동사",
       "definition": "더 알아보기 섹션의 뜻풀이: 1. 옮겨지기 위해 탈것, 수레, 비행기 등에 올려지다. 2. 글, 그림, 사진 등이 책이나 신문 같은 곳에 나오다.",
@@ -2183,7 +2087,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-041-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-039-meet.webp"
         },
         {
           "type": "think",
@@ -2217,9 +2121,9 @@
       ]
     },
     {
-      "id": "v-g1-042",
+      "id": "v-g1-040",
       "grade": 1,
-      "order": 42,
+      "order": 40,
       "word": "쓰임",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -2234,7 +2138,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-042-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-040-meet.webp"
         },
         {
           "type": "think",
@@ -2268,15 +2172,15 @@
       ]
     },
     {
-      "id": "v-g1-043",
+      "id": "v-g1-041",
       "grade": 1,
-      "order": 43,
-      "word": "여쭤보다",
+      "order": 41,
+      "word": "여쭈어보다",
       "pos": "동사",
-      "definition": "‘물어보다’의 높임말로, 주로 나보다 높은 사람이 다른 사람에게 질문할 때 쓰는 말입니다.",
+      "definition": "'물어보다'의 높임말. 윗사람에게 무엇을 물어볼 때 쓰는 말.",
       "examples": [
-        "친구에게 숙제가 무엇인지 여쭤보았습니다.",
-        "선생님께서 질문하신 내용을 여쭤보았어요."
+        "모르는 문제를 선생님께 여쭈어보았다.",
+        "할머니께 옛날 이야기를 여쭈어보았어요."
       ],
       "similarWords": [],
       "page": 100,
@@ -2284,9 +2188,9 @@
         {
           "type": "meet",
           "title": "만나기",
-          "prompt": "선생님께서 학생에게 질문하는 모습을 상상해서 이야기해 보세요.",
+          "prompt": "선생님께 궁금한 것을 여쭈어보는 모습을 상상해 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-043-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-041-meet.webp"
         },
         {
           "type": "think",
@@ -2294,7 +2198,7 @@
           "imageUrl": "",
           "activity": {
             "kind": "multipleChoice",
-            "prompt": "‘여쭤보다’의 의미로 적절한 것을 고르세요.",
+            "prompt": "'여쭈어보다'의 의미로 알맞은 것을 고르세요.",
             "options": [
               "무엇을 가리키다",
               "높임말로 물어보다",
@@ -2314,15 +2218,15 @@
           "imageUrl": "",
           "activity": {
             "kind": "freeWrite",
-            "prompt": "‘여쭤보다’라는 말을 사용해서 문장을 만들어 보세요."
+            "prompt": "'여쭈어보다'를 사용해서 문장을 만들어 보세요."
           }
         }
       ]
     },
     {
-      "id": "v-g1-044",
+      "id": "v-g1-042",
       "grade": 1,
-      "order": 44,
+      "order": 42,
       "word": "역사",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이: 국가나 사회의 발전과 관련된 의미 있는 과거의 사실들에 대한 생각이나 기록",
@@ -2337,7 +2241,7 @@
           "title": "만나기",
           "prompt": "역사에 관한 인물이나 이야기를 떠올리며 생각해 봅시다.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-044-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-042-meet.webp"
         },
         {
           "type": "think",
@@ -2371,9 +2275,9 @@
       ]
     },
     {
-      "id": "v-g1-045",
+      "id": "v-g1-043",
       "grade": 1,
-      "order": 45,
+      "order": 43,
       "word": "엿듣다",
       "pos": "동사",
       "definition": "남의 말을 몰래 가만히 듣다.",
@@ -2389,7 +2293,7 @@
           "title": "만나기",
           "prompt": "<보기>에 나오는 말을 이용하여 여러 가지 문장을 완성해 봅시다.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-045-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-043-meet.webp"
         },
         {
           "type": "think",
@@ -2423,9 +2327,9 @@
       ]
     },
     {
-      "id": "v-g1-046",
+      "id": "v-g1-044",
       "grade": 1,
-      "order": 46,
+      "order": 44,
       "word": "이삭",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -2440,7 +2344,7 @@
           "title": "만나기",
           "prompt": "이삭이 무엇인지 살펴보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-046-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-044-meet.webp"
         },
         {
           "type": "think",
@@ -2477,9 +2381,9 @@
       ]
     },
     {
-      "id": "v-g1-047",
+      "id": "v-g1-045",
       "grade": 1,
-      "order": 47,
+      "order": 45,
       "word": "입김",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이: 입에서 나오는 더운 김",
@@ -2494,7 +2398,7 @@
           "title": "만나기",
           "prompt": "이 낱말의 초성이에요",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-047-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-045-meet.webp"
         },
         {
           "type": "think",
@@ -2528,9 +2432,9 @@
       ]
     },
     {
-      "id": "v-g1-048",
+      "id": "v-g1-046",
       "grade": 1,
-      "order": 48,
+      "order": 46,
       "word": "적용",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이: 어떤 것을 규칙이나 원리에 따라 실질적으로 사용하거나 이루어 내는 것",
@@ -2545,7 +2449,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-048-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-046-meet.webp"
         },
         {
           "type": "think",
@@ -2579,9 +2483,9 @@
       ]
     },
     {
-      "id": "v-g1-049",
+      "id": "v-g1-047",
       "grade": 1,
-      "order": 49,
+      "order": 47,
       "word": "전시하다",
       "pos": "명사",
       "definition": "여러 가지 물품을 한 곳에 벌여 놓고 보게 하다.",
@@ -2597,7 +2501,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-049-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-047-meet.webp"
         },
         {
           "type": "think",
@@ -2631,9 +2535,9 @@
       ]
     },
     {
-      "id": "v-g1-050",
+      "id": "v-g1-048",
       "grade": 1,
-      "order": 50,
+      "order": 48,
       "word": "점잖다",
       "pos": "형용사",
       "definition": "말이나 행동이 의젓하고 신중하다.",
@@ -2650,7 +2554,7 @@
           "dialogue": [
             "안녕! 친구야"
           ],
-          "imageUrl": "/images/vocab/grade1/v-g1-050-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-048-meet.webp"
         },
         {
           "type": "think",
@@ -2684,9 +2588,9 @@
       ]
     },
     {
-      "id": "v-g1-051",
+      "id": "v-g1-049",
       "grade": 1,
-      "order": 51,
+      "order": 49,
       "word": "차례",
       "pos": "명사",
       "definition": "순서에 따라 돌아오는 기회 또는 규칙에 따라 정해진 순서",
@@ -2702,7 +2606,7 @@
           "title": "만나기",
           "prompt": "버스를 탈 때는 차례를 지켜 순서대로 타야 합니다.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-051-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-049-meet.webp"
         },
         {
           "type": "think",
@@ -2739,9 +2643,9 @@
       ]
     },
     {
-      "id": "v-g1-052",
+      "id": "v-g1-050",
       "grade": 1,
-      "order": 52,
+      "order": 50,
       "word": "차별",
       "pos": "명사",
       "definition": "다른 사람, 사물, 집단 등에 대해 차이 또는 구별을 두거나 다르게 대하는 것",
@@ -2756,7 +2660,7 @@
           "title": "만나기",
           "prompt": "차별에 대해 생각해 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-052-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-050-meet.webp"
         },
         {
           "type": "think",
@@ -2790,9 +2694,9 @@
       ]
     },
     {
-      "id": "v-g1-053",
+      "id": "v-g1-051",
       "grade": 1,
-      "order": 53,
+      "order": 51,
       "word": "체험",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -2807,7 +2711,7 @@
           "title": "만나기",
           "prompt": "어떤 일이 자기에게 일어나는 것",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-053-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-051-meet.webp"
         },
         {
           "type": "think",
@@ -2841,9 +2745,9 @@
       ]
     },
     {
-      "id": "v-g1-054",
+      "id": "v-g1-052",
       "grade": 1,
-      "order": 54,
+      "order": 52,
       "word": "충전하다",
       "pos": "동사",
       "definition": "전기나 다른 에너지를 넣어서 충만하게 만들다.",
@@ -2858,7 +2762,7 @@
           "title": "만나기",
           "prompt": "전기, 충전하는 모습이나 상황을 생각해 보세요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-054-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-052-meet.webp"
         },
         {
           "type": "think",
@@ -2892,9 +2796,9 @@
       ]
     },
     {
-      "id": "v-g1-055",
+      "id": "v-g1-053",
       "grade": 1,
-      "order": 55,
+      "order": 53,
       "word": "침착하다",
       "pos": "형용사",
       "definition": "어떤 일을 할 때 서두르지 않고 차분하게 행동하도록 하자는 의미입니다.",
@@ -2916,7 +2820,7 @@
             "일하는 사람 구별하기",
             "나이가 많아서 고민해요."
           ],
-          "imageUrl": "/images/vocab/grade1/v-g1-055-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-053-meet.webp"
         },
         {
           "type": "think",
@@ -2950,66 +2854,9 @@
       ]
     },
     {
-      "id": "v-g1-056",
+      "id": "v-g1-054",
       "grade": 1,
-      "order": 56,
-      "word": "만나다",
-      "pos": "동사",
-      "definition": "어떤 사람이나 사물과 어떤 곳에서 함께 있게 된다.",
-      "examples": [
-        "나는 친구를 학교에서 만났어요."
-      ],
-      "similarWords": [],
-      "page": 130,
-      "sections": [
-        {
-          "type": "meet",
-          "title": "만나기",
-          "prompt": "누구를 어디에서 만났나요? 쓰거나 말하세요.",
-          "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-056-meet.webp"
-        },
-        {
-          "type": "think",
-          "title": "생각해보기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "multipleChoice",
-            "prompt": "다음 중 '만나다'의 뜻에 가장 가까운 것은 무엇일까요?",
-            "options": [
-              "쉬다",
-              "만나다",
-              "먹다",
-              "잔소리하다"
-            ],
-            "correctIndex": 1
-          }
-        },
-        {
-          "type": "learn",
-          "title": "더 알아보기"
-        },
-        {
-          "type": "practice",
-          "title": "익히기",
-          "imageUrl": "",
-          "activity": {
-            "kind": "fillBlank",
-            "prompt": "나는 ___ 친구를 만났어요.",
-            "blanks": [
-              "________"
-            ],
-            "answers": [
-              "좋은"
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "id": "v-g1-057",
-      "grade": 1,
-      "order": 57,
+      "order": 54,
       "word": "타작",
       "pos": "명사",
       "definition": "벼나 보리 같은 곡식에서 이삭을 떼어내어 거두는 일",
@@ -3024,7 +2871,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-057-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-054-meet.webp"
         },
         {
           "type": "think",
@@ -3065,9 +2912,9 @@
       ]
     },
     {
-      "id": "v-g1-058",
+      "id": "v-g1-055",
       "grade": 1,
-      "order": 58,
+      "order": 55,
       "word": "탐스럽다",
       "pos": "형용사",
       "definition": "가지거나 차지하고 싶은 마음이 들 정도로 보기가 좋고 마음이 끌린다.",
@@ -3082,7 +2929,7 @@
           "title": "만나기",
           "prompt": "",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-058-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-055-meet.webp"
         },
         {
           "type": "think",
@@ -3116,9 +2963,9 @@
       ]
     },
     {
-      "id": "v-g1-059",
+      "id": "v-g1-056",
       "grade": 1,
-      "order": 59,
+      "order": 56,
       "word": "파악하다",
       "pos": "동사",
       "definition": "어떤 내용이나 사람의 성격 등을 충분히 이해하다.",
@@ -3134,7 +2981,7 @@
           "title": "만나기",
           "prompt": "파악하다는 어떤 내용이나 사람의 성격 등을 충분히 이해하는 것을 말합니다.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-059-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-056-meet.webp"
         },
         {
           "type": "think",
@@ -3174,9 +3021,9 @@
       ]
     },
     {
-      "id": "v-g1-060",
+      "id": "v-g1-057",
       "grade": 1,
-      "order": 60,
+      "order": 57,
       "word": "햅쌀",
       "pos": "명사",
       "definition": "명절이나 특별한 날에 햅쌀로 송편을 만들어 먹습니다. 추석에는 햅쌀로 밥을 지어 차례를 지냅니다.",
@@ -3191,7 +3038,7 @@
           "title": "만나기",
           "prompt": "햅쌀을 보고 어떤 음식이나 의미가 떠오르나요?",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-060-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-057-meet.webp"
         },
         {
           "type": "think",
@@ -3225,9 +3072,9 @@
       ]
     },
     {
-      "id": "v-g1-061",
+      "id": "v-g1-058",
       "grade": 1,
-      "order": 61,
+      "order": 58,
       "word": "헤치다",
       "pos": "동사",
       "definition": "어려움을 헤치고 나아가려면 끈기와 노력이 필요하다.",
@@ -3242,7 +3089,7 @@
           "title": "만나기",
           "prompt": "산타할아버지는 아이들에게 선물을 주기 위해 눈보라를 헤치며 걸어갔어요.",
           "dialogue": [],
-          "imageUrl": "/images/vocab/grade1/v-g1-061-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-058-meet.webp"
         },
         {
           "type": "think",
@@ -3279,9 +3126,9 @@
       ]
     },
     {
-      "id": "v-g1-062",
+      "id": "v-g1-059",
       "grade": 1,
-      "order": 62,
+      "order": 59,
       "word": "활용",
       "pos": "명사",
       "definition": "더 알아보기 섹션의 뜻풀이",
@@ -3301,7 +3148,7 @@
             "암탉! 맛있다. 실컷 먹어야지",
             "음! 배가 너무 불러서 빠져 나갈 수가 없어"
           ],
-          "imageUrl": "/images/vocab/grade1/v-g1-062-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-059-meet.webp"
         },
         {
           "type": "think",
@@ -3335,9 +3182,9 @@
       ]
     },
     {
-      "id": "v-g1-063",
+      "id": "v-g1-060",
       "grade": 1,
-      "order": 63,
+      "order": 60,
       "word": "휴대",
       "pos": "명사",
       "definition": "손에 들거나 몸에 지니고 다님",
@@ -3354,7 +3201,7 @@
           "dialogue": [
             "해-, 햅- 햇-의 쓰임 알아보기"
           ],
-          "imageUrl": "/images/vocab/grade1/v-g1-063-meet.webp"
+          "imageUrl": "/images/vocab/grade1/v-g1-060-meet.webp"
         },
         {
           "type": "think",
