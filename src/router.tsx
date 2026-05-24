@@ -10,7 +10,9 @@ const ConceptIndex= lazy(() => import("./routes/concept/Index"));
 const ConceptBookView= lazy(() => import("./routes/concept/BookView"));
 const ConceptVideoLearn= lazy(() => import("./routes/concept/VideoLearn"));
 const ReadingIndex= lazy(() => import("./routes/reading/Index"));
+const ReadingTopic= lazy(() => import("./routes/reading/Topic"));
 const EnglishIndex= lazy(() => import("./routes/english/Index"));
+const EnglishItem = lazy(() => import("./routes/english/Item"));
 const Badges      = lazy(() => import("./routes/Badges"));
 const Share       = lazy(() => import("./routes/Share"));
 
@@ -43,7 +45,11 @@ export const router = createBrowserRouter([
   { path: "/concept/:grade/video/:videoId", element: wrap(<ConceptVideoLearn />) },
   
   { path: "/reading",           element: wrap(<ReadingIndex />) },
+  { path: "/reading/:grade",   element: wrap(<ReadingIndex />) },
+  { path: "/reading/:grade/:topicId", element: wrap(<ReadingTopic />) },
   { path: "/english",           element: wrap(<EnglishIndex />) },
+  { path: "/english/:grade",   element: wrap(<EnglishIndex />) },
+  { path: "/english/:grade/:itemId", element: wrap(<EnglishItem />) },
   { path: "/badges",            element: wrap(<Badges />) },
   { path: "/share",             element: wrap(<Share />) },
 

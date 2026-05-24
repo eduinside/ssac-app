@@ -1,0 +1,165 @@
+{
+  "grade": 6,
+  "items": [
+    {
+      "id": "6-01",
+      "title": "I Love My Sister",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "언니가 슬퍼한 이유는 무엇인지 고르시오.",
+        "choices": [
+          "My friend doesn't like the present I made.",
+          "My sister doesn't like my room.",
+          "I lost my favorite pencil.",
+          "I don't have a friend."
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "6-02",
+      "title": "Finding a Superstar",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 단어가 알맞게 짝지어진 것을 고르시오.",
+        "choices": [
+          "first, sports club",
+          "second, art club",
+          "third, music club",
+          "fourth, dance club"
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "id": "6-03",
+      "title": "My Birthday is Coming",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것을 고르시오.",
+        "choices": [
+          "When is your birthday?",
+          "What is your name?",
+          "Where is the restroom?",
+          "How old are you?"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "6-04",
+      "title": "Solar System",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 알맞은 단어를 고르시오.",
+        "choices": [
+          "smaller",
+          "bigger",
+          "closer",
+          "heavier"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "6-05",
+      "title": "Lisa's Fun Day in Korea",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 대답으로 알맞은 것을 고르시오.",
+        "choices": [
+          "It's a traditional Korean house.",
+          "It's a traditional Korean food.",
+          "It's a traditional Korean sport.",
+          "It's a traditional Korean hat."
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "6-06",
+      "title": "A New Friend",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "영상의 내용과 일치하지 않는 것을 고르시오.",
+        "choices": [
+          "민준이는 케이트에게 길을 안내해 주었다.",
+          "케이트는 내일 일정이 없다고 말했다.",
+          "민준이와 케이트는 내일 만나기로 약속했다.",
+          "민준이는 케이트에게 내일 도서관에서 만나자고 말했다."
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "id": "6-07",
+      "title": "My Great Summer",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것을 고르시오.",
+        "choices": [
+          "What will you do this summer?",
+          "What did you do last summer?",
+          "What are you going to do this summer?",
+          "What are you doing now?"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "id": "6-08",
+      "title": "The Sports Day",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것은?",
+        "choices": [
+          "What's wrong?",
+          "What's your name?",
+          "What's this?",
+          "What's your favorite sport?"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "6-09",
+      "title": "The Introduction to Our School",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 대답으로 알맞지 않은 것을 고르시오.",
+        "choices": [
+          "She has long straight hair.",
+          "She is wearing a red skirt.",
+          "She has big eyes.",
+          "She is wearing glasses."
+        ],
+        "answer": 3
+      }
+    },
+    {
+      "id": "6-10",
+      "title": "Save the Earth",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "빈칸에 들어갈 대답으로 가장 적절한 것을 고르시오.",
+        "choices": [
+          "I will make a flower pot.",
+          "I will use a cup.",
+          "I will turn off the TV.",
+          "I will plant a tree."
+        ],
+        "answer": 2
+      }
+    }
+  ]
+}

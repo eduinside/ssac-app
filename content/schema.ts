@@ -75,25 +75,38 @@ export const ConceptBook = z.object({
 });
 export type ConceptBook = z.infer<typeof ConceptBook>;
 
-export const ReadingTopic = z.object({
-  id: z.string(),
-  title: z.string(),
-  meet: z.string(),
-  read: z.string(),
-  activities: z.array(Check).default([]),
-  apply: z.string(),
+export const ReadingApplyItem = z.object({
+  id:      z.string(),
+  label:   z.string().optional(),
+  prompt:  z.string(),
+  example: z.string().optional(),
 });
+export type ReadingApplyItem = z.infer<typeof ReadingApplyItem>;
+
+export const ReadingTopic = z.object({
+  id:         z.string(),
+  title:      z.string(),
+  read:       z.string(),
+  activities: z.array(Check).default([]),
+  apply:      z.array(ReadingApplyItem).default([]),
+});
+export type ReadingTopic = z.infer<typeof ReadingTopic>;
+
 export const ReadingBook = z.object({
-  grade: z.number().int().min(2).max(6),
+  grade:  z.number().int().min(2).max(6),
   topics: z.array(ReadingTopic).default([]),
 });
+export type ReadingBook = z.infer<typeof ReadingBook>;
 
 export const EnglishItem = z.object({
   id: z.string(),
   title: z.string(),
   videoUrl: z.string(),
+  quiz: Check.optional(),
 });
+export type EnglishItem = z.infer<typeof EnglishItem>;
 export const EnglishBook = z.object({
   grade: z.number().int().min(3).max(6),
   items: z.array(EnglishItem).default([]),
 });
+export type EnglishBook = z.infer<typeof EnglishBook>;

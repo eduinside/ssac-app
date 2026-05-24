@@ -15,6 +15,7 @@ export type ItemProgress = {
   done: boolean;
   starred: boolean;
   score?: number;
+  text?: string;
   lastVisitedAt: number;
 };
 export type RecentEntry = {

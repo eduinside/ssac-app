@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SubjectCard, type SubjectKey } from "@/components/SubjectCard";
 import { OnboardingFlow } from "@/components/OnboardingFlow";
-import { SUBJECTS, loadVocab, loadConcept } from "@/lib/content";
+import { SUBJECTS, loadVocab, loadConcept, loadReading, loadEnglish } from "@/lib/content";
 import {
   getActiveStudent,
   getRecent,
@@ -26,15 +26,21 @@ export default function Home() {
   const [vocabProgress, setVocabProgress] = useState({ done: 0, total: 0 });
   const [conceptActive, setConceptActive] = useState<{ grade: number; semester: number } | null>(null);
   const [conceptProgress, setConceptProgress] = useState({ done: 0, total: 0 });
+  const [readingActiveGrade, setReadingActiveGrade] = useState<number | null>(null);
+  const [readingProgress, setReadingProgress] = useState({ done: 0, total: 0 });
+  const [englishActiveGrade, setEnglishActiveGrade] = useState<number | null>(null);
+  const [englishProgress, setEnglishProgress] = useState({ done: 0, total: 0 });
   const [starredWords, setStarredWords] = useState<StarredWord[]>([]);
   const [earnedBadges, setEarnedBadges] = useState<string[]>([]);
 
   async function loadAll() {
-    const [s, r, map, conceptMap, badges] = await Promise.all([
+    const [s, r, map, conceptMap, readingMap, englishMap, badges] = await Promise.all([
       getActiveStudent(),
       getRecent(),
       getAllProgress("vocab"),
       getAllProgress("concept"),
+      getAllProgress("reading"),
+      getAllProgress("english"),
       getBadges(),
     ]);
     setStudent(s);
@@ -74,6 +80,42 @@ export default function Home() {
     } else {
       setConceptActive(null);
       setConceptProgress({ done: 0, total: 0 });
+    }
+
+    // Reading active grade from most recent entry
+    const readingRecent = r.find((rr) => rr.subject === "reading");
+    if (readingRecent) {
+      const rg = readingRecent.grade;
+      setReadingActiveGrade(rg);
+      try {
+        const book = await loadReading(rg);
+        const total = book.topics.length;
+        const done = book.topics.filter((t) => readingMap[t.id]?.done).length;
+        setReadingProgress({ done, total });
+      } catch {
+        setReadingProgress({ done: 0, total: 0 });
+      }
+    } else {
+      setReadingActiveGrade(null);
+      setReadingProgress({ done: 0, total: 0 });
+    }
+
+    // English active grade from most recent entry
+    const englishRecent = r.find((rr) => rr.subject === "english");
+    if (englishRecent) {
+      const eg = englishRecent.grade;
+      setEnglishActiveGrade(eg);
+      try {
+        const book = await loadEnglish(eg);
+        const total = book.items.length;
+        const done = book.items.filter((it) => englishMap[it.id]?.done).length;
+        setEnglishProgress({ done, total });
+      } catch {
+        setEnglishProgress({ done: 0, total: 0 });
+      }
+    } else {
+      setEnglishActiveGrade(null);
+      setEnglishProgress({ done: 0, total: 0 });
     }
 
     // Starred vocab — load word labels from content JSON
@@ -230,6 +272,9 @@ export default function Home() {
           {SUBJECTS.map((s) => {
             const isVocabActive = s.key === "vocab" && vocabActiveGrade !== null;
             const isConceptActive = s.key === "concept" && conceptActive !== null;
+            const isReadingActive = s.key === "reading" && readingActiveGrade !== null;
+            const isEnglishActive = s.key === "english" && englishActiveGrade !== null;
+            const isActive = isVocabActive || isConceptActive || isReadingActive || isEnglishActive;
             return (
               <SubjectCard
                 key={s.key}
@@ -239,16 +284,22 @@ export default function Home() {
                     ? `어휘싹 ${vocabActiveGrade}학년 공부 중`
                     : isConceptActive
                     ? `개념싹 ${conceptActive.grade}학년 ${conceptActive.semester}학기 공부 중`
+                    : isReadingActive
+                    ? `독해싹 ${readingActiveGrade}학년 공부 중`
+                    : isEnglishActive
+                    ? `영어싹 ${englishActiveGrade}학년 공부 중`
                     : s.title
                 }
                 emoji={s.emoji}
-                tag={isVocabActive || isConceptActive ? "계속 공부하기 →" : s.tag}
+                tag={isActive ? "계속 공부하기 →" : s.tag}
                 subjectKey={s.key as SubjectKey}
                 recommended={!s.comingSoon && subjectAvailable(s.key)}
                 comingSoon={s.comingSoon}
                 progress={
                   isVocabActive ? vocabProgress
                   : isConceptActive ? conceptProgress
+                  : isReadingActive ? readingProgress
+                  : isEnglishActive ? englishProgress
                   : undefined
                 }
                 color={s.color}

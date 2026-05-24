@@ -1,0 +1,165 @@
+{
+  "grade": 4,
+  "items": [
+    {
+      "id": "4-01",
+      "title": "Peter Pan",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "주인공의 이름을 바르게 말한 것을 고르시오.",
+        "choices": [
+          "I am Wendy.",
+          "My name is Shadow.",
+          "My name is John. I am Michael.",
+          "I am Peter Pan."
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "id": "4-02",
+      "title": "Thumbelina",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "다음 중 Mr. Mole의 물건으로 소개된 것이 아닌 것을 고르시오.",
+        "choices": [
+          "자동차",
+          "테이블",
+          "손목시계",
+          "반지"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "4-03",
+      "title": "The Jungle Book",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "다음 주인공은 무엇을 하고 있는지 고르시오.",
+        "choices": [
+          "I am sleeping.",
+          "I am hunting.",
+          "I am running.",
+          "I am watching."
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "id": "4-04",
+      "title": "A Christmas Carol",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "How much is this hat?",
+        "choices": [
+          "It's 5,000 won.",
+          "It's 6,000 won.",
+          "It's 7,000 won.",
+          "It's 8,000 won."
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "4-05",
+      "title": "Cinderella",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "요정이 신데렐라에게 입으라고 한 것을 고르시오.",
+        "choices": [
+          "gloves",
+          "shoes",
+          "dress",
+          "glasses"
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "4-06",
+      "title": "How are you? Robo",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "다음 질문에 대한 로보가 한 대답을 고르시오.\n\n\"How are you?\"",
+        "choices": [
+          "I'm great.",
+          "I'm hungry.",
+          "I'm tired.",
+          "I'm sick."
+        ],
+        "answer": 0
+      }
+    },
+    {
+      "id": "4-07",
+      "title": "Heungbu and Nolbu",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "이 장면에서 놀부의 기분으로 알맞은 것은?",
+        "choices": [
+          "happy",
+          "sad",
+          "angry",
+          "tired"
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "id": "4-08",
+      "title": "Dance Audition",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "이야기의 내용과 일치하는 것을 고르시오.",
+        "choices": [
+          "댄스파티는 7시에 시작했다.",
+          "8시는 주인공이 숙제해야 하는 시간이다.",
+          "주인공들은 11시가 넘어서 집에 갔다.",
+          "주인공들은 10시에 잠을 잤다."
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "id": "4-09",
+      "title": "Time Machine",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "What day is it?",
+        "choices": [
+          "It's Monday.",
+          "It's Wednesday.",
+          "It's Friday.",
+          "It's Sunday."
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "id": "4-10",
+      "title": "Matthew and Seung-min",
+      "videoUrl": "",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "매튜가 음식을 더 먹지 않은 이유로 알맞은 것은?",
+        "choices": [
+          "집에 가야 해서",
+          "배가 너무 불러서",
+          "맛이 없어서",
+          "속이 아파서"
+        ],
+        "answer": 1
+      }
+    }
+  ]
+}

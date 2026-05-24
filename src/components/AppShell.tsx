@@ -6,7 +6,7 @@ import { StudentSwitcher } from "./StudentSwitcher";
 const ALL_SUBJECTS = [
   { to: "/vocab",   emoji: "🌱", label: "어휘" },
   { to: "/concept", emoji: "💡", label: "개념" },
-  { to: "/reading", emoji: "📖", label: "독해", comingSoon: true },
+  { to: "/reading", emoji: "📖", label: "독해" },
   { to: "/english", emoji: "🅰️", label: "영어", comingSoon: true },
 ];
 const DEFAULT_RECENT = ["/vocab", "/concept"];
