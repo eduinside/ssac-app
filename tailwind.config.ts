@@ -33,6 +33,13 @@ export default {
         "5xl": "2.5rem",
       },
       fontFamily: {
+        jua: [
+          "'Jua'",
+          "'Pretendard Variable'",
+          "'Apple SD Gothic Neo'",
+          "system-ui",
+          "sans-serif",
+        ],
         round: [
           "'Nunito'",
           "'Pretendard Variable'",

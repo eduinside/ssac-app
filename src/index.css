@@ -13,6 +13,8 @@
       radial-gradient(circle at 85% 90%, rgba(90,184,255,0.10) 0%, transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(255,193,7,0.05) 0%, transparent 70%);
   }
+  /* 제목·헤더 전용 폰트: Jua */
+  h1, h2, h3, h4 { @apply font-jua; }
   button { -webkit-tap-highlight-color: transparent; }
   * { -webkit-font-smoothing: antialiased; }
 }

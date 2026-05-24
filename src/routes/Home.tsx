@@ -263,7 +263,7 @@ export default function Home() {
         <div className="relative z-10 flex items-center justify-between">
           <div>
             <div className="text-white/80 text-sm font-bold mb-0.5">오늘도 한 발짝!</div>
-            <div className="text-white font-black text-kidxl leading-tight whitespace-pre-line">
+            <div className="text-white font-jua text-kidxl leading-tight whitespace-pre-line">
               {timeGreeting(student.name)}
             </div>
             <div className="mt-1 text-white/60 text-xs">{grade}학년</div>
@@ -403,22 +403,21 @@ export default function Home() {
             <p className="text-ink-500 text-kid">공부를 하면 뱃지를 받을 수 있어!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-5 gap-2">
             {earnedBadges.map((code) => {
               const b = BADGES[code];
               if (!b) return null;
               return (
                 <div
                   key={code}
-                  className="flex flex-col items-center justify-center rounded-3xl py-4 px-2 text-center"
+                  className="flex flex-col items-center justify-center rounded-2xl py-3 px-1 text-center"
                   style={{
                     background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
-                    boxShadow: "0 4px 0 #c67a00",
+                    boxShadow: "0 3px 0 #c67a00",
                   }}
                 >
-                  <div className="text-3xl mb-1">{b.emoji}</div>
-                  <div className="font-black text-xs text-ink-900 leading-tight">{b.name}</div>
-                  <div className="text-[10px] text-ink-500 mt-0.5 leading-tight">{b.desc}</div>
+                  <div className="text-2xl mb-0.5">{b.emoji}</div>
+                  <div className="font-black text-[10px] text-ink-900 leading-tight">{b.name}</div>
                 </div>
               );
             })}

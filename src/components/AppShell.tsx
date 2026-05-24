@@ -86,7 +86,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <Link to="/" className="flex items-center gap-2 group">
             <img src="/sprout.svg" className="w-9 h-9 group-hover:animate-wiggle" alt="" />
             <span
-              className="font-black text-kidlg tracking-tight"
+              className="font-jua text-kidlg tracking-tight"
               style={{
                 background: "linear-gradient(135deg, #4ab50f 0%, #1e88e5 100%)",
                 WebkitBackgroundClip: "text",
