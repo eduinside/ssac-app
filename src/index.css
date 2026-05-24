@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+  :root { color-scheme: light; }
   html { scroll-behavior: smooth; }
   html, body { @apply min-h-full; overflow-x: hidden; }
   body {
