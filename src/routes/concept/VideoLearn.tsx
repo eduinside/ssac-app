@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { findConceptVideo, loadConcept } from "@/lib/content";
 import type { ConceptBook, ConceptVideo } from "@content/schema";
 import { getProgress, patchProgress, pushRecent } from "@/lib/storage";
+import { evaluateConceptBadges, BADGES } from "@/lib/badges";
 
 export default function ConceptVideoLearn() {
   const { grade: g, videoId } = useParams();
@@ -23,6 +24,7 @@ export default function ConceptVideoLearn() {
   const [submitted, setSubmitted] = useState(false);
   const [quizScore, setQuizScore] = useState<{ correct: number; total: number }>({ correct: 0, total: 0 });
   const [quizFinished, setQuizFinished] = useState(false);
+  const [newBadges, setNewBadges] = useState<string[]>([]);
 
   // Load video and book details
   useEffect(() => {
@@ -47,6 +49,12 @@ export default function ConceptVideoLearn() {
     });
   }, [videoId]);
 
+  useEffect(() => {
+    if (newBadges.length === 0) return;
+    const t = setTimeout(() => setNewBadges([]), 3500);
+    return () => clearTimeout(t);
+  }, [newBadges]);
+
   // Push to recent history when video is loaded
   useEffect(() => {
     if (data?.video) {
@@ -55,6 +63,7 @@ export default function ConceptVideoLearn() {
         itemId: data.video.id,
         label: data.video.title,
         grade,
+        semester: data.semester,
       });
     }
   }, [data, grade]);
@@ -135,8 +144,9 @@ export default function ConceptVideoLearn() {
     } else {
       setQuizFinished(true);
       setDone(true);
-      // Mark as completed in progress storage
       await patchProgress("concept", video.id, { done: true });
+      const added = await evaluateConceptBadges();
+      if (added.length) setNewBadges(added);
     }
   };
 
@@ -398,6 +408,33 @@ export default function ConceptVideoLearn() {
       <Link to={`/concept/${grade}/${semester}`} className="btn-soft w-full text-center py-2.5">
         ← 다른 주제 보기 (목록으로)
       </Link>
+
+      {/* Badge toast */}
+      {newBadges.length > 0 && (
+        <div
+          className="fixed bottom-24 sm:bottom-6 inset-x-4 max-w-sm mx-auto rounded-4xl p-4 z-50 animate-bounce-in"
+          style={{
+            background: "linear-gradient(135deg, #f9a825, #ffd54f)",
+            boxShadow: "0 8px 0 #c67a00, 0 12px 30px rgba(0,0,0,0.2)",
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div className="text-4xl animate-wiggle">🏅</div>
+            <div>
+              <div className="font-black text-ink-900">뱃지 획득!</div>
+              <div className="text-sm text-ink-700">
+                {newBadges.map((c) => `${BADGES[c]?.emoji ?? ""} ${BADGES[c]?.name ?? c}`).join("  ")}
+              </div>
+            </div>
+            <button
+              onClick={() => setNewBadges([])}
+              className="ml-auto text-ink-600 text-xl leading-none"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

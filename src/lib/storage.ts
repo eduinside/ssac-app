@@ -22,6 +22,7 @@ export type RecentEntry = {
   itemId: string;
   label: string;
   grade: number;
+  semester?: number;
   at: number;
 };
 

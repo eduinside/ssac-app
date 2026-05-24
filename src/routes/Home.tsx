@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SubjectCard, type SubjectKey } from "@/components/SubjectCard";
 import { OnboardingFlow } from "@/components/OnboardingFlow";
-import { SUBJECTS, loadVocab } from "@/lib/content";
+import { SUBJECTS, loadVocab, loadConcept } from "@/lib/content";
 import {
   getActiveStudent,
   getRecent,
@@ -24,14 +24,17 @@ export default function Home() {
   const [recent, setRecent] = useState<RecentEntry[]>([]);
   const [vocabActiveGrade, setVocabActiveGrade] = useState<number | null>(null);
   const [vocabProgress, setVocabProgress] = useState({ done: 0, total: 0 });
+  const [conceptActive, setConceptActive] = useState<{ grade: number; semester: number } | null>(null);
+  const [conceptProgress, setConceptProgress] = useState({ done: 0, total: 0 });
   const [starredWords, setStarredWords] = useState<StarredWord[]>([]);
   const [earnedBadges, setEarnedBadges] = useState<string[]>([]);
 
   async function loadAll() {
-    const [s, r, map, badges] = await Promise.all([
+    const [s, r, map, conceptMap, badges] = await Promise.all([
       getActiveStudent(),
       getRecent(),
       getAllProgress("vocab"),
+      getAllProgress("concept"),
       getBadges(),
     ]);
     setStudent(s);
@@ -47,6 +50,30 @@ export default function Home() {
       setVocabProgress({ done: gradeEntries.filter(([, v]) => v.done).length, total: totalWords });
     } else {
       setVocabProgress({ done: 0, total: 0 });
+    }
+
+    // Concept active grade/semester from most recent entry
+    const conceptRecent = r.find((rr) => rr.subject === "concept");
+    if (conceptRecent?.semester) {
+      const { grade: cg, semester: cs } = conceptRecent as { grade: number; semester: number };
+      setConceptActive({ grade: cg, semester: cs });
+      const books = await Promise.allSettled(
+        ["social", "math", "science"].map((sub) => loadConcept(cg, cs, sub))
+      );
+      const total = books.reduce((acc, r) =>
+        r.status === "fulfilled"
+          ? acc + r.value.units.flatMap((u) => u.videos).length
+          : acc, 0);
+      const allVideoIds = new Set(
+        books.flatMap((r) =>
+          r.status === "fulfilled" ? r.value.units.flatMap((u) => u.videos.map((v) => v.id)) : []
+        )
+      );
+      const done = Object.entries(conceptMap).filter(([id, v]) => allVideoIds.has(id) && v.done).length;
+      setConceptProgress({ done, total });
+    } else {
+      setConceptActive(null);
+      setConceptProgress({ done: 0, total: 0 });
     }
 
     // Starred vocab — load word labels from content JSON
@@ -202,17 +229,28 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-3 sm:gap-4">
           {SUBJECTS.map((s) => {
             const isVocabActive = s.key === "vocab" && vocabActiveGrade !== null;
+            const isConceptActive = s.key === "concept" && conceptActive !== null;
             return (
               <SubjectCard
                 key={s.key}
                 to={`/${s.key}`}
-                title={isVocabActive ? `어휘싹 ${vocabActiveGrade}학년 공부 중` : s.title}
+                title={
+                  isVocabActive
+                    ? `어휘싹 ${vocabActiveGrade}학년 공부 중`
+                    : isConceptActive
+                    ? `개념싹 ${conceptActive.grade}학년 ${conceptActive.semester}학기 공부 중`
+                    : s.title
+                }
                 emoji={s.emoji}
-                tag={isVocabActive ? "계속 공부하기 →" : s.tag}
+                tag={isVocabActive || isConceptActive ? "계속 공부하기 →" : s.tag}
                 subjectKey={s.key as SubjectKey}
                 recommended={!s.comingSoon && subjectAvailable(s.key)}
                 comingSoon={s.comingSoon}
-                progress={isVocabActive ? vocabProgress : undefined}
+                progress={
+                  isVocabActive ? vocabProgress
+                  : isConceptActive ? conceptProgress
+                  : undefined
+                }
                 color={s.color}
               />
             );
