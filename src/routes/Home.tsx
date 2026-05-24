@@ -8,6 +8,7 @@ import {
   getRecent,
   getAllProgress,
   getBadges,
+  nukeAndReload,
   type Student,
   type RecentEntry,
 } from "@/lib/storage";
@@ -32,142 +33,151 @@ export default function Home() {
   const [englishProgress, setEnglishProgress] = useState({ done: 0, total: 0 });
   const [starredItems, setStarredItems] = useState<StarredItem[]>([]);
   const [earnedBadges, setEarnedBadges] = useState<string[]>([]);
+  const [dbError, setDbError] = useState(false);
 
   async function loadAll() {
-    const [s, r, map, conceptMap, readingMap, englishMap, badges] = await Promise.all([
-      getActiveStudent(),
-      getRecent(),
-      getAllProgress("vocab"),
-      getAllProgress("concept"),
-      getAllProgress("reading"),
-      getAllProgress("english"),
-      getBadges(),
-    ]);
-    setStudent(s);
-    setRecent(r);
+    setDbError(false);
 
-    // Find the most recently studied vocab grade
-    const vocabGrade = r.find((rr) => rr.subject === "vocab")?.grade ?? null;
-    setVocabActiveGrade(vocabGrade);
-    if (vocabGrade !== null) {
-      const prefix = `g${vocabGrade}-`;
-      const gradeEntries = Object.entries(map).filter(([id]) => id.startsWith(prefix));
-      const totalWords = (vocabGrade === 3 || vocabGrade === 4) ? 42 : 60;
-      setVocabProgress({ done: gradeEntries.filter(([, v]) => v.done).length, total: totalWords });
-    } else {
-      setVocabProgress({ done: 0, total: 0 });
-    }
+    // IndexedDB가 응답하지 않으면 6초 후 오류 처리
+    let timedOut = false;
+    const timer = setTimeout(() => { timedOut = true; }, 6000);
 
-    // Concept active grade/semester from most recent entry
-    const conceptRecent = r.find((rr) => rr.subject === "concept");
-    if (conceptRecent?.semester) {
-      const { grade: cg, semester: cs } = conceptRecent as { grade: number; semester: number };
-      setConceptActive({ grade: cg, semester: cs });
-      const books = await Promise.allSettled(
-        ["social", "math", "science"].map((sub) => loadConcept(cg, cs, sub))
-      );
-      const total = books.reduce((acc, r) =>
-        r.status === "fulfilled"
-          ? acc + r.value.units.flatMap((u) => u.videos).length
-          : acc, 0);
-      const allVideoIds = new Set(
-        books.flatMap((r) =>
-          r.status === "fulfilled" ? r.value.units.flatMap((u) => u.videos.map((v) => v.id)) : []
-        )
-      );
-      const done = Object.entries(conceptMap).filter(([id, v]) => allVideoIds.has(id) && v.done).length;
-      setConceptProgress({ done, total });
-    } else {
-      setConceptActive(null);
-      setConceptProgress({ done: 0, total: 0 });
-    }
+    try {
+      const [s, r, map, conceptMap, readingMap, englishMap, badges] = await Promise.all([
+        getActiveStudent(),
+        getRecent(),
+        getAllProgress("vocab"),
+        getAllProgress("concept"),
+        getAllProgress("reading"),
+        getAllProgress("english"),
+        getBadges(),
+      ]);
 
-    // Reading active grade from most recent entry
-    const readingRecent = r.find((rr) => rr.subject === "reading");
-    if (readingRecent) {
-      const rg = readingRecent.grade;
-      setReadingActiveGrade(rg);
-      try {
-        const book = await loadReading(rg);
-        const total = book.topics.length;
-        const done = book.topics.filter((t) => readingMap[t.id]?.done).length;
-        setReadingProgress({ done, total });
-      } catch {
+      clearTimeout(timer);
+      if (timedOut) { setDbError(true); setStudent(null); return; }
+
+      setStudent(s);
+      setRecent(r);
+
+      // Vocab — most recently studied grade
+      const vocabGrade = r.find((rr) => rr.subject === "vocab")?.grade ?? null;
+      setVocabActiveGrade(vocabGrade);
+      if (vocabGrade !== null) {
+        const prefix = `g${vocabGrade}-`;
+        const gradeEntries = Object.entries(map).filter(([id]) => id.startsWith(prefix));
+        const totalWords = (vocabGrade === 3 || vocabGrade === 4) ? 42 : 60;
+        setVocabProgress({ done: gradeEntries.filter(([, v]) => v.done).length, total: totalWords });
+      } else {
+        setVocabProgress({ done: 0, total: 0 });
+      }
+
+      // Concept — most recent grade/semester
+      const conceptRecent = r.find((rr) => rr.subject === "concept");
+      if (conceptRecent?.semester) {
+        const { grade: cg, semester: cs } = conceptRecent as { grade: number; semester: number };
+        setConceptActive({ grade: cg, semester: cs });
+        const books = await Promise.allSettled(
+          ["social", "math", "science"].map((sub) => loadConcept(cg, cs, sub))
+        );
+        const total = books.reduce((acc, r) =>
+          r.status === "fulfilled"
+            ? acc + r.value.units.flatMap((u) => u.videos).length
+            : acc, 0);
+        const allVideoIds = new Set(
+          books.flatMap((r) =>
+            r.status === "fulfilled" ? r.value.units.flatMap((u) => u.videos.map((v) => v.id)) : []
+          )
+        );
+        const done = Object.entries(conceptMap).filter(([id, v]) => allVideoIds.has(id) && v.done).length;
+        setConceptProgress({ done, total });
+      } else {
+        setConceptActive(null);
+        setConceptProgress({ done: 0, total: 0 });
+      }
+
+      // Reading — most recent grade
+      const readingRecent = r.find((rr) => rr.subject === "reading");
+      if (readingRecent) {
+        const rg = readingRecent.grade;
+        setReadingActiveGrade(rg);
+        try {
+          const book = await loadReading(rg);
+          setReadingProgress({ done: book.topics.filter((t) => readingMap[t.id]?.done).length, total: book.topics.length });
+        } catch {
+          setReadingProgress({ done: 0, total: 0 });
+        }
+      } else {
+        setReadingActiveGrade(null);
         setReadingProgress({ done: 0, total: 0 });
       }
-    } else {
-      setReadingActiveGrade(null);
-      setReadingProgress({ done: 0, total: 0 });
-    }
 
-    // English active grade from most recent entry
-    const englishRecent = r.find((rr) => rr.subject === "english");
-    if (englishRecent) {
-      const eg = englishRecent.grade;
-      setEnglishActiveGrade(eg);
-      try {
-        const book = await loadEnglish(eg);
-        const total = book.items.length;
-        const done = book.items.filter((it) => englishMap[it.id]?.done).length;
-        setEnglishProgress({ done, total });
-      } catch {
+      // English — most recent grade
+      const englishRecent = r.find((rr) => rr.subject === "english");
+      if (englishRecent) {
+        const eg = englishRecent.grade;
+        setEnglishActiveGrade(eg);
+        try {
+          const book = await loadEnglish(eg);
+          setEnglishProgress({ done: book.items.filter((it) => englishMap[it.id]?.done).length, total: book.items.length });
+        } catch {
+          setEnglishProgress({ done: 0, total: 0 });
+        }
+      } else {
+        setEnglishActiveGrade(null);
         setEnglishProgress({ done: 0, total: 0 });
       }
-    } else {
-      setEnglishActiveGrade(null);
-      setEnglishProgress({ done: 0, total: 0 });
+
+      // Starred items — vocab + english + reading
+      const allStarred: StarredItem[] = [];
+
+      const starredVocab = Object.entries(map).filter(([, v]) => v.starred);
+      if (starredVocab.length > 0) {
+        const grades = [...new Set(starredVocab.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "1")))];
+        const books = await Promise.all(grades.map((g) => loadVocab(g).catch(() => null)));
+        const wordMap: Record<string, { word: string; grade: number }> = {};
+        books.forEach((b) => b?.words.forEach((w) => { wordMap[w.id] = { word: w.word, grade: b.grade }; }));
+        starredVocab.forEach(([id]) => {
+          const info = wordMap[id];
+          if (info) allStarred.push({ id, label: info.word, grade: info.grade, subject: "vocab" });
+        });
+      }
+
+      const starredEnglish = Object.entries(englishMap).filter(([, v]) => v.starred);
+      if (starredEnglish.length > 0) {
+        const grades = [...new Set(starredEnglish.map(([id]) => parseInt(id.split("-")[0]) || 3))];
+        const engBooks = await Promise.all(grades.map((g) => loadEnglish(g).catch(() => null)));
+        const engItemMap: Record<string, { title: string; grade: number }> = {};
+        engBooks.forEach((b) => b?.items.forEach((it) => { engItemMap[it.id] = { title: it.title, grade: b.grade }; }));
+        starredEnglish.forEach(([id]) => {
+          const info = engItemMap[id];
+          if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "english" });
+        });
+      }
+
+      const starredReading = Object.entries(readingMap).filter(([id, v]) => !id.includes("-apply-") && v.starred);
+      if (starredReading.length > 0) {
+        const grades = [...new Set(starredReading.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "2")))];
+        const readBooks = await Promise.all(grades.map((g) => loadReading(g).catch(() => null)));
+        const readTopicMap: Record<string, { title: string; grade: number }> = {};
+        readBooks.forEach((b) => b?.topics.forEach((t) => { readTopicMap[t.id] = { title: t.title, grade: b.grade }; }));
+        starredReading.forEach(([id]) => {
+          const info = readTopicMap[id];
+          if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "reading" });
+        });
+      }
+
+      setStarredItems(allStarred);
+      setEarnedBadges(badges);
+    } catch {
+      clearTimeout(timer);
+      setStudent(null);
+      setDbError(true);
     }
-
-    // Starred items across vocab, english, reading
-    const allStarred: StarredItem[] = [];
-
-    // Vocab starred
-    const starredVocab = Object.entries(map).filter(([, v]) => v.starred);
-    if (starredVocab.length > 0) {
-      const grades = [...new Set(starredVocab.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "1")))];
-      const books = await Promise.all(grades.map((g) => loadVocab(g).catch(() => null)));
-      const wordMap: Record<string, { word: string; grade: number }> = {};
-      books.forEach((b) => b?.words.forEach((w) => { wordMap[w.id] = { word: w.word, grade: b.grade }; }));
-      starredVocab.forEach(([id]) => {
-        const info = wordMap[id];
-        if (info) allStarred.push({ id, label: info.word, grade: info.grade, subject: "vocab" });
-      });
-    }
-
-    // English starred
-    const starredEnglish = Object.entries(englishMap).filter(([, v]) => v.starred);
-    if (starredEnglish.length > 0) {
-      const grades = [...new Set(starredEnglish.map(([id]) => parseInt(id.split("-")[0]) || 3))];
-      const engBooks = await Promise.all(grades.map((g) => loadEnglish(g).catch(() => null)));
-      const engItemMap: Record<string, { title: string; grade: number }> = {};
-      engBooks.forEach((b) => b?.items.forEach((it) => { engItemMap[it.id] = { title: it.title, grade: b.grade }; }));
-      starredEnglish.forEach(([id]) => {
-        const info = engItemMap[id];
-        if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "english" });
-      });
-    }
-
-    // Reading starred (top-level topics only)
-    const starredReading = Object.entries(readingMap).filter(([id, v]) => !id.includes("-apply-") && v.starred);
-    if (starredReading.length > 0) {
-      const grades = [...new Set(starredReading.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "2")))];
-      const readBooks = await Promise.all(grades.map((g) => loadReading(g).catch(() => null)));
-      const readTopicMap: Record<string, { title: string; grade: number }> = {};
-      readBooks.forEach((b) => b?.topics.forEach((t) => { readTopicMap[t.id] = { title: t.title, grade: b.grade }; }));
-      starredReading.forEach(([id]) => {
-        const info = readTopicMap[id];
-        if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "reading" });
-      });
-    }
-
-    setStarredItems(allStarred);
-
-    setEarnedBadges(badges);
   }
 
   useEffect(() => { loadAll(); }, []);
 
-  // Still checking IndexedDB
+  // ── Loading ──────────────────────────────────────────────────────────
   if (student === "loading") {
     return (
       <div className="flex items-center justify-center py-32">
@@ -176,7 +186,38 @@ export default function Home() {
     );
   }
 
-  // First visit — onboarding
+  // ── DB 오류 복구 화면 ──────────────────────────────────────────────
+  if (dbError) {
+    return (
+      <div className="flex flex-col items-center justify-center py-20 gap-6 text-center px-4">
+        <div className="text-6xl">😵</div>
+        <div>
+          <p className="font-black text-kidlg text-ink-800 mb-1">데이터를 불러올 수 없어요</p>
+          <p className="text-sm text-ink-500">저장 공간에 문제가 생겼을 수 있어요.</p>
+        </div>
+        <div className="flex flex-col gap-3 w-full max-w-xs">
+          <button
+            onClick={() => { setDbError(false); setStudent("loading"); loadAll(); }}
+            className="btn-soft w-full"
+          >
+            🔄 다시 시도하기
+          </button>
+          <button
+            onClick={() => {
+              if (confirm("데이터를 초기화하면 학습 기록이 모두 삭제돼요. 계속할까요?")) {
+                nukeAndReload();
+              }
+            }}
+            className="w-full rounded-2xl px-6 py-3.5 font-extrabold text-red-600 bg-red-50 border-2 border-red-200 hover:bg-red-100 transition"
+          >
+            🗑️ 데이터 초기화 후 재시작
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // ── 첫 방문 — 온보딩 ────────────────────────────────────────────────
   if (!student) {
     return <OnboardingFlow onDone={() => loadAll()} />;
   }
@@ -193,7 +234,7 @@ export default function Home() {
     return `${name} 친구야,\n밤에도 공부하는구나!`;
   }
 
-  // Recent — one entry per subject, most recent first
+  // Recent — subject당 1개, 최신순
   const recentDeduped = recent.reduce<RecentEntry[]>((acc, r) => {
     if (!acc.some((x) => x.subject === r.subject)) acc.push(r);
     return acc;
@@ -231,13 +272,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Recent + Starred (나란히) ── */}
+      {/* ── Recent + Starred ── */}
       <div className="grid grid-cols-2 gap-3 items-start">
         {/* 최근 활동 */}
         <section className="min-w-0">
           <h2 className="font-black text-kidlg text-ink-800 mb-2">⏰ 최근 활동</h2>
           {recentDeduped.length === 0 ? (
-            <div className="card-bordered text-center h-[116px] flex flex-col items-center justify-center p-4">
+            <div className="card-bordered text-center py-6">
               <div className="text-3xl mb-1">👆</div>
               <p className="text-ink-500 text-xs">아래에서 골라봐!</p>
             </div>
@@ -251,16 +292,13 @@ export default function Home() {
                       ? `/concept/${r.grade}/video/${r.itemId}`
                       : `/${r.subject}/${r.grade}/${r.itemId}`
                   }
-                  className="card flex-shrink-0 snap-start w-28 h-[116px] p-3.5 flex flex-col justify-between hover:scale-[1.02] transition-transform"
-                  style={{
-                    boxShadow: "0 4px 20px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)",
-                  }}
+                  className="card flex-shrink-0 snap-start w-28 hover:scale-[1.02] transition-transform"
                 >
                   <div className="text-[10px] text-ink-300 font-bold leading-tight">
                     {SUBJECT_LABEL[r.subject] ?? r.subject}<br />{r.grade}학년
                   </div>
-                  <div className="mt-0.5 font-black text-xs text-ink-800 line-clamp-2 leading-tight">{r.label}</div>
-                  <div className="text-[10px] text-ink-300">→ 이어하기</div>
+                  <div className="mt-1 font-black text-xs text-ink-800 line-clamp-2 leading-tight">{r.label}</div>
+                  <div className="text-[10px] text-ink-300 mt-1">→ 이어하기</div>
                 </Link>
               ))}
             </div>
@@ -271,7 +309,7 @@ export default function Home() {
         <section className="min-w-0">
           <h2 className="font-black text-kidlg text-ink-800 mb-2">⭐ 즐겨찾기</h2>
           {starredItems.length === 0 ? (
-            <div className="card-bordered text-center h-[116px] flex flex-col items-center justify-center p-4">
+            <div className="card-bordered text-center py-6">
               <div className="text-3xl mb-1">⭐</div>
               <p className="text-ink-500 text-xs">별표한 항목이 여기 모여!</p>
             </div>
@@ -290,15 +328,15 @@ export default function Home() {
                   <Link
                     key={`${item.subject}-${item.id}`}
                     to={to}
-                    className="flex-shrink-0 snap-start w-28 h-[116px] rounded-4xl p-3.5 text-center flex flex-col justify-between hover:scale-[1.02] transition-transform"
+                    className="flex-shrink-0 snap-start w-20 rounded-2xl px-2 py-3 text-center hover:scale-[1.02] transition-transform"
                     style={{
                       background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
-                      boxShadow: "0 3px 0 #c67a00, 0 4px 20px rgba(0,0,0,0.08)",
+                      boxShadow: "0 3px 0 #c67a00",
                     }}
                   >
-                    <div className="text-sm">{subjectEmoji}</div>
+                    <div className="text-sm mb-0.5">{subjectEmoji}</div>
                     <div className="font-black text-xs text-ink-900 leading-tight line-clamp-2">{item.label}</div>
-                    <div className="text-[10px] text-ink-500">{item.grade}학년</div>
+                    <div className="text-[10px] text-ink-500 mt-0.5">{item.grade}학년</div>
                   </Link>
                 );
               })}

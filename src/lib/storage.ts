@@ -192,3 +192,9 @@ export async function resetAll() {
   const allKeys = await keys(store);
   await Promise.all(allKeys.map((k) => del(k, store)));
 }
+
+// ── DB 복구: IndexedDB 자체를 삭제하고 리로드 ──────────────────────
+export function nukeAndReload() {
+  try { indexedDB.deleteDatabase("ssac-app"); } catch { /* ignore */ }
+  window.location.reload();
+}
