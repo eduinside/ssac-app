@@ -10,7 +10,8 @@ binding = "DB"
 database_name = "ssac-app"
 database_id = "47fca4a8-8993-428c-a693-5c0956067bf5"
 
-# GEMINI_API_KEY is set in the Pages dashboard or via:
-#   npx wrangler pages secret put GEMINI_API_KEY
-# For local dev create .dev.vars with:
-#   GEMINI_API_KEY=...
+# Workers AI binding (no API key needed)
+[ai]
+binding = "AI"
+
+# GEMINI_API_KEY is kept as fallback — can be removed once Workers AI is stable
