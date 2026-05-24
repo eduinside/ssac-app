@@ -1,5 +1,6 @@
 interface Env {
   SHORT_IO_API_KEY: string;
+  SHORT_IO_DOMAIN: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -14,7 +15,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (!url) return json({ error: "url 필드가 필요합니다." }, 400);
 
   const apiKey = env.SHORT_IO_API_KEY;
+  const domain = env.SHORT_IO_DOMAIN;
   if (!apiKey) return json({ error: "SHORT_IO_API_KEY not configured" }, 500);
+  if (!domain) return json({ error: "SHORT_IO_DOMAIN not configured" }, 500);
 
   try {
     const res = await fetch("https://api.short.io/links", {
@@ -25,7 +28,7 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
       },
       body: JSON.stringify({
         originalURL: url,
-        domain: "byeduin.short.io",
+        domain,
       }),
     });
 
