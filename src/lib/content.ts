@@ -82,7 +82,7 @@ export async function findConceptVideo(
 
 export const SUBJECTS: { key: Subject; title: string; emoji: string; tag: string; color: string; comingSoon?: boolean }[] =
   [
-    { key: "vocab", title: "어휘싹", emoji: "🌱", tag: "어휘 키우기", color: "bg-sprout-100" },
+    { key: "vocab", title: "어휘싹", emoji: "🌱", tag: "어휘력 키우기", color: "bg-sprout-100" },
     { key: "concept", title: "개념싹", emoji: "💡", tag: "교과 문해력 기르기", color: "bg-sun-400/30" },
     { key: "reading", title: "독해싹", emoji: "📖", tag: "독해력 기르기", color: "bg-sky2-400/20" },
     { key: "english", title: "영어싹", emoji: "🅰️", tag: "영어 표현력 기르기", color: "bg-coral-400/20" },

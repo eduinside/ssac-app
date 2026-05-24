@@ -3,18 +3,18 @@ import { addStudent } from "@/lib/storage";
 
 const GRADE_CFG = [
   { emoji: "🌱", color: "bg-sprout-400", shadow: "#266607" },
-  { emoji: "🐣", color: "bg-sky2-400",   shadow: "#0d47a1" },
-  { emoji: "🌻", color: "bg-sun-400",    shadow: "#c67a00" },
-  { emoji: "🦋", color: "bg-coral-400",  shadow: "#bf360c" },
+  { emoji: "🐣", color: "bg-sky2-400", shadow: "#0d47a1" },
+  { emoji: "🌻", color: "bg-sun-400", shadow: "#c67a00" },
+  { emoji: "🦋", color: "bg-coral-400", shadow: "#bf360c" },
   { emoji: "🔭", color: "bg-violet-400", shadow: "#4a0070" },
   { emoji: "🚀", color: "bg-sprout-600", shadow: "#1a4a00" },
 ];
 
 const SUBJECTS = [
-  { emoji: "🌱", label: "어휘싹",  desc: "낱말 키우기",   bg: "from-sprout-400 to-sprout-300" },
-  { emoji: "💡", label: "개념싹",  desc: "수·사·과 개념", bg: "from-sun-400 to-sun-300" },
-  { emoji: "📖", label: "독해싹",  desc: "문해력 쑥쑥",   bg: "from-sky2-400 to-sky2-300" },
-  { emoji: "🅰️", label: "영어싹",  desc: "영어 영상",     bg: "from-coral-400 to-coral-300" },
+  { emoji: "🌱", label: "어휘싹", desc: "어휘력 키우기", bg: "from-sprout-400 to-sprout-300" },
+  { emoji: "💡", label: "개념싹", desc: "교과 문해력 기르기", bg: "from-sun-400 to-sun-300" },
+  { emoji: "📖", label: "독해싹", desc: "독해력 기르기", bg: "from-sky2-400 to-sky2-300" },
+  { emoji: "🅰️", label: "영어싹", desc: "영어 표현력 기르기", bg: "from-coral-400 to-coral-300" },
 ];
 
 export function OnboardingFlow({ onDone }: { onDone: () => void }) {
