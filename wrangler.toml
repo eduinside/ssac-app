@@ -7,8 +7,8 @@ pages_build_output_dir = "dist"
 # Then paste the database_id below.
 [[d1_databases]]
 binding = "DB"
-database_name = "ssac-study"
-database_id = "c6db3d54-39f8-4460-b602-5fddeaa1ad55"
+database_name = "ssac-app"
+database_id = "47fca4a8-8993-428c-a693-5c0956067bf5"
 
 # GEMINI_API_KEY is set in the Pages dashboard or via:
 #   npx wrangler pages secret put GEMINI_API_KEY
