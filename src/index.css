@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  html, body { @apply min-h-full; overflow-x: hidden; }
+  body {
+    @apply antialiased font-round bg-ink-100 text-ink-700;
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(74,181,15,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 85% 90%, rgba(90,184,255,0.10) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255,193,7,0.05) 0%, transparent 70%);
+  }
+  button { -webkit-tap-highlight-color: transparent; }
+  * { -webkit-font-smoothing: antialiased; }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────── */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-extrabold
+           transition-all duration-150 cursor-pointer select-none;
+  }
+  .btn:active { transform: translateY(4px); }
+
+  .btn-primary {
+    @apply btn bg-sprout-500 text-white;
+    box-shadow: 0 6px 0 #266607;
+  }
+  .btn-primary:hover { @apply bg-sprout-600; }
+  .btn-primary:active { box-shadow: 0 2px 0 #266607; }
+
+  .btn-soft {
+    @apply btn bg-white text-ink-700 border-2 border-ink-100;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.12);
+  }
+  .btn-soft:hover { @apply border-sprout-400; }
+  .btn-soft:active { box-shadow: 0 2px 0 rgba(0,0,0,0.12); }
+
+  .btn-sun {
+    @apply btn bg-sun-400 text-ink-900;
+    box-shadow: 0 6px 0 #c67a00;
+  }
+  .btn-sun:active { box-shadow: 0 2px 0 #c67a00; }
+
+  .btn-ghost { @apply btn text-ink-500 hover:bg-white/60; }
+
+  /* ── Cards ───────────────────────────────── */
+  .card {
+    @apply bg-white rounded-4xl p-5;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card-bordered {
+    @apply card border-2 border-ink-100;
+  }
+
+  /* ── Chips ───────────────────────────────── */
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-bold
+           border-2 border-transparent;
+  }
+
+  /* ── Progress bar ────────────────────────── */
+  .progress-track {
+    @apply relative h-5 rounded-full overflow-hidden;
+    background: rgba(0,0,0,0.08);
+  }
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+    background: linear-gradient(90deg, #4ab50f, #8fe558);
+    box-shadow: 0 0 8px rgba(74,181,15,0.5);
+  }
+
+  /* ── Decorative ──────────────────────────── */
+  .blob {
+    @apply absolute rounded-full pointer-events-none select-none;
+    filter: blur(40px);
+    opacity: 0.18;
+  }
+}
+
+/* Dim for locked content */
+.dim { filter: grayscale(0.55) blur(0.5px); opacity: 0.45; }
+
+/* Staggered animation helpers */
+.stagger-1  { animation-delay: 0.05s; }
+.stagger-2  { animation-delay: 0.10s; }
+.stagger-3  { animation-delay: 0.15s; }
+.stagger-4  { animation-delay: 0.20s; }
+.stagger-5  { animation-delay: 0.25s; }
+.stagger-6  { animation-delay: 0.30s; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-ink-300 rounded-full; }

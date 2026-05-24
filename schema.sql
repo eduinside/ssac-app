@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS shares (
+  id TEXT PRIMARY KEY,
+  payload TEXT NOT NULL,
+  created_at INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kind TEXT NOT NULL,
+  ref TEXT NOT NULL,
+  ts INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS events_kind_ref ON events(kind, ref);

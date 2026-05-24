@@ -1,0 +1,16 @@
+name = "ssac-study"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"
+
+# Bind D1. Create with:
+#   npx wrangler d1 create ssac-study
+# Then paste the database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "ssac-study"
+database_id = "REPLACE_WITH_D1_ID"
+
+# GEMINI_API_KEY is set in the Pages dashboard or via:
+#   npx wrangler pages secret put GEMINI_API_KEY
+# For local dev create .dev.vars with:
+#   GEMINI_API_KEY=...
