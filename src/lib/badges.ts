@@ -23,7 +23,10 @@ export async function evaluateVocabBadges(grade: number, studentId?: string): Pr
   if (done >= 1)  earned.push("first_word");
   if (done >= 10) earned.push("ten_words");
   if (done >= 30) earned.push("thirty_words");
-  if (done >= 60) earned.push("sixty_words");
+
+  const targetDone = (grade === 3 || grade === 4) ? 42 : 60;
+  if (done >= targetDone) earned.push("sixty_words");
+
   if (stars >= 5) earned.push("five_stars");
 
   const added: string[] = [];

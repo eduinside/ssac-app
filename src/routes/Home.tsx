@@ -43,7 +43,8 @@ export default function Home() {
     if (vocabGrade !== null) {
       const prefix = `g${vocabGrade}-`;
       const gradeEntries = Object.entries(map).filter(([id]) => id.startsWith(prefix));
-      setVocabProgress({ done: gradeEntries.filter(([, v]) => v.done).length, total: 60 });
+      const totalWords = (vocabGrade === 3 || vocabGrade === 4) ? 42 : 60;
+      setVocabProgress({ done: gradeEntries.filter(([, v]) => v.done).length, total: totalWords });
     } else {
       setVocabProgress({ done: 0, total: 0 });
     }

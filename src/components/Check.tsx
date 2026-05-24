@@ -154,7 +154,58 @@ function FillCheck({
 }) {
   const [val, setVal] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const ok = val.trim() === check.answer.trim();
+  const [attempts, setAttempts] = useState(0); // 0=미제출, 1=1차완료, 2=최종
+  const [loading, setLoading] = useState(false);
+  const [aiResult, setAiResult] = useState<{ score: number; feedback: string } | null>(null);
+  const [isRetrying, setIsRetrying] = useState(false);
+
+  const exactOk = val.trim() === check.answer.trim();
+  const isCorrect = submitted && (exactOk || (aiResult !== null && aiResult.score >= 60));
+  const isFinal = submitted && (isCorrect || (attempts >= 2 && !isRetrying));
+  const isWrongFirst = submitted && !isCorrect && attempts === 1;
+
+  async function handleSubmit() {
+    const nextAttempts = attempts + 1;
+    setAttempts(nextAttempts);
+    setIsRetrying(false);
+
+    if (exactOk) {
+      setSubmitted(true);
+      onResult(true, nextAttempts === 1 ? 100 : 50);
+    } else {
+      // 정확히 일치하지 않는 경우 (1차, 2차 불문) 바로 AI 채점 실행
+      setLoading(true);
+      try {
+        const r = await gradeWriting({
+          prompt: check.prompt,
+          rubric: `정답은 "${check.answer}" 입니다. 학생의 답이 이 정답 단어와 실질적으로 같은 뜻을 가진 단어/표현이거나, 빈칸 문맥에 들어가기에 적절한 유사답안(예: 조사 유무, 유의어 등)이라면 너그럽게 정답(60점 이상)으로 평가해 주세요. 초등학생 수준임을 감안해 주세요.`,
+          studentAnswer: val,
+        });
+        setAiResult({ score: r.score, feedback: r.feedback });
+        setSubmitted(true);
+        const aiPassed = r.score >= 60;
+        
+        if (aiPassed) {
+          onResult(true, nextAttempts === 1 ? 100 : 50);
+        } else if (nextAttempts >= 2) {
+          onResult(false, 0);
+        }
+        // 1차 오답 시에는 onResult 보류하고 재도전 제공
+      } catch {
+        // AI 평가 실패 시 최종 오답 처리 (2차 시도 시) 또는 1차 시도인 경우 바로 실패 처리하지 않고 비상 제출 처리
+        setSubmitted(true);
+        if (nextAttempts >= 2) {
+          onResult(false, 0);
+        }
+      } finally {
+        setLoading(false);
+      }
+    }
+  }
+
+  function handleRetry() {
+    setIsRetrying(true);
+  }
 
   return (
     <div className="space-y-3">
@@ -168,16 +219,15 @@ function FillCheck({
         value={val}
         onChange={(e) => setVal(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === "Enter" && val && !submitted) {
-            setSubmitted(true);
-            onResult(ok, ok ? 100 : 0);
+          if (e.key === "Enter" && val && (!submitted || isRetrying) && !loading) {
+            handleSubmit();
           }
         }}
-        disabled={submitted}
+        disabled={loading || (submitted && !isRetrying)}
         className={
           "w-full rounded-2xl border-2 px-4 py-3 text-kid font-bold outline-none transition-colors " +
-          (submitted
-            ? ok
+          (submitted && !isRetrying
+            ? isCorrect
               ? "border-sprout-500 bg-sprout-50 text-sprout-700"
               : "border-coral-400 bg-coral-400/10 text-coral-600"
             : "border-ink-200 focus:border-sprout-400")
@@ -186,33 +236,79 @@ function FillCheck({
         autoCapitalize="none"
         autoCorrect="off"
       />
-      {!submitted ? (
+
+      {/* 제출 전 버튼 (결과가 없거나 재도전 중일 때 노출) */}
+      {(!submitted || isRetrying) && (
         <button
-          disabled={!val}
-          onClick={() => {
-            setSubmitted(true);
-            onResult(ok, ok ? 100 : 0);
-          }}
+          disabled={!val || loading}
+          onClick={handleSubmit}
           className="btn-primary w-full disabled:opacity-30"
         >
-          정답 확인
+          {loading ? (
+            <span className="flex items-center gap-2 justify-center">
+              <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+              AI가 확인하는 중…
+            </span>
+          ) : (
+            "정답 확인"
+          )}
         </button>
-      ) : (
+      )}
+
+      {/* 1차 오답 피드백 및 재도전 버튼 */}
+      {isWrongFirst && (
+        <div className="space-y-3">
+          {aiResult && (
+            <div className="rounded-2xl p-4 space-y-2 bg-coral-400/10 text-coral-500">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">💪</span>
+                <span className="font-black text-kidlg">{aiResult.score}점</span>
+              </div>
+              <p className="text-kid text-ink-700 whitespace-pre-wrap">{aiResult.feedback}</p>
+            </div>
+          )}
+
+          {!isRetrying && (
+            <div className="rounded-2xl p-4 space-y-3 bg-coral-400/10">
+              <div className="flex items-center gap-3 font-black text-kidlg text-coral-500">
+                <span className="text-3xl">😅</span>
+                <div>
+                  <div>조금 더 다듬어볼까?</div>
+                  <div className="text-sm font-bold opacity-70">한 번 더 도전해봐! (마지막 기회)</div>
+                </div>
+              </div>
+              <button onClick={handleRetry} className="btn-primary w-full">
+                🔄 다시 도전하기
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 최종 결과 */}
+      {isFinal && (
         <div
           className={
-            "rounded-2xl p-4 flex items-center gap-3 font-black text-kidlg " +
-            (ok ? "bg-sprout-100 text-sprout-700" : "bg-coral-400/10 text-coral-500")
+            "rounded-2xl p-4 space-y-2 " +
+            (isCorrect ? "bg-sprout-100 text-sprout-700" : "bg-coral-400/10 text-coral-500")
           }
         >
-          <span className="text-3xl">{ok ? "🎉" : "😅"}</span>
-          <div>
-            <div>{ok ? "정답이야!" : "아쉽다!"}</div>
-            {!ok && (
-              <div className="text-sm font-bold mt-0.5 opacity-80">
-                정답: {check.answer}
-              </div>
-            )}
+          <div className="flex items-center gap-3 font-black text-kidlg">
+            <span className="text-3xl">{isCorrect ? "🎉" : "😭"}</span>
+            <div>
+              <div>{isCorrect ? (attempts === 1 ? "정답이야!" : "재도전 성공!") : "아쉽지만 틀렸어!"}</div>
+              {!isCorrect && (
+                <div className="text-sm font-bold mt-0.5 opacity-80">
+                  정답: {check.answer}
+                </div>
+              )}
+            </div>
           </div>
+          {aiResult && (
+            <p className="text-kid text-ink-700 border-t border-ink-100/20 pt-2 whitespace-pre-wrap">
+              {aiResult.feedback}
+            </p>
+          )}
         </div>
       )}
     </div>
@@ -230,6 +326,37 @@ function WriteCheck({
   const [val, setVal] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<{ score: number; feedback: string } | null>(null);
+  const [attempts, setAttempts] = useState(0); // 0=미제출, 1=1차완료, 2=최종
+  const [isRetrying, setIsRetrying] = useState(false);
+
+  const isCorrect = result !== null && result.score >= 60;
+  const isFinal = result !== null && (isCorrect || (attempts >= 2 && !isRetrying));
+  const isWrongFirst = result !== null && !isCorrect && attempts === 1;
+
+  async function handleSubmit() {
+    setLoading(true);
+    try {
+      const r = await gradeWriting({ prompt: check.prompt, rubric: check.rubric, studentAnswer: val });
+      const nextAttempts = attempts + 1;
+      setAttempts(nextAttempts);
+      setResult({ score: r.score, feedback: r.feedback });
+      setIsRetrying(false); // 제출이 완료되면 재도전 모드 해제
+
+      if (r.score >= 60) {
+        onResult(true, r.score);
+      } else if (nextAttempts >= 2) {
+        onResult(false, r.score);
+      }
+    } catch {
+      // 에러 발생 시
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function handleRetry() {
+    setIsRetrying(true);
+  }
 
   return (
     <div className="space-y-3">
@@ -243,28 +370,24 @@ function WriteCheck({
       <textarea
         value={val}
         onChange={(e) => setVal(e.target.value)}
-        disabled={!!result}
+        disabled={loading || (result !== null && !isRetrying)}
         rows={4}
         className={
           "w-full rounded-2xl border-2 px-4 py-3 text-kid outline-none transition-colors resize-none " +
-          (result ? "border-ink-200 bg-ink-50 text-ink-500" : "border-ink-200 focus:border-sprout-400")
+          (result !== null && !isRetrying ? "border-ink-200 bg-ink-50 text-ink-500" : "border-ink-200 focus:border-sprout-400")
         }
         placeholder="내 생각을 써봐! (짧아도 괜찮아)"
       />
-      {!result ? (
+
+      {/* 제출 버튼 (결과가 없거나 재도전 모드일 때 노출) */}
+      {(!result || isRetrying) && (
         <button
           disabled={val.trim().length < 3 || loading}
-          onClick={async () => {
-            setLoading(true);
-            const r = await gradeWriting({ prompt: check.prompt, rubric: check.rubric, studentAnswer: val });
-            setLoading(false);
-            setResult({ score: r.score, feedback: r.feedback });
-            onResult(r.score >= 60, r.score);
-          }}
+          onClick={handleSubmit}
           className="btn-primary w-full disabled:opacity-30"
         >
           {loading ? (
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 justify-center">
               <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
               AI가 읽는 중…
             </span>
@@ -272,22 +395,54 @@ function WriteCheck({
             "✨ AI에게 보여주기"
           )}
         </button>
-      ) : (
+      )}
+
+      {/* 1차 오답 피드백 영역 */}
+      {isWrongFirst && (
+        <div className="space-y-3">
+          <div className="rounded-2xl p-4 space-y-2 bg-coral-400/10 text-coral-500">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">💪</span>
+              <span className="font-black text-kidlg">{result.score}점</span>
+            </div>
+            <p className="text-kid text-ink-700 whitespace-pre-wrap">{result.feedback}</p>
+          </div>
+
+          {/* 재도전 모드가 아닐 때만 다시 도전하기 상자가 나옵니다 */}
+          {!isRetrying && (
+            <div className="rounded-2xl p-4 space-y-3 bg-coral-400/10">
+              <div className="flex items-center gap-3 font-black text-kidlg text-coral-500">
+                <span className="text-3xl">😅</span>
+                <div>
+                  <div>조금 더 다듬어볼까?</div>
+                  <div className="text-sm font-bold opacity-70">한 번 더 도전해봐! (마지막 기회)</div>
+                </div>
+              </div>
+              <button onClick={handleRetry} className="btn-primary w-full">
+                🔄 다시 써보기
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 최종 결과 피드백 */}
+      {isFinal && (
         <div
           className={
             "rounded-2xl p-4 space-y-2 " +
-            (result.score >= 60 ? "bg-sprout-100" : "bg-coral-400/10")
+            (isCorrect ? "bg-sprout-100 text-sprout-700" : "bg-coral-400/10 text-coral-500")
           }
         >
           <div className="flex items-center gap-2">
-            <span className="text-2xl">{result.score >= 60 ? "🎉" : "💪"}</span>
+            <span className="text-2xl">{isCorrect ? "🎉" : "😭"}</span>
             <span
               className={
                 "font-black text-kidlg " +
-                (result.score >= 60 ? "text-sprout-700" : "text-coral-500")
+                (isCorrect ? "text-sprout-700" : "text-coral-500")
               }
             >
-              {result.score}점
+              {isCorrect ? (attempts === 1 ? "정답이야!" : "재도전 성공!") : "아쉽지만 틀렸어!"} ({result.score}점)
             </span>
           </div>
           <p className="text-kid text-ink-700 whitespace-pre-wrap">{result.feedback}</p>

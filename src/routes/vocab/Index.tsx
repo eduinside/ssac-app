@@ -20,9 +20,12 @@ export default function VocabIndex() {
   }, []);
 
   useEffect(() => {
+    getAllProgress("vocab").then(setProgress);
+  }, [grade]);
+
+  useEffect(() => {
     if (!grade) return;
     loadVocab(grade).then(setBook).catch(() => setBook({ grade, words: [], reviews: [] }));
-    getAllProgress("vocab").then(setProgress);
     getRecent().then((entries) => {
       const ids = new Set(
         entries
@@ -44,39 +47,50 @@ export default function VocabIndex() {
         </h1>
         <p className="text-ink-500">체계적인 어휘력 향상 프로그램으로 어휘력을 키워봐요!</p>
         <div className="grid grid-cols-2 gap-3">
-          {tabs.map((t) => (
-            <button
-              key={t.grade}
-              onClick={() => {
-                if (t.dimmed) return;
-                setGrade(t.grade);
-                nav(`/vocab/${t.grade}`);
-              }}
-              className={
-                "relative rounded-4xl p-5 text-left transition-all duration-150 " +
-                (t.dimmed
-                  ? "dim cursor-not-allowed"
-                  : "hover:scale-[1.02] active:scale-[0.98] cursor-pointer")
-              }
-              style={{
-                background: t.dimmed
-                  ? "linear-gradient(135deg, #e0e0e0, #bdbdbd)"
-                  : "linear-gradient(135deg, #4ab50f 0%, #8fe558 100%)",
-                boxShadow: t.dimmed ? "0 5px 0 #9e9e9e" : "0 7px 0 #266607",
-              }}
-            >
-              <div className="text-4xl mb-2">🌱</div>
-              <div className="font-black text-kidlg text-white">{t.label}</div>
-              <div className="text-white/70 text-sm">60개 낱말</div>
-              {t.dimmed && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="bg-white/80 rounded-full px-3 py-1 text-sm font-black text-ink-500">
-                    🔒 준비 중
-                  </span>
-                </div>
-              )}
-            </button>
-          ))}
+          {tabs.map((t) => {
+            const total = (t.grade === 3 || t.grade === 4) ? 42 : 60;
+            const done = Object.entries(progress).filter(([id, v]) => id.startsWith(`g${t.grade}-`) && v.done).length;
+
+            return (
+              <button
+                key={t.grade}
+                onClick={() => {
+                  if (t.dimmed) return;
+                  setGrade(t.grade);
+                  nav(`/vocab/${t.grade}`);
+                }}
+                className={
+                  "relative rounded-4xl p-5 text-left transition-all duration-150 " +
+                  (t.dimmed
+                    ? "dim cursor-not-allowed"
+                    : "hover:scale-[1.02] active:scale-[0.98] cursor-pointer")
+                }
+                style={{
+                  background: t.dimmed
+                    ? "linear-gradient(135deg, #e0e0e0, #bdbdbd)"
+                    : "linear-gradient(135deg, #4ab50f 0%, #8fe558 100%)",
+                  boxShadow: t.dimmed ? "0 5px 0 #9e9e9e" : "0 7px 0 #266607",
+                }}
+              >
+                <div className="text-4xl mb-2">🌱</div>
+                <div className="font-black text-kidlg text-white">{t.label}</div>
+                {done > 0 ? (
+                  <div className="text-white/90 text-sm font-bold">
+                    {done}/{total} 완료
+                  </div>
+                ) : (
+                  <div className="text-white/70 text-sm">{total}개 낱말</div>
+                )}
+                {t.dimmed && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="bg-white/80 rounded-full px-3 py-1 text-sm font-black text-ink-500">
+                      🔒 준비 중
+                    </span>
+                  </div>
+                )}
+              </button>
+            );
+          })}
         </div>
         <Link to="/" className="btn-soft w-full">← 홈으로</Link>
       </section>

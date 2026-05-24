@@ -70,16 +70,16 @@ export default function VocabReview() {
 
       {/* 영상 영역 */}
       <div
-        className="rounded-4xl overflow-hidden"
+        className="w-full aspect-video rounded-4xl overflow-hidden relative"
         style={{
           background: "linear-gradient(135deg, #1e88e5 0%, #4ab50f 100%)",
           boxShadow: "0 8px 0 #0d3b7a",
         }}
       >
         {review.videoUrl ? (
-          <video src={review.videoUrl} controls className="w-full" />
+          <video src={review.videoUrl} controls className="w-full h-full object-contain" />
         ) : (
-          <div className="flex flex-col items-center justify-center h-44 gap-3 px-6">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6">
             <div className="text-5xl opacity-60">📹</div>
             <p className="text-white/70 font-bold text-center">영상을 준비 중이에요<br />
               <span className="text-white/50 text-sm font-normal">추후 업데이트 예정</span>

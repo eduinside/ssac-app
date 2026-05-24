@@ -156,7 +156,7 @@ export default function VocabWord() {
           <span className="w-8 h-8 rounded-xl bg-sprout-100 flex items-center justify-center text-lg">✍️</span>
           확인해 볼까?
         </h2>
-        <CheckRunner check={w.check} onResult={complete} />
+        <CheckRunner key={wordId} check={w.check} onResult={complete} />
       </div>
 
       {/* Nav buttons */}
