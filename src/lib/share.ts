@@ -49,25 +49,20 @@ export function decodeShare(s: string): SharePayload | null {
 
 export async function makeShareUrl(p: SharePayload): Promise<string> {
   const code = encodeShare(p);
-  const base = `${location.origin}/share#`;
+  const longUrl = `${location.origin}/share#${code}`;
 
-  // Short enough → URL hash
-  if (code.length < 1500) return base + code;
-
-  // Fallback: D1 via /api/share
-  // TODO: vives-share 연동 후 여기서 단축 URL을 받아 반환
   try {
-    const res = await fetch("/api/share", {
+    const res = await fetch("/api/shorten", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(p),
+      body: JSON.stringify({ url: longUrl }),
     });
     if (res.ok) {
-      const { id } = (await res.json()) as { id: string };
-      return `${location.origin}/share?s=${id}`;
+      const data = (await res.json()) as { shortURL?: string };
+      if (data.shortURL) return data.shortURL;
     }
   } catch {
-    // fall through
+    // fall through to long URL
   }
-  return base + code;
+  return longUrl;
 }
