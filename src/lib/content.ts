@@ -5,11 +5,11 @@ export type GateItem = { label: string; grade: number; semester?: 1 | 2; dimmed:
 export function availableFor(grade: number, subject: Subject): GateItem[] {
   switch (subject) {
     case "vocab": {
-      const max = 4;
+      // 데이터가 있는 학년(1~4)은 학생 학년에 관계없이 모두 선택 가능
       return [1, 2, 3, 4].map((g) => ({
         label: `${g}학년`,
         grade: g,
-        dimmed: g > grade,
+        dimmed: false,
       }));
     }
     case "reading": {
