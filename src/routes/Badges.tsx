@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BADGES } from "@/lib/badges";
-import { getBadges, getActiveStudent, getAllProgress } from "@/lib/storage";
+import { getBadges, getBadgeTimes, getActiveStudent, getAllProgress } from "@/lib/storage";
 import { makeShareUrl, type SharePayload } from "@/lib/share";
 
 export default function Badges() {
   const [earned, setEarned] = useState<string[]>([]);
+  const [badgeTimes, setBadgeTimes] = useState<Record<string, number>>({});
   const [grade, setGrade] = useState(1);
   const [name, setName] = useState("친구");
   const [stats, setStats] = useState({ done: 0, star: 0, total: 0 });
@@ -14,11 +15,16 @@ export default function Badges() {
 
   useEffect(() => {
     (async () => {
-      setEarned(await getBadges());
-      const s = await getActiveStudent();
+      const [badges, times, s, map] = await Promise.all([
+        getBadges(),
+        getBadgeTimes(),
+        getActiveStudent(),
+        getAllProgress("vocab"),
+      ]);
+      setEarned(badges);
+      setBadgeTimes(times);
       setGrade(s?.grade ?? 1);
       setName(s?.name ?? "친구");
-      const map = await getAllProgress("vocab");
       const arr = Object.values(map);
       setStats({ done: arr.filter((v) => v.done).length, star: arr.filter((v) => v.starred).length, total: arr.length });
     })();
@@ -100,6 +106,10 @@ export default function Badges() {
         <div className="grid grid-cols-3 gap-3">
           {Object.entries(BADGES).map(([code, b]) => {
             const have = earned.includes(code);
+            const ts = badgeTimes[code];
+            const dateStr = ts
+              ? new Date(ts).toLocaleDateString("ko-KR", { month: "short", day: "numeric" })
+              : null;
             return (
               <div
                 key={code}
@@ -122,6 +132,9 @@ export default function Badges() {
                 <div className={"text-4xl " + (have ? "animate-bounce-in" : "")}>{b.emoji}</div>
                 <div className="font-black text-sm text-ink-900 mt-1">{b.name}</div>
                 <div className="text-xs text-ink-500 mt-0.5">{b.desc}</div>
+                {have && dateStr && (
+                  <div className="text-[10px] text-ink-400 mt-1.5 font-bold">{dateStr} 획득</div>
+                )}
                 {!have && <div className="text-xs text-ink-300 mt-1">🔒</div>}
               </div>
             );

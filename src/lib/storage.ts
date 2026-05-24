@@ -34,6 +34,7 @@ const K = {
   progress: (sid: string, subject: Subject, id: string) => `p|${sid}|${subject}|${id}`,
   recent:   (sid: string) => `r|${sid}`,
   badges:   (sid: string) => `b|${sid}`,
+  badgeTimes: (sid: string) => `bt|${sid}`,  // code → timestamp
 };
 
 // ── Students ────────────────────────────────────────────────────────
@@ -178,12 +179,24 @@ export async function getBadges(studentId?: string): Promise<string[]> {
   return (await get<string[]>(K.badges(sid), store)) ?? [];
 }
 
+export async function getBadgeTimes(studentId?: string): Promise<Record<string, number>> {
+  const sid = studentId ?? (await getActiveStudentId());
+  if (!sid) return {};
+  return (await get<Record<string, number>>(K.badgeTimes(sid), store)) ?? {};
+}
+
 export async function addBadge(code: string, studentId?: string): Promise<string[]> {
   const sid = studentId ?? (await getActiveStudentId()) ?? "default";
   const cur = await getBadges(sid);
   if (cur.includes(code)) return cur;
   const next = [...cur, code];
   await set(K.badges(sid), next, store);
+  // 획득 날짜 기록
+  const times = (await get<Record<string, number>>(K.badgeTimes(sid), store)) ?? {};
+  if (!times[code]) {
+    times[code] = Date.now();
+    await set(K.badgeTimes(sid), times, store);
+  }
   return next;
 }
 

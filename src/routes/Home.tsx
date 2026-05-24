@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SubjectCard, type SubjectKey } from "@/components/SubjectCard";
 import { OnboardingFlow } from "@/components/OnboardingFlow";
+import { NoticeModal, isNoticeRead } from "@/components/NoticeModal";
 import { SUBJECTS, loadVocab, loadConcept, loadReading, loadEnglish } from "@/lib/content";
 import {
   getActiveStudent,
@@ -13,6 +14,8 @@ import {
   type RecentEntry,
 } from "@/lib/storage";
 import { BADGES } from "@/lib/badges";
+
+type Notice = { id: number; title: string; body: string; created_at: number };
 
 type StarredItem = { id: string; label: string; grade: number; subject: "vocab" | "english" | "reading" };
 
@@ -34,6 +37,8 @@ export default function Home() {
   const [starredItems, setStarredItems] = useState<StarredItem[]>([]);
   const [earnedBadges, setEarnedBadges] = useState<string[]>([]);
   const [dbError, setDbError] = useState(false);
+  const [notice, setNotice] = useState<Notice | null>(null);
+  const [showNotice, setShowNotice] = useState(false);
 
   async function loadAll() {
     setDbError(false);
@@ -176,6 +181,21 @@ export default function Home() {
   }
 
   useEffect(() => { loadAll(); }, []);
+
+  // 공지사항 fetch — 읽지 않은 공지가 있으면 자동 팝업
+  useEffect(() => {
+    fetch("/api/notice")
+      .then((r) => r.ok ? r.json() as Promise<Notice | null> : null)
+      .then((data) => {
+        if (data && !isNoticeRead(data.id)) {
+          setNotice(data);
+          setShowNotice(true);
+        } else if (data) {
+          setNotice(data); // 읽었어도 배너용으로는 보존
+        }
+      })
+      .catch(() => { /* 오프라인 등 무시 */ });
+  }, []);
 
   // ── Loading ──────────────────────────────────────────────────────────
   if (student === "loading") {
@@ -328,15 +348,19 @@ export default function Home() {
                   <Link
                     key={`${item.subject}-${item.id}`}
                     to={to}
-                    className="flex-shrink-0 snap-start w-20 rounded-2xl px-2 py-3 text-center hover:scale-[1.02] transition-transform"
+                    className="flex-shrink-0 snap-start w-28 rounded-2xl p-3 hover:scale-[1.02] transition-transform flex flex-col justify-between"
                     style={{
                       background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
                       boxShadow: "0 3px 0 #c67a00",
                     }}
                   >
-                    <div className="text-sm mb-0.5">{subjectEmoji}</div>
-                    <div className="font-black text-xs text-ink-900 leading-tight line-clamp-2">{item.label}</div>
-                    <div className="text-[10px] text-ink-500 mt-0.5">{item.grade}학년</div>
+                    <div>
+                      <div className="text-[10px] text-amber-700 font-bold leading-tight">
+                        {subjectEmoji} {SUBJECT_LABEL[item.subject]}<br />{item.grade}학년
+                      </div>
+                      <div className="mt-1 font-black text-xs text-ink-900 leading-tight line-clamp-2">{item.label}</div>
+                    </div>
+                    <div className="text-[10px] text-amber-600 mt-1">→ 바로가기</div>
                   </Link>
                 );
               })}
@@ -424,6 +448,32 @@ export default function Home() {
           </div>
         )}
       </section>
+
+      {/* ── 공지사항 ── */}
+      {notice && (
+        <section>
+          <button
+            onClick={() => setShowNotice(true)}
+            className="w-full text-left rounded-3xl px-5 py-4 flex items-center gap-3 hover:scale-[1.01] transition-transform"
+            style={{
+              background: "linear-gradient(135deg, #e8f5e9, #e3f2fd)",
+              boxShadow: "0 3px 0 #b0bec5",
+            }}
+          >
+            <span className="text-2xl">📢</span>
+            <div className="flex-1 min-w-0">
+              <div className="text-[10px] font-bold text-ink-400 mb-0.5">공지사항</div>
+              <div className="font-black text-sm text-ink-800 leading-tight truncate">{notice.title}</div>
+            </div>
+            <span className="text-ink-300 text-sm">›</span>
+          </button>
+        </section>
+      )}
+
+      {/* ── NoticeModal ── */}
+      {showNotice && notice && (
+        <NoticeModal notice={notice} onClose={() => setShowNotice(false)} />
+      )}
     </div>
   );
 }

@@ -40,6 +40,13 @@ export default {
           "system-ui",
           "sans-serif",
         ],
+        noto: [
+          "'Noto Sans KR'",
+          "'Pretendard Variable'",
+          "'Apple SD Gothic Neo'",
+          "system-ui",
+          "sans-serif",
+        ],
         round: [
           "'Nunito'",
           "'Pretendard Variable'",
