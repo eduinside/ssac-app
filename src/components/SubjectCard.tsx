@@ -40,6 +40,7 @@ export function SubjectCard({
   subjectKey,
   recommended,
   disabled,
+  comingSoon,
   progress,
 }: {
   to: string;
@@ -49,6 +50,7 @@ export function SubjectCard({
   subjectKey?: SubjectKey;
   recommended?: boolean;
   disabled?: boolean;
+  comingSoon?: boolean;
   progress?: { done: number; total: number };
   color?: string;
 }) {
@@ -59,10 +61,10 @@ export function SubjectCard({
   return (
     <Link
       to={to}
-      aria-disabled={disabled}
+      aria-disabled={disabled || comingSoon}
       className={
         "relative block rounded-4xl overflow-hidden group transition-all duration-150 " +
-        (disabled ? "dim pointer-events-none" : "hover:scale-[1.02] active:scale-[0.98]")
+        (disabled || comingSoon ? "dim pointer-events-none" : "hover:scale-[1.02] active:scale-[0.98]")
       }
       style={{
         background: cfg.gradient,
@@ -75,11 +77,15 @@ export function SubjectCard({
 
       <div className="relative p-5">
         {/* Badge */}
-        {recommended && (
+        {comingSoon ? (
+          <span className="absolute top-3 right-3 text-xs font-black bg-black/40 text-white rounded-full px-2 py-0.5 shadow backdrop-blur-[2px]">
+            ⏳ 준비중
+          </span>
+        ) : recommended ? (
           <span className="absolute top-3 right-3 text-xs font-black bg-white/90 rounded-full px-2 py-0.5 text-sprout-700 shadow">
             ✨ 추천
           </span>
-        )}
+        ) : null}
 
         {/* Icon */}
         <div

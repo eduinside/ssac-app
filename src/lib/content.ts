@@ -1,4 +1,4 @@
-import type { Subject, VocabBook } from "@content/schema";
+import type { Subject, VocabBook, ConceptBook, ConceptVideo } from "@content/schema";
 
 export type GateItem = { label: string; grade: number; semester?: 1 | 2; dimmed: boolean };
 
@@ -16,21 +16,21 @@ export function availableFor(grade: number, subject: Subject): GateItem[] {
       return [2, 3, 4].map((g) => ({
         label: `${g}학년`,
         grade: g,
-        dimmed: g > grade,
+        dimmed: false,
       }));
     }
     case "english": {
       return [3, 4, 5, 6].map((g) => ({
         label: `${g}학년`,
         grade: g,
-        dimmed: g > grade,
+        dimmed: false,
       }));
     }
     case "concept": {
       const items: GateItem[] = [];
       for (let g = 3; g <= 6; g++) {
         for (const s of [1, 2] as const) {
-          items.push({ label: `${g}-${s}`, grade: g, semester: s, dimmed: g > grade });
+          items.push({ label: `${g}-${s}`, grade: g, semester: s, dimmed: false });
         }
       }
       return items;
@@ -39,14 +39,42 @@ export function availableFor(grade: number, subject: Subject): GateItem[] {
 }
 
 export async function loadVocab(grade: number): Promise<VocabBook> {
-  const mod = await import(`@content/vocab/grade-${grade}.json`);
+  const mod = await import(`../../content/vocab/grade-${grade}.json`);
   return mod.default as VocabBook;
 }
 
-export const SUBJECTS: { key: Subject; title: string; emoji: string; tag: string; color: string }[] =
+export async function loadConcept(grade: number, semester: number, subject: string): Promise<ConceptBook> {
+  const mod = await import(`../../content/concept/grade-${grade}-${semester}-${subject}.json`);
+  return mod.default as ConceptBook;
+}
+
+export async function findConceptVideo(
+  grade: number,
+  videoId: string
+): Promise<{ book: ConceptBook; video: ConceptVideo; semester: number; subject: string } | null> {
+  for (const s of [1, 2] as const) {
+    for (const sub of ["social", "math", "science"] as const) {
+      try {
+        const book = await loadConcept(grade, s, sub);
+        for (const unit of book.units) {
+          const video = unit.videos.find((v) => v.id === videoId);
+          if (video) {
+            return { book, video, semester: s, subject: sub };
+          }
+        }
+      } catch {
+        // Skip if file doesn't exist
+      }
+    }
+  }
+  return null;
+}
+
+export const SUBJECTS: { key: Subject; title: string; emoji: string; tag: string; color: string; comingSoon?: boolean }[] =
   [
-    { key: "vocab", title: "어휘싹", emoji: "🌱", tag: "낱말 키우기", color: "bg-sprout-100" },
-    { key: "concept", title: "개념싹", emoji: "💡", tag: "수·사·과 개념", color: "bg-sun-400/30" },
-    { key: "reading", title: "독해싹", emoji: "📖", tag: "문해력 쑥쑥", color: "bg-sky2-400/20" },
-    { key: "english", title: "영어싹", emoji: "🅰️", tag: "영어 영상", color: "bg-coral-400/20" },
+    { key: "vocab", title: "어휘싹", emoji: "🌱", tag: "어휘 키우기", color: "bg-sprout-100" },
+    { key: "concept", title: "개념싹", emoji: "💡", tag: "교과 문해력 기르기", color: "bg-sun-400/30" },
+    { key: "reading", title: "독해싹", emoji: "📖", tag: "독해력 기르기", color: "bg-sky2-400/20", comingSoon: true },
+    { key: "english", title: "영어싹", emoji: "🅰️", tag: "영어 표현력 기르기", color: "bg-coral-400/20", comingSoon: true },
   ];
+

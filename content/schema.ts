@@ -57,20 +57,23 @@ export type VocabBook = z.infer<typeof VocabBook>;
 export const ConceptVideo = z.object({
   id: z.string(),
   title: z.string(),
-  youtubeUrl: z.string(),
+  youtubeUrl: z.string().optional().default(""),
   concepts: z.array(z.object({ term: z.string(), meaning: z.string(), example: z.string().optional() })),
   quiz: z
     .array(z.object({ type: z.literal("ox"), prompt: z.string(), answer: z.boolean() }))
     .default([]),
 });
+export type ConceptVideo = z.infer<typeof ConceptVideo>;
 
 export const ConceptBook = z.object({
   grade: z.number().int().min(3).max(6),
   semester: z.union([z.literal(1), z.literal(2)]),
+  subject: z.string().optional(),
   units: z
     .array(z.object({ id: z.string(), title: z.string(), videos: z.array(ConceptVideo) }))
     .default([]),
 });
+export type ConceptBook = z.infer<typeof ConceptBook>;
 
 export const ReadingTopic = z.object({
   id: z.string(),

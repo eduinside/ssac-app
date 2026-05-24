@@ -149,7 +149,11 @@ export default function Home() {
               {recentDeduped.map((r) => (
                 <Link
                   key={r.subject}
-                  to={`/${r.subject}/${r.grade}/${r.itemId}`}
+                  to={
+                    r.subject === "concept"
+                      ? `/concept/${r.grade}/video/${r.itemId}`
+                      : `/${r.subject}/${r.grade}/${r.itemId}`
+                  }
                   className="card flex-shrink-0 snap-start w-28 hover:scale-[1.02] transition-transform"
                 >
                   <div className="text-[10px] text-ink-300 font-bold leading-tight">
@@ -206,7 +210,8 @@ export default function Home() {
                 emoji={s.emoji}
                 tag={isVocabActive ? "계속 공부하기 →" : s.tag}
                 subjectKey={s.key as SubjectKey}
-                recommended={subjectAvailable(s.key)}
+                recommended={!s.comingSoon && subjectAvailable(s.key)}
+                comingSoon={s.comingSoon}
                 progress={isVocabActive ? vocabProgress : undefined}
                 color={s.color}
               />

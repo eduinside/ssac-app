@@ -106,7 +106,7 @@ export default function Share() {
       </div>
 
       <Link to="/" className="btn-primary w-full text-center">
-        🌱 나도 싹스터디 시작하기
+        🌱 나도 개념튼튼 ON싹 시작하기
       </Link>
     </section>
   );

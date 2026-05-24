@@ -63,7 +63,7 @@ export function OnboardingFlow({ onDone }: { onDone: () => void }) {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              싹스터디
+              개념튼튼 ON싹
             </h1>
             <p className="mt-2 text-ink-600 font-bold text-sm">초등 기초·기본을 다져요</p>
           </div>

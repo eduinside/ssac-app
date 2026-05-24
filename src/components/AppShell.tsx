@@ -6,10 +6,10 @@ import { StudentSwitcher } from "./StudentSwitcher";
 const ALL_SUBJECTS = [
   { to: "/vocab",   emoji: "🌱", label: "어휘" },
   { to: "/concept", emoji: "💡", label: "개념" },
-  { to: "/reading", emoji: "📖", label: "독해" },
-  { to: "/english", emoji: "🅰️", label: "영어" },
+  { to: "/reading", emoji: "📖", label: "독해", comingSoon: true },
+  { to: "/english", emoji: "🅰️", label: "영어", comingSoon: true },
 ];
-const DEFAULT_RECENT = ["/vocab", "/reading"];
+const DEFAULT_RECENT = ["/vocab", "/concept"];
 const LS_KEY = "ssac:recentSubjects";
 
 function getRecentSubjects(): string[] {
@@ -68,9 +68,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const gradeShadow = GRADE_SHADOWS[gradeIdx];
 
   const midItems = recentSubjects
-    .slice(0, 2)
     .map((to) => ALL_SUBJECTS.find((s) => s.to === to)!)
-    .filter(Boolean);
+    .filter((s) => s && !s.comingSoon)
+    .slice(0, 2);
 
   const navItems = [
     { to: "/",       emoji: "🏠", label: "홈" },
@@ -93,7 +93,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              싹스터디
+              개념튼튼 ON싹
             </span>
           </Link>
 
