@@ -237,7 +237,7 @@ export default function Home() {
         <section className="min-w-0">
           <h2 className="font-black text-kidlg text-ink-800 mb-2">⏰ 최근 활동</h2>
           {recentDeduped.length === 0 ? (
-            <div className="card-bordered text-center py-6">
+            <div className="card-bordered text-center h-[116px] flex flex-col items-center justify-center p-4">
               <div className="text-3xl mb-1">👆</div>
               <p className="text-ink-500 text-xs">아래에서 골라봐!</p>
             </div>
@@ -251,13 +251,16 @@ export default function Home() {
                       ? `/concept/${r.grade}/video/${r.itemId}`
                       : `/${r.subject}/${r.grade}/${r.itemId}`
                   }
-                  className="card flex-shrink-0 snap-start w-28 hover:scale-[1.02] transition-transform"
+                  className="card flex-shrink-0 snap-start w-28 h-[116px] p-3.5 flex flex-col justify-between hover:scale-[1.02] transition-transform"
+                  style={{
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06)",
+                  }}
                 >
                   <div className="text-[10px] text-ink-300 font-bold leading-tight">
                     {SUBJECT_LABEL[r.subject] ?? r.subject}<br />{r.grade}학년
                   </div>
-                  <div className="mt-1 font-black text-xs text-ink-800 line-clamp-2 leading-tight">{r.label}</div>
-                  <div className="text-[10px] text-ink-300 mt-1">→ 이어하기</div>
+                  <div className="mt-0.5 font-black text-xs text-ink-800 line-clamp-2 leading-tight">{r.label}</div>
+                  <div className="text-[10px] text-ink-300">→ 이어하기</div>
                 </Link>
               ))}
             </div>
@@ -268,7 +271,7 @@ export default function Home() {
         <section className="min-w-0">
           <h2 className="font-black text-kidlg text-ink-800 mb-2">⭐ 즐겨찾기</h2>
           {starredItems.length === 0 ? (
-            <div className="card-bordered text-center py-6">
+            <div className="card-bordered text-center h-[116px] flex flex-col items-center justify-center p-4">
               <div className="text-3xl mb-1">⭐</div>
               <p className="text-ink-500 text-xs">별표한 항목이 여기 모여!</p>
             </div>
@@ -287,15 +290,15 @@ export default function Home() {
                   <Link
                     key={`${item.subject}-${item.id}`}
                     to={to}
-                    className="flex-shrink-0 snap-start w-20 rounded-2xl px-2 py-3 text-center hover:scale-[1.02] transition-transform"
+                    className="flex-shrink-0 snap-start w-28 h-[116px] rounded-4xl p-3.5 text-center flex flex-col justify-between hover:scale-[1.02] transition-transform"
                     style={{
                       background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
-                      boxShadow: "0 3px 0 #c67a00",
+                      boxShadow: "0 3px 0 #c67a00, 0 4px 20px rgba(0,0,0,0.08)",
                     }}
                   >
-                    <div className="text-sm mb-0.5">{subjectEmoji}</div>
+                    <div className="text-sm">{subjectEmoji}</div>
                     <div className="font-black text-xs text-ink-900 leading-tight line-clamp-2">{item.label}</div>
-                    <div className="text-[10px] text-ink-500 mt-0.5">{item.grade}학년</div>
+                    <div className="text-[10px] text-ink-500">{item.grade}학년</div>
                   </Link>
                 );
               })}
