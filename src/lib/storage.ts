@@ -2,7 +2,7 @@ import { get, set, del, createStore, keys } from "idb-keyval";
 import type { Subject } from "@content/schema";
 import { nanoid } from "nanoid";
 
-const store = createStore("ssac-study", "kv");
+const store = createStore("ssac-app", "kv");
 
 // ── Types ──────────────────────────────────────────────────────────
 export type Student = {

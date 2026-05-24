@@ -1,9 +1,9 @@
-name = "ssac-study"
+name = "ssac-app"
 compatibility_date = "2025-01-01"
 pages_build_output_dir = "dist"
 
 # Bind D1. Create with:
-#   npx wrangler d1 create ssac-study
+#   npx wrangler d1 create ssac-app
 # Then paste the database_id below.
 [[d1_databases]]
 binding = "DB"

@@ -233,7 +233,7 @@ export default function AdminData() {
     });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `ssac-study-all-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `ssac-app-all-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(a.href);
   }
