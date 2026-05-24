@@ -19,6 +19,7 @@ export default function ConceptVideoLearn() {
   } | null>(null);
 
   const [done, setDone] = useState(false);
+  const [starred, setStarred] = useState(false);
   const [currentQuizIdx, setCurrentQuizIdx] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -46,6 +47,7 @@ export default function ConceptVideoLearn() {
     if (!videoId) return;
     getProgress("concept", videoId).then((p) => {
       setDone(!!p?.done);
+      setStarred(!!p?.starred);
     });
   }, [videoId]);
 
@@ -117,6 +119,13 @@ export default function ConceptVideoLearn() {
     );
   }
 
+  async function toggleStar() {
+    if (!videoId) return;
+    const v = !starred;
+    setStarred(v);
+    await patchProgress("concept", videoId, { starred: v });
+  }
+
   const { video, semester, subject, book } = data;
   const quizzes = video.quiz ?? [];
   const currentQuiz = quizzes[currentQuizIdx];
@@ -172,6 +181,16 @@ export default function ConceptVideoLearn() {
         <div className="text-xs font-bold text-ink-500 bg-ink-100 rounded-full px-3 py-1">
           {subject === "social" ? "사회 🗺️" : subject === "math" ? "수학 🔢" : "과학 🧪"} · {grade}학년 {semester}학기
         </div>
+        <button
+          onClick={toggleStar}
+          className={
+            "w-12 h-12 flex items-center justify-center rounded-2xl text-2xl transition-all duration-200 active:scale-95 " +
+            (starred ? "scale-110" : "grayscale opacity-50 hover:opacity-80 hover:grayscale-0")
+          }
+          aria-label="별표"
+        >
+          ⭐
+        </button>
       </div>
 
       {/* Video Title */}

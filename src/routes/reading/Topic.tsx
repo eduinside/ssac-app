@@ -4,6 +4,7 @@ import { loadReading } from "@/lib/content";
 import type { ReadingTopic as TopicType } from "@content/schema";
 import { getProgress, patchProgress, pushRecent } from "@/lib/storage";
 import { CheckRunner } from "@/components/Check";
+import { evaluateReadingBadges, BADGES } from "@/lib/badges";
 
 type Phase = "main" | "apply";
 
@@ -15,7 +16,9 @@ export default function ReadingTopic() {
   const [topic, setTopic] = useState<TopicType | null>(null);
   const [loading, setLoading] = useState(true);
   const [done, setDone] = useState(false);
+  const [starred, setStarred] = useState(false);
   const [phase, setPhase] = useState<Phase>("main");
+  const [newBadges, setNewBadges] = useState<string[]>([]);
 
   // activities: track which are passed
   const [actPassed, setActPassed] = useState<boolean[]>([]);
@@ -44,8 +47,17 @@ export default function ReadingTopic() {
   // Load persisted progress
   useEffect(() => {
     if (!topicId) return;
-    getProgress("reading", topicId).then((p) => setDone(!!p?.done));
+    getProgress("reading", topicId).then((p) => {
+      setDone(!!p?.done);
+      setStarred(!!p?.starred);
+    });
   }, [topicId]);
+
+  useEffect(() => {
+    if (newBadges.length === 0) return;
+    const t = setTimeout(() => setNewBadges([]), 3500);
+    return () => clearTimeout(t);
+  }, [newBadges]);
 
   // Load saved apply texts
   useEffect(() => {
@@ -77,6 +89,13 @@ export default function ReadingTopic() {
 
   const scrollTop = () => topRef.current?.scrollIntoView({ behavior: "smooth" });
 
+  async function toggleStar() {
+    if (!topicId) return;
+    const v = !starred;
+    setStarred(v);
+    await patchProgress("reading", topicId, { starred: v });
+  }
+
   const allApplyFilled = topic?.apply.every((it) => (applyTexts[it.id] ?? "").trim().length >= 3) ?? false;
   const allApplySubmitted = topic?.apply.every((it) => applyDone[it.id]) ?? false;
 
@@ -98,6 +117,8 @@ export default function ReadingTopic() {
     await patchProgress("reading", topicId!, { done: true });
     setDone(true);
     setSubmitting(false);
+    const added = await evaluateReadingBadges();
+    if (added.length) setNewBadges(added);
   }
 
   if (loading) {
@@ -155,6 +176,16 @@ export default function ReadingTopic() {
           </div>
           <h1 className="font-black text-kidlg text-ink-900 leading-tight">{topic.title}</h1>
         </div>
+        <button
+          onClick={toggleStar}
+          className={
+            "w-12 h-12 flex items-center justify-center rounded-2xl text-2xl transition-all duration-200 active:scale-95 " +
+            (starred ? "scale-110" : "grayscale opacity-50 hover:opacity-80 hover:grayscale-0")
+          }
+          aria-label="별표"
+        >
+          ⭐
+        </button>
         {done && (
           <div className="chip bg-sky2-100 text-sky2-700 border-sky2-200 font-black shrink-0">✓ 완료</div>
         )}
@@ -328,6 +359,33 @@ export default function ReadingTopic() {
       <Link to={`/reading/${grade}`} className="btn-soft w-full text-center py-2.5">
         ← 목록으로 돌아가기
       </Link>
+
+      {/* Badge toast */}
+      {newBadges.length > 0 && (
+        <div
+          className="fixed bottom-24 sm:bottom-6 inset-x-4 max-w-sm mx-auto rounded-4xl p-4 z-50 animate-bounce-in"
+          style={{
+            background: "linear-gradient(135deg, #f9a825, #ffd54f)",
+            boxShadow: "0 8px 0 #c67a00, 0 12px 30px rgba(0,0,0,0.2)",
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div className="text-4xl animate-wiggle">🏅</div>
+            <div>
+              <div className="font-black text-ink-900">뱃지 획득!</div>
+              <div className="text-sm text-ink-700">
+                {newBadges.map((c) => `${BADGES[c]?.emoji ?? ""} ${BADGES[c]?.name ?? c}`).join("  ")}
+              </div>
+            </div>
+            <button
+              onClick={() => setNewBadges([])}
+              className="ml-auto text-ink-600 text-xl leading-none"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

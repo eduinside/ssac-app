@@ -10,6 +10,12 @@ export const BADGES: Record<string, { name: string; emoji: string; desc: string 
   first_concept:  { name: "개념 첫걸음", emoji: "💡", desc: "개념싹 영상 1개 완료" },
   ten_concepts:   { name: "개념 탐험가", emoji: "🔭", desc: "개념싹 영상 10개 완료" },
   concept_master: { name: "개념 마스터", emoji: "🧠", desc: "개념싹 영상 30개 완료" },
+  first_english:  { name: "영어 첫걸음", emoji: "🅰️", desc: "영어싹 1개 완료" },
+  ten_english:    { name: "영어 탐험가", emoji: "🌏", desc: "영어싹 10개 완료" },
+  english_master: { name: "영어 마스터", emoji: "🗣️", desc: "영어싹 20개 완료" },
+  first_reading:  { name: "독해 첫걸음", emoji: "📖", desc: "독해싹 1개 완료" },
+  ten_reading:    { name: "독해 탐험가", emoji: "📚", desc: "독해싹 10개 완료" },
+  reading_master: { name: "독해 마스터", emoji: "✍️", desc: "독해싹 20개 완료" },
 };
 
 export async function evaluateVocabBadges(grade: number, studentId?: string): Promise<string[]> {
@@ -70,6 +76,53 @@ export async function evaluateConceptBadges(studentId?: string): Promise<string[
   if (done >= 1)  earned.push("first_concept");
   if (done >= 10) earned.push("ten_concepts");
   if (done >= 30) earned.push("concept_master");
+
+  const added: string[] = [];
+  for (const code of earned) {
+    if (!existing.includes(code)) {
+      await addBadge(code, sid);
+      added.push(code);
+    }
+  }
+  return added;
+}
+
+export async function evaluateEnglishBadges(studentId?: string): Promise<string[]> {
+  const sid = studentId ?? (await getActiveStudentId()) ?? undefined;
+  const [map, existing] = await Promise.all([
+    getAllProgress("english", sid),
+    getBadges(sid),
+  ]);
+  const done = Object.values(map).filter((v) => v.done).length;
+
+  const earned: string[] = [];
+  if (done >= 1)  earned.push("first_english");
+  if (done >= 10) earned.push("ten_english");
+  if (done >= 20) earned.push("english_master");
+
+  const added: string[] = [];
+  for (const code of earned) {
+    if (!existing.includes(code)) {
+      await addBadge(code, sid);
+      added.push(code);
+    }
+  }
+  return added;
+}
+
+export async function evaluateReadingBadges(studentId?: string): Promise<string[]> {
+  const sid = studentId ?? (await getActiveStudentId()) ?? undefined;
+  const [map, existing] = await Promise.all([
+    getAllProgress("reading", sid),
+    getBadges(sid),
+  ]);
+  // Only count top-level topic completion (not apply sub-items)
+  const done = Object.entries(map).filter(([id, v]) => !id.includes("-apply-") && v.done).length;
+
+  const earned: string[] = [];
+  if (done >= 1)  earned.push("first_reading");
+  if (done >= 10) earned.push("ten_reading");
+  if (done >= 20) earned.push("reading_master");
 
   const added: string[] = [];
   for (const code of earned) {

@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { loadEnglish } from "@/lib/content";
 import { getProgress, patchProgress, pushRecent } from "@/lib/storage";
 import { CheckRunner } from "@/components/Check";
+import { evaluateEnglishBadges, BADGES } from "@/lib/badges";
 import type { EnglishItem } from "@content/schema";
 
 export default function EnglishItemPage() {
@@ -13,7 +14,9 @@ export default function EnglishItemPage() {
   const [item, setItem] = useState<EnglishItem | null>(null);
   const [loading, setLoading] = useState(true);
   const [done, setDone] = useState(false);
+  const [starred, setStarred] = useState(false);
   const [quizPassed, setQuizPassed] = useState(false);
+  const [newBadges, setNewBadges] = useState<string[]>([]);
 
   useEffect(() => {
     if (!itemId) return;
@@ -27,7 +30,10 @@ export default function EnglishItemPage() {
 
   useEffect(() => {
     if (!itemId) return;
-    getProgress("english", itemId).then((p) => setDone(!!p?.done));
+    getProgress("english", itemId).then((p) => {
+      setDone(!!p?.done);
+      setStarred(!!p?.starred);
+    });
   }, [itemId]);
 
   useEffect(() => {
@@ -36,10 +42,25 @@ export default function EnglishItemPage() {
     }
   }, [item, grade]);
 
+  useEffect(() => {
+    if (newBadges.length === 0) return;
+    const t = setTimeout(() => setNewBadges([]), 3500);
+    return () => clearTimeout(t);
+  }, [newBadges]);
+
+  async function toggleStar() {
+    if (!itemId) return;
+    const v = !starred;
+    setStarred(v);
+    await patchProgress("english", itemId, { starred: v });
+  }
+
   async function markDone() {
     if (!itemId) return;
     await patchProgress("english", itemId, { done: true });
     setDone(true);
+    const added = await evaluateEnglishBadges();
+    if (added.length) setNewBadges(added);
   }
 
   if (loading) {
@@ -74,6 +95,16 @@ export default function EnglishItemPage() {
           </div>
           <h1 className="font-black text-kidlg text-ink-900 leading-tight">{item.title}</h1>
         </div>
+        <button
+          onClick={toggleStar}
+          className={
+            "w-12 h-12 flex items-center justify-center rounded-2xl text-2xl transition-all duration-200 active:scale-95 " +
+            (starred ? "scale-110" : "grayscale opacity-50 hover:opacity-80 hover:grayscale-0")
+          }
+          aria-label="별표"
+        >
+          ⭐
+        </button>
         {done && (
           <div className="chip font-black shrink-0 text-white border-pink-700"
             style={{ background: "#e91e8c" }}>
@@ -141,6 +172,33 @@ export default function EnglishItemPage() {
       <Link to={`/english/${grade}`} className="btn-soft w-full text-center py-2.5">
         ← 목록으로 돌아가기
       </Link>
+
+      {/* Badge toast */}
+      {newBadges.length > 0 && (
+        <div
+          className="fixed bottom-24 sm:bottom-6 inset-x-4 max-w-sm mx-auto rounded-4xl p-4 z-50 animate-bounce-in"
+          style={{
+            background: "linear-gradient(135deg, #f9a825, #ffd54f)",
+            boxShadow: "0 8px 0 #c67a00, 0 12px 30px rgba(0,0,0,0.2)",
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div className="text-4xl animate-wiggle">🏅</div>
+            <div>
+              <div className="font-black text-ink-900">뱃지 획득!</div>
+              <div className="text-sm text-ink-700">
+                {newBadges.map((c) => `${BADGES[c]?.emoji ?? ""} ${BADGES[c]?.name ?? c}`).join("  ")}
+              </div>
+            </div>
+            <button
+              onClick={() => setNewBadges([])}
+              className="ml-auto text-ink-600 text-xl leading-none"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

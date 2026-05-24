@@ -13,7 +13,7 @@ import {
 } from "@/lib/storage";
 import { BADGES } from "@/lib/badges";
 
-type StarredWord = { id: string; word: string; grade: number };
+type StarredItem = { id: string; label: string; grade: number; subject: "vocab" | "english" | "reading" };
 
 const SUBJECT_LABEL: Record<string, string> = {
   vocab: "어휘싹", concept: "개념싹", reading: "독해싹", english: "영어싹",
@@ -30,7 +30,7 @@ export default function Home() {
   const [readingProgress, setReadingProgress] = useState({ done: 0, total: 0 });
   const [englishActiveGrade, setEnglishActiveGrade] = useState<number | null>(null);
   const [englishProgress, setEnglishProgress] = useState({ done: 0, total: 0 });
-  const [starredWords, setStarredWords] = useState<StarredWord[]>([]);
+  const [starredItems, setStarredItems] = useState<StarredItem[]>([]);
   const [earnedBadges, setEarnedBadges] = useState<string[]>([]);
 
   async function loadAll() {
@@ -118,21 +118,49 @@ export default function Home() {
       setEnglishProgress({ done: 0, total: 0 });
     }
 
-    // Starred vocab — load word labels from content JSON
-    const starredEntries = Object.entries(map).filter(([, v]) => v.starred);
-    if (starredEntries.length > 0) {
-      const grades = [...new Set(starredEntries.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "1")))];
+    // Starred items across vocab, english, reading
+    const allStarred: StarredItem[] = [];
+
+    // Vocab starred
+    const starredVocab = Object.entries(map).filter(([, v]) => v.starred);
+    if (starredVocab.length > 0) {
+      const grades = [...new Set(starredVocab.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "1")))];
       const books = await Promise.all(grades.map((g) => loadVocab(g).catch(() => null)));
       const wordMap: Record<string, { word: string; grade: number }> = {};
       books.forEach((b) => b?.words.forEach((w) => { wordMap[w.id] = { word: w.word, grade: b.grade }; }));
-      setStarredWords(
-        starredEntries
-          .map(([id]) => ({ id, ...(wordMap[id] ?? { word: id, grade: 1 }) }))
-          .filter((w) => w.word)
-      );
-    } else {
-      setStarredWords([]);
+      starredVocab.forEach(([id]) => {
+        const info = wordMap[id];
+        if (info) allStarred.push({ id, label: info.word, grade: info.grade, subject: "vocab" });
+      });
     }
+
+    // English starred
+    const starredEnglish = Object.entries(englishMap).filter(([, v]) => v.starred);
+    if (starredEnglish.length > 0) {
+      const grades = [...new Set(starredEnglish.map(([id]) => parseInt(id.split("-")[0]) || 3))];
+      const engBooks = await Promise.all(grades.map((g) => loadEnglish(g).catch(() => null)));
+      const engItemMap: Record<string, { title: string; grade: number }> = {};
+      engBooks.forEach((b) => b?.items.forEach((it) => { engItemMap[it.id] = { title: it.title, grade: b.grade }; }));
+      starredEnglish.forEach(([id]) => {
+        const info = engItemMap[id];
+        if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "english" });
+      });
+    }
+
+    // Reading starred (top-level topics only)
+    const starredReading = Object.entries(readingMap).filter(([id, v]) => !id.includes("-apply-") && v.starred);
+    if (starredReading.length > 0) {
+      const grades = [...new Set(starredReading.map(([id]) => parseInt(id.match(/^g(\d+)-/)?.[1] ?? "2")))];
+      const readBooks = await Promise.all(grades.map((g) => loadReading(g).catch(() => null)));
+      const readTopicMap: Record<string, { title: string; grade: number }> = {};
+      readBooks.forEach((b) => b?.topics.forEach((t) => { readTopicMap[t.id] = { title: t.title, grade: b.grade }; }));
+      starredReading.forEach(([id]) => {
+        const info = readTopicMap[id];
+        if (info) allStarred.push({ id, label: info.title, grade: info.grade, subject: "reading" });
+      });
+    }
+
+    setStarredItems(allStarred);
 
     setEarnedBadges(badges);
   }
@@ -239,27 +267,38 @@ export default function Home() {
         {/* 즐겨찾기 */}
         <section className="min-w-0">
           <h2 className="font-black text-kidlg text-ink-800 mb-2">⭐ 즐겨찾기</h2>
-          {starredWords.length === 0 ? (
+          {starredItems.length === 0 ? (
             <div className="card-bordered text-center py-6">
               <div className="text-3xl mb-1">⭐</div>
-              <p className="text-ink-500 text-xs">별표한 낱말이 여기 모여!</p>
+              <p className="text-ink-500 text-xs">별표한 항목이 여기 모여!</p>
             </div>
           ) : (
             <div className="flex gap-2 overflow-x-auto pb-1 snap-x snap-mandatory">
-              {starredWords.map((w) => (
-                <Link
-                  key={w.id}
-                  to={`/vocab/${w.grade}/${w.id}`}
-                  className="flex-shrink-0 snap-start w-20 rounded-2xl px-2 py-3 text-center hover:scale-[1.02] transition-transform"
-                  style={{
-                    background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
-                    boxShadow: "0 3px 0 #c67a00",
-                  }}
-                >
-                  <div className="font-black text-xs text-ink-900 leading-tight line-clamp-2">{w.word}</div>
-                  <div className="text-[10px] text-ink-500 mt-0.5">{w.grade}학년</div>
-                </Link>
-              ))}
+              {starredItems.map((item) => {
+                const to =
+                  item.subject === "vocab"
+                    ? `/vocab/${item.grade}/${item.id}`
+                    : item.subject === "english"
+                    ? `/english/${item.grade}/${item.id}`
+                    : `/reading/${item.grade}/${item.id}`;
+                const subjectEmoji =
+                  item.subject === "vocab" ? "📝" : item.subject === "english" ? "🅰️" : "📖";
+                return (
+                  <Link
+                    key={`${item.subject}-${item.id}`}
+                    to={to}
+                    className="flex-shrink-0 snap-start w-20 rounded-2xl px-2 py-3 text-center hover:scale-[1.02] transition-transform"
+                    style={{
+                      background: "linear-gradient(135deg, #fff9c4, #ffd54f)",
+                      boxShadow: "0 3px 0 #c67a00",
+                    }}
+                  >
+                    <div className="text-sm mb-0.5">{subjectEmoji}</div>
+                    <div className="font-black text-xs text-ink-900 leading-tight line-clamp-2">{item.label}</div>
+                    <div className="text-[10px] text-ink-500 mt-0.5">{item.grade}학년</div>
+                  </Link>
+                );
+              })}
             </div>
           )}
         </section>
