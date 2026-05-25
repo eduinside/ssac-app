@@ -4,7 +4,7 @@
     {
       "id": "5-01",
       "title": "The Secret of the Bear and the Tiger",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/24050845_1719782502_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "Bear, what do you want to be?",
@@ -20,10 +20,10 @@
     {
       "id": "5-02",
       "title": "The City Mouse and the Country Mouse",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/24799052_1771403301_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "다음 대화를 읽고, 이어질 응답으로 알맞은 것을 고르시오.",
+        "prompt": "다음 대화를 읽고, 이어질 응답으로 알맞은 것을 고르시오.\n\n\"I'm David. I'm from the city, Daegu.\"\n\"Hi, David. What do you do in your free time?\"",
         "choices": [
           "I watch movies in my free time.",
           "I play soccer in my free time.",
@@ -36,12 +36,12 @@
     {
       "id": "5-03",
       "title": "Three Little Pigs",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/27153654_1734018788_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 대답으로 가장 알맞은 것을 고르시오.",
+        "prompt": "빈칸에 들어갈 대답으로 가장 알맞은 것을 고르시오.\n\n\"What will you do tomorrow?\"",
         "choices": [
-          "I will build a house.",
+          "I will make a house.",
           "I will make a fire.",
           "I will grow vegetables.",
           "I will go shopping."
@@ -52,7 +52,7 @@
     {
       "id": "5-04",
       "title": "A Monster is in My House",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/37173602_1764745238_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "What is in the kitchen?",
@@ -68,7 +68,7 @@
     {
       "id": "5-05",
       "title": "Diaries of Hong-do and Yoon-bok",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/21197582_1776309029_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "이야기의 내용과 일치하는 것을 고르시오.",
@@ -84,14 +84,14 @@
     {
       "id": "5-06",
       "title": "Let's Build a Castle, Suwon Hwaseong",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/13982993_1701892893_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "이야기 속에서 정약용이 수원화성을 짓기 위해, 사용한 물건이 아닌 것을 고르시오.",
         "choices": [
           "pen",
-          "geojungi(거중기)",
-          "u-hyeong-geo(유형거)",
+          "paper",
+          "hammer",
           "brush"
         ],
         "answer": 0
@@ -100,10 +100,10 @@
     {
       "id": "5-07",
       "title": "Shopping in Goryeo",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/18722827_1750807453_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 알맞은 질문을 고르시오.",
+        "prompt": "빈칸에 알맞은 질문을 고르시오.\n\n[ ? ]\n\"They're 5,000 won.\"",
         "choices": [
           "How much is this shoe?",
           "How much are this shoes?",
@@ -116,15 +116,15 @@
     {
       "id": "5-08",
       "title": "What is in Gyeongbok Palace",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/19203659_1746317030_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "What's in Geunjeongjeon(근정전)?",
         "choices": [
-          "There is a desk.",
           "There is a bed.",
+          "There is a toilet.",
           "There is a chair.",
-          "There is a book."
+          "There is a TV."
         ],
         "answer": 2
       }
@@ -132,10 +132,10 @@
     {
       "id": "5-09",
       "title": "Battle Trip in Jeju-do",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/16317166_1712472546_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 대답으로 알맞은 것을 고르시오.",
+        "prompt": "빈칸에 들어갈 대답으로 알맞은 것을 고르시오.\n\n\"Seung-bin, what will you do in Jeju-do?\"",
         "choices": [
           "I went to the mountain.",
           "I ate delicious food.",
@@ -148,7 +148,7 @@
     {
       "id": "5-10",
       "title": "Who is My Secret Guest",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/20460464_1762537355_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "이야기 속 비밀 방문객이 가장 좋아하는 과목을 고르시오.",

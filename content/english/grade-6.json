@@ -4,15 +4,15 @@
     {
       "id": "6-01",
       "title": "I Love My Sister",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/18024418_1789519718_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "언니가 슬퍼한 이유는 무엇인지 고르시오.",
+        "prompt": "언니가 슬퍼한 이유는 무엇인지 고르시오.\n\n\"Why are you sad?\"",
         "choices": [
           "My friend doesn't like the present I made.",
-          "My sister doesn't like my room.",
-          "I lost my favorite pencil.",
-          "I don't have a friend."
+          "My friend doesn't like the card I made.",
+          "My friend doesn't like the picture I draw.",
+          "My friend doesn't like the letter I wrote."
         ],
         "answer": 0
       }
@@ -20,15 +20,15 @@
     {
       "id": "6-02",
       "title": "Finding a Superstar",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/29072036_1702704360_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 단어가 알맞게 짝지어진 것을 고르시오.",
+        "prompt": "토끼는 몇 학년이고, 무슨 동아리에 속해 있나요?",
         "choices": [
-          "first, sports club",
-          "second, art club",
-          "third, music club",
-          "fourth, dance club"
+          "first grade, art club",
+          "second grade, art club",
+          "third grade, music club",
+          "fourth grade, dance club"
         ],
         "answer": 1
       }
@@ -36,26 +36,26 @@
     {
       "id": "6-03",
       "title": "My Birthday is Coming",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/21596044_1708988888_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것을 고르시오.",
+        "prompt": "이야기의 내용과 일치하는 것을 고르시오.",
         "choices": [
-          "When is your birthday?",
-          "What is your name?",
-          "Where is the restroom?",
-          "How old are you?"
+          "주인공의 생일은 5월 12일이다.",
+          "세은이는 축구 연습이 있어 생일 파티에 오지 못한다고 말했다.",
+          "수민이는 수학 수업이 있어 생일 파티에 오지 못한다고 말했다.",
+          "친구들은 주인공을 위한 깜짝파티를 준비했다."
         ],
-        "answer": 0
+        "answer": 3
       }
     },
     {
       "id": "6-04",
       "title": "Solar System",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/25053677_1764255375_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 알맞은 단어를 고르시오.",
+        "prompt": "빈칸에 들어갈 알맞은 단어를 고르시오.\n\n\"Hello, my name is Mercury. I live closer than the others to the sun. I'm [ ? ] than Earth.\"",
         "choices": [
           "smaller",
           "bigger",
@@ -68,10 +68,10 @@
     {
       "id": "6-05",
       "title": "Lisa's Fun Day in Korea",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/17254115_1719987855_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 대답으로 알맞은 것을 고르시오.",
+        "prompt": "이어질 대답으로 알맞은 것을 고르시오.\n\n\"Do you know anything about Hanok?\"",
         "choices": [
           "It's a traditional Korean house.",
           "It's a traditional Korean food.",
@@ -84,7 +84,7 @@
     {
       "id": "6-06",
       "title": "A New Friend",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/25305383_1769894179_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "영상의 내용과 일치하지 않는 것을 고르시오.",
@@ -100,10 +100,10 @@
     {
       "id": "6-07",
       "title": "My Great Summer",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/23569016_1725337313_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것을 고르시오.",
+        "prompt": "다음 답에 어울리는 질문으로 가장 알맞은 것을 고르시오.\n\n\"I'm going to to to An-dong with my Family.\"",
         "choices": [
           "What will you do this summer?",
           "What did you do last summer?",
@@ -116,10 +116,10 @@
     {
       "id": "6-08",
       "title": "The Sports Day",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/23033835_1754516547_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것은?",
+        "prompt": "빈칸에 들어갈 질문으로 가장 알맞은 것은?\n\n\"The first game is running.\"\n\"Ow!\"\n\"[ ? ]\"\n\"I have a stomachache.\"",
         "choices": [
           "What's wrong?",
           "What's your name?",
@@ -132,10 +132,10 @@
     {
       "id": "6-09",
       "title": "The Introduction to Our School",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/24187327_1714083438_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 대답으로 알맞지 않은 것을 고르시오.",
+        "prompt": "이어질 대답으로 알맞지 않은 것을 고르시오.\n\n\"What does the librarian look like?\"",
         "choices": [
           "She has long straight hair.",
           "She is wearing a red skirt.",
@@ -148,15 +148,15 @@
     {
       "id": "6-10",
       "title": "Save the Earth",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/21363736_1763568376_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈칸에 들어갈 대답으로 가장 적절한 것을 고르시오.",
+        "prompt": "빈칸에 들어갈 대답으로 가장 적절한 것을 고르시오.\n\n\"[ ? ]\"\n\"It's on April 22nd!\"",
         "choices": [
-          "I will make a flower pot.",
-          "I will use a cup.",
-          "I will turn off the TV.",
-          "I will plant a tree."
+          "When is Children's Day?",
+          "When is Earth day?",
+          "When is Parents' day?",
+          "When is Christmas?"
         ],
         "answer": 2
       }

@@ -4,7 +4,7 @@
     {
       "id": "3-01",
       "title": "Happy Zookeeper",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/13299114_1705262389_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "다음 등장 인물의 직업으로 알맞은 것을 고르시오.",
@@ -20,10 +20,10 @@
     {
       "id": "3-02",
       "title": "How Old Are You?",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/11055594_1714114300_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "How old is Bella? (Bella는 몇 살인지 고르시오.)",
+        "prompt": "How old is Bella?\n\n(Bella는 몇 살인지 고르시오.)",
         "choices": [
           "She is seven years old.",
           "She is eight years old.",
@@ -36,15 +36,15 @@
     {
       "id": "3-03",
       "title": "Best Cook, Snow White",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/12725358_1760743904_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "What can Snow White do for the dwarfs? (백설공주는 난쟁이들을 위해 무엇을 할 수 있는지 고르시오.)",
+        "prompt": "What can Snow White do for the dwarfs?\n\n(백설공주는 난쟁이들을 위해 무엇을 할 수 있는지 고르시오.)",
         "choices": [
-          "She can dance.",
-          "She can sing.",
+          "She can run.",
+          "She can jump.",
           "She can cook.",
-          "She can swim."
+          "She can dance."
         ],
         "answer": 2
       }
@@ -52,55 +52,54 @@
     {
       "id": "3-04",
       "title": "Finding the Suspect",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/13255727_1767423688_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "다음 그림에 알맞은 질문을 고르시오.",
+        "prompt": "이야기의 내용과 일치하지 않는 것을 고르시오.",
         "choices": [
-          "Do you have a pen?",
-          "Do you have a pencil?",
-          "Do you have a ruler?",
-          "Do you have a crayon?"
-        ],
-        "answer": 0
-      }
-    },
-    {
-      "id": "3-05",
-      "title": "The Funny Quiz Show",
-      "videoUrl": "",
-      "quiz": {
-        "type": "mcq",
-        "prompt": "퀴즈에서 이것은 무슨 그림이었는지 고르시오.",
-        "choices": [
-          "a pen",
-          "a cup",
-          "a pencil",
-          "a ruler"
+          "Donald(도날드): \"I have a pen.\"",
+          "Eva(에바): \"I have crayons.\"",
+          "Eva(에바): \"I don't have a pen.\"",
+          "Freddy(프레디): \"I don't have a ruler.\""
         ],
         "answer": 2
       }
     },
     {
-      "id": "3-06",
-      "title": "Happy Halloween",
-      "videoUrl": "",
+      "id": "3-05",
+      "title": "The Funny Quiz Show",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/24323411_1757442856_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈 칸에 들어갈 문장으로 알맞은 것을 고르시오.",
+        "prompt": "Who was the winner?",
         "choices": [
-          "He is my dad.",
-          "He is my mom.",
-          "He is my sister.",
-          "He is my brother."
+          "Andrew",
+          "Bora",
+          "Cindy"
         ],
-        "answer": 3
+        "answer": 1
+      }
+    },
+    {
+      "id": "3-06",
+      "title": "Happy Halloween",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/18964287_1777231512_mp4.mp4",
+      "quiz": {
+        "type": "mcq",
+        "prompt": "What celebration is this?",
+        "choices": [
+          "Christmas",
+          "Halloween",
+          "Children's Day",
+          "Teachers' Day"
+        ],
+        "answer": 1
       }
     },
     {
       "id": "3-07",
       "title": "Travel with Books",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/14396512_1753310448_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "다음 말에 이어질 표현으로 가장 알맞은 것을 고르시오.\n\n\"Look at this river!\"",
@@ -108,15 +107,15 @@
           "Wow, it's big!",
           "Wow, it's long!",
           "Wow, it's small!",
-          "Wow, it's tall!"
+          "Wow, it's short!"
         ],
-        "answer": 1
+        "answer": 0
       }
     },
     {
       "id": "3-08",
       "title": "How many hamburgers?",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/19720412_1724463217_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "How many hamburgers are there?",
@@ -132,33 +131,33 @@
     {
       "id": "3-09",
       "title": "Let's Play",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/12040411_1784341293_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "빈 칸에 들어갈 문장으로 가장 알맞은 것을 고르시오.",
+        "prompt": "이 게임에서 일어서라고 지시할 때 할 말로 가장 알맞은 것을 고르시오.",
         "choices": [
-          "Sit down, please.",
-          "Stand up, please.",
-          "Open the door, please.",
-          "Close the door, please."
+          "Simon says, Sit down, please.",
+          "Simon says, stand up, please.",
+          "Simon says, open the door, please.",
+          "Simon says, clap three times, please."
         ],
-        "answer": 1
+        "answer": 0
       }
     },
     {
       "id": "3-10",
       "title": "How's the Weather?",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/12887299_1709082434_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "How's the weather?",
+        "prompt": "다음에 이어질 말로 알맞지 않은 것을 고르시오.\n\n\"It's very hot outside.\"",
         "choices": [
-          "It's sunny.",
-          "It's windy.",
-          "It's rainy.",
-          "It's cloudy."
+          "We can run outside.",
+          "We can play at home.",
+          "We can go swimming.",
+          "We can read books at home."
         ],
-        "answer": 1
+        "answer": 0
       }
     }
   ]

@@ -4,15 +4,15 @@
     {
       "id": "4-01",
       "title": "Peter Pan",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/21920658_1770548468_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "주인공의 이름을 바르게 말한 것을 고르시오.",
+        "prompt": "이야기의 내용을 바르게 말한 것을 고르시오.",
         "choices": [
-          "I am Wendy.",
-          "My name is Shadow.",
-          "My name is John. I am Michael.",
-          "I am Peter Pan."
+          "피터팬은 팅커벨을 찾고 있다.",
+          "피터팬 혼자 네버랜드로 돌아갔다.",
+          "마이클과 존은 웬디의 남동생이다.",
+          "피터팬의 그림자는 잠을 자고 있었다."
         ],
         "answer": 2
       }
@@ -20,39 +20,39 @@
     {
       "id": "4-02",
       "title": "Thumbelina",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/18030739_1746591253_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "다음 중 Mr. Mole의 물건으로 소개된 것이 아닌 것을 고르시오.",
         "choices": [
-          "자동차",
+          "모자",
           "테이블",
-          "손목시계",
-          "반지"
+          "자동차",
+          "손목시계"
         ],
-        "answer": 0
+        "answer": 2
       }
     },
     {
       "id": "4-03",
       "title": "The Jungle Book",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/19563268_1702326548_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "다음 주인공은 무엇을 하고 있는지 고르시오.",
+        "prompt": "다음 대화에서 질문으로 알맞은 것을 고르시오.\n\n[ ? ] / \"I am eating some fruits.\"",
         "choices": [
-          "I am sleeping.",
-          "I am hunting.",
-          "I am running.",
-          "I am watching."
+          "What are you doing?",
+          "What is your name?",
+          "How are you?",
+          "Who are you?"
         ],
-        "answer": 1
+        "answer": 0
       }
     },
     {
       "id": "4-04",
       "title": "A Christmas Carol",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/17251399_1723727663_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "How much is this hat?",
@@ -68,7 +68,7 @@
     {
       "id": "4-05",
       "title": "Cinderella",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/20197258_1751786681_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "요정이 신데렐라에게 입으라고 한 것을 고르시오.",
@@ -84,7 +84,7 @@
     {
       "id": "4-06",
       "title": "How are you? Robo",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/16552114_1784898979_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "다음 질문에 대한 로보가 한 대답을 고르시오.\n\n\"How are you?\"",
@@ -100,23 +100,23 @@
     {
       "id": "4-07",
       "title": "Heungbu and Nolbu",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/23277761_1721348698_mp4.mp4",
       "quiz": {
         "type": "mcq",
-        "prompt": "이 장면에서 놀부의 기분으로 알맞은 것은?",
+        "prompt": "I think you are sick.이 무슨 뜻인지 고르시오.",
         "choices": [
-          "happy",
-          "sad",
-          "angry",
-          "tired"
+          "나는 다쳤어.",
+          "나는 네가 아프다고 생각해.",
+          "내가 너를 도와줄게.",
+          "앞으로는 착하게 살도록 해."
         ],
-        "answer": 2
+        "answer": 1
       }
     },
     {
       "id": "4-08",
       "title": "Dance Audition",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/17719181_1712008505_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "이야기의 내용과 일치하는 것을 고르시오.",
@@ -132,7 +132,7 @@
     {
       "id": "4-09",
       "title": "Time Machine",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/21093459_1757365471_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "What day is it?",
@@ -148,7 +148,7 @@
     {
       "id": "4-10",
       "title": "Matthew and Seung-min",
-      "videoUrl": "",
+      "videoUrl": "https://vod.edunavi.kr/vod/edunavi/18325381_1778260452_mp4.mp4",
       "quiz": {
         "type": "mcq",
         "prompt": "매튜가 음식을 더 먹지 않은 이유로 알맞은 것은?",
