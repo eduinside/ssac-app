@@ -1,6 +1,5 @@
 interface Env {
-  SHORT_IO_API_KEY: string;
-  SHORT_IO_DOMAIN: string;
+  EDULINK_API_KEY: string;
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
@@ -14,28 +13,23 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   if (!url) return json({ error: "url 필드가 필요합니다." }, 400);
 
-  const apiKey = env.SHORT_IO_API_KEY;
-  const domain = env.SHORT_IO_DOMAIN;
-  if (!apiKey) return json({ error: "SHORT_IO_API_KEY not configured" }, 500);
-  if (!domain) return json({ error: "SHORT_IO_DOMAIN not configured" }, 500);
+  const apiKey = env.EDULINK_API_KEY;
+  if (!apiKey) return json({ error: "EDULINK_API_KEY not configured" }, 500);
 
   try {
-    const res = await fetch("https://api.short.io/links", {
+    const res = await fetch("https://dgedu.link/api/v1/shorten", {
       method: "POST",
       headers: {
-        Authorization: apiKey,
+        "x-api-key": apiKey,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        originalURL: url,
-        domain,
-      }),
+      body: JSON.stringify({ original_url: url, is_public: false }),
     });
 
-    const data = await res.json() as { shortURL?: string; message?: string };
-    if (!res.ok) return json({ error: data.message ?? "단축 URL 생성 실패" }, res.status);
+    const data = await res.json() as { success?: boolean; short_url?: string; error?: string };
+    if (!res.ok || !data.success) return json({ error: data.error ?? "단축 URL 생성 실패" }, res.status);
 
-    return json({ shortURL: data.shortURL });
+    return json({ shortURL: data.short_url });
   } catch {
     return json({ error: "외부 API 연결 실패" }, 502);
   }
