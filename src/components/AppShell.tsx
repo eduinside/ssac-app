@@ -102,7 +102,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               onClick={() => {
                 window.location.href = `https://ssac.dgedu.link${window.location.pathname}${window.location.search}`;
               }}
-              className="px-4 py-2 bg-white text-coral-600 font-bold rounded-lg hover:bg-white/90 transition whitespace-nowrap text-sm"
+              className="px-4 py-2 bg-white text-coral-700 font-bold rounded-lg hover:bg-coral-50 transition whitespace-nowrap text-sm"
             >
               이동하기
             </button>
