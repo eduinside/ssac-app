@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -c \"import pdfplumber; print\\('ok'\\)\")"
+      "Bash(python -c \"import pdfplumber; print\\('ok'\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(npm run *)",
+      "Bash(curl -I https://ssac.pages.dev/)",
+      "Bash(curl -I -w \"\\\\nHTTP Status: %{http_code}\\\\n\" https://ssac.pages.dev/)",
+      "Bash(curl -v https://ssac.pages.dev/)"
     ]
   }
 }
