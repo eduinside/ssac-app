@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SubjectCard, type SubjectKey } from "@/components/SubjectCard";
 import { OnboardingFlow } from "@/components/OnboardingFlow";
-import { NoticeModal, isNoticeRead } from "@/components/NoticeModal";
+import { NoticeModal, isNoticeRead, type Notice } from "@/components/NoticeModal";
 import { SUBJECTS, loadVocab, loadConcept, loadReading, loadEnglish } from "@/lib/content";
 import {
   getActiveStudent,
@@ -14,8 +14,6 @@ import {
   type RecentEntry,
 } from "@/lib/storage";
 import { BADGES } from "@/lib/badges";
-
-type Notice = { id: number; title: string; body: string; created_at: number };
 
 type StarredItem = { id: string; label: string; grade: number; subject: "vocab" | "english" | "reading" };
 
@@ -470,7 +468,7 @@ export default function Home() {
 
       {/* ── NoticeModal ── */}
       {showNotice && notice && (
-        <NoticeModal notice={notice} onClose={() => setShowNotice(false)} />
+        <NoticeModal notice={notice} onClose={() => setShowNotice(false)} fullScreen={false} />
       )}
     </div>
   );

@@ -1,4 +1,4 @@
-type Notice = { id: number; title: string; body: string; created_at: number };
+export type Notice = { id: number; title: string; body: string; created_at: number };
 
 const LS_KEY = (id: number) => `ssac:notice-read-${id}`;
 
@@ -9,7 +9,15 @@ export function markNoticeRead(id: number) {
   try { localStorage.setItem(LS_KEY(id), "1"); } catch { /* ignore */ }
 }
 
-export function NoticeModal({ notice, onClose }: { notice: Notice; onClose: () => void }) {
+export function NoticeModal({
+  notice,
+  onClose,
+  fullScreen = false,
+}: {
+  notice: Notice;
+  onClose: () => void;
+  fullScreen?: boolean;
+}) {
   const date = new Date(notice.created_at).toLocaleDateString("ko-KR", {
     year: "numeric", month: "long", day: "numeric",
   });
@@ -19,9 +27,11 @@ export function NoticeModal({ notice, onClose }: { notice: Notice; onClose: () =
     onClose();
   }
 
+  const topClass = fullScreen ? "top-0" : "top-[61px]";
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4"
+      className={`fixed ${topClass} inset-x-0 bottom-0 z-40 flex items-end sm:items-center justify-center p-4`}
       style={{ background: "rgba(0,0,0,0.5)" }}
       onClick={handleClose}
     >

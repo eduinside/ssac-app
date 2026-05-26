@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { addStudent } from "@/lib/storage";
+import { NoticeModal, type Notice } from "./NoticeModal";
 
 const GRADE_CFG = [
   { emoji: "🌱", color: "bg-sprout-400", shadow: "#266607" },
@@ -22,6 +23,18 @@ export function OnboardingFlow({ onDone }: { onDone: () => void }) {
   const [name, setName] = useState("");
   const [saving, setSaving] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
+
+  const [notice, setNotice] = useState<Notice | null>(null);
+  const [showNotice, setShowNotice] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/notice")
+      .then((r) => r.ok ? r.json() as Promise<Notice | null> : null)
+      .then((data) => {
+        if (data) setNotice(data);
+      })
+      .catch(() => {});
+  }, []);
 
   async function finish(grade: number) {
     setSaving(true);
@@ -161,12 +174,81 @@ export function OnboardingFlow({ onDone }: { onDone: () => void }) {
           )}
         </div>
 
-        {/* 카피라이트 */}
-        <p className="absolute bottom-4 left-0 right-0 text-center text-ink-400 text-xs leading-relaxed px-4">
-          대구광역시교육청 개발 자료를 활용해 제작하였습니다.<br />
-          2026년 5월 업데이트
-        </p>
+        {/* 카피라이트 (공지사항이 없을 때만 2번째 화면에 노출) */}
+        {!notice && (
+          <p className="absolute bottom-4 left-0 right-0 text-center text-ink-400 text-xs leading-relaxed px-4">
+            대구광역시교육청 개발 자료를 활용해 제작하였습니다.<br />
+            2026년 5월 업데이트
+          </p>
+        )}
+
+        {/* 공지사항이 있을 때 아래로 스크롤 유도 버튼 */}
+        {notice && (
+          <div className="absolute bottom-6 left-0 right-0 text-center animate-bounce">
+            <button
+              onClick={() => {
+                document.getElementById("landing-notice-section")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-xs font-bold text-sprout-600 bg-sprout-50 px-4 py-2 rounded-full border-2 border-sprout-200 shadow-sm hover:bg-sprout-100 transition"
+            >
+              📢 새로운 소식 보기 👇
+            </button>
+          </div>
+        )}
       </section>
+
+      {/* ── 섹션 3: 공지사항 ── */}
+      {notice && (
+        <section
+          id="landing-notice-section"
+          className="relative min-h-svh flex flex-col justify-center items-center px-6 py-12"
+        >
+          <div className="w-full max-w-sm mx-auto space-y-6 text-center animate-slide-up">
+            <div className="text-5xl animate-float-slow">📢</div>
+            <div>
+              <h2 className="font-black text-kidxl text-ink-900">새로운 소식</h2>
+              <p className="text-ink-500 mt-1 text-sm">개념튼튼 ON싹의 공지사항을 확인해 보세요!</p>
+            </div>
+
+            {/* 공지사항 카드 */}
+            <button
+              onClick={() => setShowNotice(true)}
+              className="w-full text-left rounded-3xl p-5 bg-white/80 border-2 border-sprout-200 hover:border-sprout-400 transition-all flex items-center gap-3 shadow-sm active:scale-[0.98]"
+            >
+              <span className="text-2xl shrink-0">🔔</span>
+              <div className="flex-1 min-w-0">
+                <div className="text-[10px] font-bold text-sprout-600 mb-0.5">공지사항</div>
+                <div className="font-black text-sm text-ink-800 leading-tight truncate">{notice.title}</div>
+              </div>
+              <span className="text-sprout-400 text-sm">›</span>
+            </button>
+
+            {/* 다시 위로 가기 */}
+            <button
+              onClick={() => {
+                formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                setTimeout(() => {
+                  formRef.current?.querySelector("input")?.focus();
+                }, 500);
+              }}
+              className="text-xs font-bold text-ink-400 hover:text-ink-600 transition"
+            >
+              ↑ 이름 입력하러 가기
+            </button>
+          </div>
+
+          {/* 카피라이트 */}
+          <p className="absolute bottom-4 left-0 right-0 text-center text-ink-400 text-xs leading-relaxed px-4">
+            대구광역시교육청 개발 자료를 활용해 제작하였습니다.<br />
+            2026년 5월 업데이트
+          </p>
+        </section>
+      )}
+
+      {/* ── NoticeModal ── */}
+      {showNotice && notice && (
+        <NoticeModal notice={notice} onClose={() => setShowNotice(false)} fullScreen={true} />
+      )}
     </div>
   );
 }
