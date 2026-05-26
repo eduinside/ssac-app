@@ -1,3 +1,5 @@
+import { createPortal } from "react-dom";
+
 export type Notice = { id: number; title: string; body: string; created_at: number };
 
 const LS_KEY = (id: number) => `ssac:notice-read-${id}`;
@@ -29,7 +31,7 @@ export function NoticeModal({
 
   const topClass = fullScreen ? "top-0" : "top-[61px]";
 
-  return (
+  return createPortal(
     <div
       className={`fixed ${topClass} inset-x-0 bottom-0 z-40 flex items-end sm:items-center justify-center p-4`}
       style={{ background: "rgba(0,0,0,0.5)" }}
@@ -64,6 +66,7 @@ export function NoticeModal({
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
