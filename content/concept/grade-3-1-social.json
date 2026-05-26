@@ -2,166 +2,131 @@
   "grade": 3,
   "semester": 1,
   "subject": "social",
-  "units": [
+  "keywords": [
     {
-      "id": "u1",
-      "title": "1. 우리 고장의 모습",
-      "videos": [
+      "id": "c3-1-social-k01",
+      "order": 1,
+      "term": "장소",
+      "meaning": "우리가 생활하는 모든 곳",
+      "example": "학교, 놀이터, 병원, 문구점, 시장 등",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/59199029_1864610977_mp4.mp4",
+      "videoTitle": "3-1 사회 01.장소",
+      "quiz": [
         {
-          "id": "c3-1-social-u1-v1",
-          "title": "우리 주변에는 다양한 장소가 있어요",
-          "youtubeUrl": "https://www.youtube.com/watch?v=dRow30egyss",
-          "concepts": [
-            {
-              "term": "장소",
-              "meaning": "우리가 생활하는 모든 곳",
-              "example": "학교, 놀이터, 병원, 문구점, 시장 등"
-            },
-            {
-              "term": "장소감",
-              "meaning": "장소마다 개인의 경험, 지식으로 만들어지는 감정",
-              "example": "매일 가는 우리 학교에서 느끼는 친근하고 따뜻한 마음"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "학교, 놀이터, 병원 등은 우리가 생활하는 '장소'에 해당합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "같은 장소에 대해서 모든 사람이 항상 똑같은 장소감을 느낍니다.",
-              "answer": false
-            }
-          ]
-        },
-        {
-          "id": "c3-1-social-u1-v2",
-          "title": "디지털 정보로 고장의 모습을 살펴봐요",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "디지털영상지도",
-              "meaning": "디지털 정보로 표현한 위성 사진이나 항공 사진 기반의 지도",
-              "example": "컴퓨터나 스마트폰으로 지도를 확대하거나 축소하여 고장을 살펴보는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "디지털영상지도를 이용하면 고장의 실제 모습을 위성 사진 등으로 생생하게 볼 수 있습니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "디지털영상지도는 직접 가볼 수 없는 먼 장소의 모습은 보여주지 못합니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "학교, 놀이터, 병원 등은 우리가 생활하는 '장소'에 해당합니다.",
+          "answer": true
         }
       ]
     },
     {
-      "id": "u2",
-      "title": "2. 우리 고장의 역사와 유래",
-      "videos": [
+      "id": "c3-1-social-k02",
+      "order": 2,
+      "term": "장소감",
+      "meaning": "장소마다 개인의 경험, 지식으로 만들어지는 감정",
+      "example": "매일 가는 우리 학교에서 느끼는 친근하고 따뜻한 마음",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/48301757_1860344127_mp4.mp4",
+      "videoTitle": "3-1 사회 02.장소감",
+      "quiz": [
         {
-          "id": "c3-1-social-u2-v1",
-          "title": "다양한 물건과 자료를 통해 과거를 살펴봐요",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "과거",
-              "meaning": "지나간 일이나 시간",
-              "example": "어제 일어났던 일, 우리가 아기였을 때의 시간 등"
-            },
-            {
-              "term": "역사",
-              "meaning": "과거에 일어난 사건이나 인물의 기록",
-              "example": "우리 고장에 전해 내려오는 옛이야기나 역사책"
-            },
-            {
-              "term": "자료",
-              "meaning": "과거의 사람들이 남긴 편지, 일기, 신문기사 등 과거의 모습을 알게 해 주는 것",
-              "example": "옛날 사람들이 쓴 일기장, 오래된 사진 등"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "과거 사람들이 쓰던 일기나 오래된 물건은 고장의 역사를 연구하는 소중한 '자료'가 됩니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "지나간 시간과 일들을 모두 일컬어 '미래'라고 부릅니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "같은 장소에 대해서 모든 사람이 항상 똑같은 장소감을 느낍니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-social-k03",
+      "order": 3,
+      "term": "과거",
+      "meaning": "지나간 일이나 시간",
+      "example": "어제 일어났던 일, 우리가 아기였을 때의 시간 등",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/63290793_1848718324_mp4.mp4",
+      "videoTitle": "3-1 사회 04.과거",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "지나간 시간과 일들을 모두 일컬어 '미래'라고 부릅니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-social-k04",
+      "order": 4,
+      "term": "역사",
+      "meaning": "과거에 일어난 사건이나 인물의 기록",
+      "example": "우리 고장에 전해 내려오는 옛이야기나 역사책",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/57703822_1784538018_mp4.mp4",
+      "videoTitle": "3-1 사회 03.역사",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "역사는 과거에 일어난 사건이나 인물에 대한 기록을 말합니다.",
+          "answer": true
         },
         {
-          "id": "c3-1-social-u2-v2",
-          "title": "시간의 흐름에 따라 변화하는 생활모습과 답사",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "변화",
-              "meaning": "시간에 따라 지역의 모습이나 사람들의 생활 모습이 달라지는 것",
-              "example": "옛날의 초가집이 오늘날 높은 아파트로 바뀐 모습"
-            },
-            {
-              "term": "생활모습",
-              "meaning": "사람들이 매일 먹고, 입고, 자고, 일하는 방식이나 생활의 형편",
-              "example": "옛날 사람들이 짚신을 신고 맷돌을 사용해 음식을 만들던 모습"
-            },
-            {
-              "term": "답사",
-              "meaning": "조사할 대상이 있는 장소에 직접 가서 살펴보는 것",
-              "example": "고장의 문화재를 조사하기 위해 옛 성터나 박물관에 직접 찾아가는 행동"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "시간이 흐르면서 고장의 건물이나 교통수단 등 사람들의 생활모습이 달라지는 현상을 '변화'라고 합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "답사는 조사할 장소에 직접 가지 않고 집에서 인터넷으로만 찾아보는 것입니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "역사는 앞으로 일어날 미래의 일들을 미리 예측하여 적어둔 기록입니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-social-k05",
+      "order": 5,
+      "term": "변화",
+      "meaning": "시간에 따라 지역의 모습이나 사람들의 생활 모습이 달라지는 것",
+      "example": "옛날의 초가집이 오늘날 높은 아파트로 바뀐 모습",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/53931784_1851419558_mp4.mp4",
+      "videoTitle": "3-1 사회 05.변화",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "시간이 흐르면서 고장의 건물이나 교통수단 등 사람들의 생활모습이 달라지는 현상을 '변화'라고 합니다.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c3-1-social-k06",
+      "order": 6,
+      "term": "지명",
+      "meaning": "땅이나 지역의 이름",
+      "example": "서울의 '마포', 대전의 '한밭' 등 고장마다 붙은 고유한 이름",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/74432972_1851012979_mp4.mp4",
+      "videoTitle": "3-1 사회 06.지명",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "우리 고장의 지명과 유래를 조사하면 옛날 고장의 자연환경이나 사람들의 삶의 모습을 이해할 수 있습니다.",
+          "answer": true
         },
         {
-          "id": "c3-1-social-u2-v3",
-          "title": "고장의 지명과 유래에 담긴 이야기",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "지명",
-              "meaning": "땅이나 지역의 이름",
-              "example": "서울의 '마포', 대전의 '한밭' 등 고장마다 붙은 고유한 이름"
-            },
-            {
-              "term": "유래",
-              "meaning": "어떤 사물이나 일이 생겨난 내력이나 원인",
-              "example": "마포라는 지명이 마포나루터에서 배를 묶어두었던 데서 생겨난 내력"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "우리 고장의 지명과 유래를 조사하면 옛날 고장의 자연환경이나 사람들의 삶의 모습을 이해할 수 있습니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "지명은 항상 아무런 이유 없이 무작위로 만들어진 이름이므로 아무런 역사적 의미도 없습니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "지명은 항상 아무런 이유 없이 무작위로 만들어진 이름이므로 아무런 역사적 의미도 없습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-social-k07",
+      "order": 7,
+      "term": "유래",
+      "meaning": "어떤 사물이나 일이 생겨난 내력이나 원인",
+      "example": "마포라는 지명이 마포나루터에서 배를 묶어두었던 데서 생겨난 내력",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/71802802_1809361331_mp4.mp4",
+      "videoTitle": "3-1 사회 07.유래",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "유래는 어떤 사물이나 일이 처음 생겨난 내력이나 원인을 말합니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "유래는 사물의 모양을 보고 똑같이 따라 그리는 그림을 뜻합니다.",
+          "answer": false
         }
       ]
     }

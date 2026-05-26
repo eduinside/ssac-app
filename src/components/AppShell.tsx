@@ -114,7 +114,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <header className={"sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-ink-100/80 shadow-sm" + (!student ? " hidden" : "")}>
         <div className="mx-auto max-w-3xl flex items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src="/sprout.svg" className="w-9 h-9 group-hover:animate-wiggle" alt="" />
+            <img src="/app-icon.png" className="w-9 h-9 group-hover:animate-wiggle rounded-lg" alt="" />
             <span
               className="font-noto text-kidlg tracking-tight"
               style={{

@@ -46,10 +46,8 @@ export default function ConceptIndex() {
             try {
               const book = await loadConcept(t.grade, t.semester as any, sub);
               if (book) {
-                const total = book.units.reduce((acc, u) => acc + u.videos.length, 0);
-                const done = book.units.reduce((acc, u) => {
-                  return acc + u.videos.filter((v) => !!p[v.id]?.done).length;
-                }, 0);
+                const total = book.keywords.length;
+                const done = book.keywords.filter((k) => !!p[k.id]?.done).length;
                 newStats[key][sub] = { done, total };
               }
             } catch {

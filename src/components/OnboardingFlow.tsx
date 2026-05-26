@@ -54,7 +54,7 @@ export function OnboardingFlow({ onDone }: { onDone: () => void }) {
         <div className="w-full max-w-sm space-y-8 text-center animate-slide-up">
           {/* 로고 */}
           <div>
-            <div className="text-8xl animate-float-slow mb-3 select-none">🌱</div>
+            <img src="/app-icon.png" alt="개념튼튼 ON싹" className="w-28 h-28 mx-auto mb-3 animate-float-slow select-none drop-shadow-lg" />
             <h1
               className="font-black text-kid2xl leading-none"
               style={{

@@ -8,7 +8,7 @@ const VocabWord   = lazy(() => import("./routes/vocab/Word"));
 const VocabReview = lazy(() => import("./routes/vocab/Review"));
 const ConceptIndex= lazy(() => import("./routes/concept/Index"));
 const ConceptBookView= lazy(() => import("./routes/concept/BookView"));
-const ConceptVideoLearn= lazy(() => import("./routes/concept/VideoLearn"));
+const ConceptKeywordLearn= lazy(() => import("./routes/concept/KeywordLearn"));
 const ReadingIndex= lazy(() => import("./routes/reading/Index"));
 const ReadingTopic= lazy(() => import("./routes/reading/Topic"));
 const EnglishIndex= lazy(() => import("./routes/english/Index"));
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
   
   { path: "/concept",           element: wrap(<ConceptIndex />) },
   { path: "/concept/:grade/:semester", element: wrap(<ConceptBookView />) },
-  { path: "/concept/:grade/video/:videoId", element: wrap(<ConceptVideoLearn />) },
+  { path: "/concept/:grade/keyword/:kid", element: wrap(<ConceptKeywordLearn />) },
   
   { path: "/reading",           element: wrap(<ReadingIndex />) },
   { path: "/reading/:grade",   element: wrap(<ReadingIndex />) },

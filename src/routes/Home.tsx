@@ -85,15 +85,13 @@ export default function Home() {
           ["social", "math", "science"].map((sub) => loadConcept(cg, cs, sub))
         );
         const total = books.reduce((acc, r) =>
-          r.status === "fulfilled"
-            ? acc + r.value.units.flatMap((u) => u.videos).length
-            : acc, 0);
-        const allVideoIds = new Set(
+          r.status === "fulfilled" ? acc + r.value.keywords.length : acc, 0);
+        const allKeywordIds = new Set(
           books.flatMap((r) =>
-            r.status === "fulfilled" ? r.value.units.flatMap((u) => u.videos.map((v) => v.id)) : []
+            r.status === "fulfilled" ? r.value.keywords.map((k) => k.id) : []
           )
         );
-        const done = Object.entries(conceptMap).filter(([id, v]) => allVideoIds.has(id) && v.done).length;
+        const done = Object.entries(conceptMap).filter(([id, v]) => allKeywordIds.has(id) && v.done).length;
         setConceptProgress({ done, total });
       } else {
         setConceptActive(null);
@@ -288,7 +286,7 @@ export default function Home() {
             </div>
             <div className="mt-1 text-white/60 text-xs">{grade}학년</div>
           </div>
-          <div className="text-7xl animate-float-slow select-none">🌱</div>
+          <img src="/app-icon.png" alt="" className="w-24 h-24 animate-float-slow select-none drop-shadow-md" />
         </div>
       </section>
 

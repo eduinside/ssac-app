@@ -1,4 +1,4 @@
-import type { Subject, VocabBook, ConceptBook, ConceptVideo, ReadingBook } from "@content/schema";
+import type { Subject, VocabBook, ConceptBook, ConceptKeyword, ReadingBook } from "@content/schema";
 
 export type GateItem = { label: string; grade: number; semester?: 1 | 2; dimmed: boolean };
 
@@ -58,19 +58,30 @@ export async function loadConcept(grade: number, semester: number, subject: stri
   return mod.default as ConceptBook;
 }
 
-export async function findConceptVideo(
+export async function findConceptKeyword(
   grade: number,
-  videoId: string
-): Promise<{ book: ConceptBook; video: ConceptVideo; semester: number; subject: string } | null> {
+  keywordId: string
+): Promise<{ book: ConceptBook; keyword: ConceptKeyword; semester: number; subject: string } | null> {
+  // Try to parse semester/subject from id pattern c{g}-{s}-{subject}-k{NN}
+  const m = keywordId.match(/^c(\d)-(\d)-(social|math|science)-k\d+$/);
+  if (m) {
+    const s = Number(m[2]) as 1 | 2;
+    const sub = m[3];
+    try {
+      const book = await loadConcept(grade, s, sub);
+      const keyword = book.keywords.find((k) => k.id === keywordId);
+      if (keyword) return { book, keyword, semester: s, subject: sub };
+    } catch {
+      // fall through to scan
+    }
+  }
   for (const s of [1, 2] as const) {
     for (const sub of ["social", "math", "science"] as const) {
       try {
         const book = await loadConcept(grade, s, sub);
-        for (const unit of book.units) {
-          const video = unit.videos.find((v) => v.id === videoId);
-          if (video) {
-            return { book, video, semester: s, subject: sub };
-          }
+        const keyword = book.keywords.find((k) => k.id === keywordId);
+        if (keyword) {
+          return { book, keyword, semester: s, subject: sub };
         }
       } catch {
         // Skip if file doesn't exist

@@ -2,264 +2,247 @@
   "grade": 3,
   "semester": 1,
   "subject": "science",
-  "units": [
+  "keywords": [
     {
-      "id": "u1",
-      "title": "1. 힘과 우리 생활",
-      "videos": [
+      "id": "c3-1-science-k01",
+      "order": 1,
+      "term": "힘",
+      "meaning": "물체의 모양이나 움직임을 변화시킬 수 있는 것",
+      "example": "두꺼운 반죽에 힘을 주어 얇게 펴거나, 힘을 주어 무거운 수레를 움직이는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/73351982_1833063810_mp4.mp4",
+      "videoTitle": "3-1 과학 01.힘",
+      "quiz": [
         {
-          "id": "c3-1-science-u1-v1",
-          "title": "힘이란 무엇일까요?",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "힘",
-              "meaning": "물체의 모양이나 움직임을 변화시킬 수 있는 것",
-              "example": "두꺼운 반죽에 힘을 주어 얇게 펴거나, 힘을 주어 무거운 수레를 움직이는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "물체에 힘을 가하면 물체의 모양이나 움직임이 변할 수 있습니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "힘은 물체를 밀거나 당길 때만 작용하고, 물체의 모양은 절대 바꾸지 못합니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "물체에 힘을 가하면 물체의 모양이나 움직임이 변할 수 있습니다.",
+          "answer": true
         },
         {
-          "id": "c3-1-science-u1-v2",
-          "title": "수평이란 무엇일까요?",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "수평",
-              "meaning": "물체가 어느 한 쪽으로 기울어지지 않고 균형이 맞는 평평한 상태",
-              "example": "모빌에 달린 장난감이 수평을 이루거나, 벽에 액자를 수평이 되도록 붙이는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "수평이란 물체가 어느 한쪽으로 기울어지지 않고 균형이 맞는 평평한 상태를 말합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "환자를 옮길 때나 사진을 찍을 때는 수평이 전혀 필요하지 않습니다.",
-              "answer": false
-            }
-          ]
-        },
-        {
-          "id": "c3-1-science-u1-v3",
-          "title": "저울과 도구",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "저울",
-              "meaning": "물체의 무게를 잴 때 사용하는 도구",
-              "example": "체중계, 용수철저울, 전자저울, 양팔저울 등"
-            },
-            {
-              "term": "도구",
-              "meaning": "일을 할 때 쓰는 연장을 통틀어 이르는 말",
-              "example": "수레는 무거운 짐을 쉽게 나르는 도구이고, 거중기는 무거운 돌을 들어 올리는 도구"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "저울은 물체의 무게를 정확히 비교하기 위해 사용하는 도구입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "도구를 이용하면 오히려 더 많은 힘이 필요해서 일하기 불편해집니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "힘은 물체를 밀거나 당길 때만 작용하고, 물체의 모양은 절대 바꾸지 못합니다.",
+          "answer": false
         }
       ]
     },
     {
-      "id": "u2",
-      "title": "2. 동물의 생활",
-      "videos": [
+      "id": "c3-1-science-k02",
+      "order": 2,
+      "term": "수평",
+      "meaning": "물체가 어느 한 쪽으로 기울어지지 않고 균형이 맞는 평평한 상태",
+      "example": "모빌에 달린 장난감이 수평을 이루거나, 벽에 액자를 수평이 되도록 붙이는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/74728990_1836091794_mp4.mp4",
+      "videoTitle": "3-1 과학 02.수평",
+      "quiz": [
         {
-          "id": "c3-1-science-u2-v1",
-          "title": "동물을 관찰하고 생김새를 알아봐요",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "관찰",
-              "meaning": "탐구하고자 하는 대상의 특징을 자세히 살펴보는 것",
-              "example": "사과의 색깔, 냄새, 맛, 소리, 촉감 등을 눈·코·귀·피부·입으로 자세히 살펴보는 것"
-            },
-            {
-              "term": "생김새",
-              "meaning": "생긴 모양새",
-              "example": "두 물건의 생김새가 너무 비슷해서 구분이 어렵거나, 파리지옥의 독특한 생김새"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "관찰은 눈으로만 하는 것이 아니라 코, 귀, 피부, 입 등 여러 감각 기관을 이용합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "눈에 보이지 않는 세균이나 바이러스는 어떤 도구를 써도 절대 관찰할 수 없습니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "수평이란 물체가 어느 한쪽으로 기울어지지 않고 균형이 맞는 평평한 상태를 말합니다.",
+          "answer": true
         },
         {
-          "id": "c3-1-science-u2-v2",
-          "title": "동물의 서식지",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "서식",
-              "meaning": "생물들이 일정한 곳에 자리를 잡고 사는 것",
-              "example": "수달은 물 근처에서 서식하고, 개미는 땅속에서 서식하며, 해파리는 바다에 서식함"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "동물들이 일정한 곳에 자리를 잡고 사는 것을 '서식'이라고 하며, 그 장소를 '서식지'라고 합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "건물이나 도로 개발로 동물들의 서식지가 파괴되어도 동물의 수에는 아무런 영향이 없습니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "환자를 옮길 때나 사진을 찍을 때는 수평이 전혀 필요하지 않습니다.",
+          "answer": false
         }
       ]
     },
     {
-      "id": "u3",
-      "title": "3. 식물의 생활",
-      "videos": [
+      "id": "c3-1-science-k03",
+      "order": 3,
+      "term": "저울",
+      "meaning": "물체의 무게를 잴 때 사용하는 도구",
+      "example": "체중계, 용수철저울, 전자저울, 양팔저울 등",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/103697973_1830144642_mp4.mp4",
+      "videoTitle": "3-1 과학 03.저울",
+      "quiz": [
         {
-          "id": "c3-1-science-u3-v1",
-          "title": "식물을 분류해요",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "분류",
-              "meaning": "같은 성질을 가진 것끼리 종류별로 나누는 것",
-              "example": "교실 바구니를 크기에 따라 분류하거나, 도서관 책을 종류에 따라 분류하는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "분류란 같은 성질을 가진 것끼리 종류별로 나누는 것입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "도서관에서는 책을 무작위로 섞어 두기 때문에 분류와 전혀 관련이 없습니다.",
-              "answer": false
-            }
-          ]
-        },
-        {
-          "id": "c3-1-science-u3-v2",
-          "title": "식물과 환경, 그리고 모방",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "환경",
-              "meaning": "생물에게 직접적, 간접적으로 영향을 주는 자연적, 사회적 상황",
-              "example": "물이 많은 환경, 건조한 환경, 눈이 많은 환경에 따라 식물의 생김새와 생활 방식이 다름"
-            },
-            {
-              "term": "모방",
-              "meaning": "다른 것을 본뜨거나 본받음",
-              "example": "도꼬마리 열매를 모방해 찍찍이 테이프를 만들고, 단풍나무 열매를 모방해 프로펠러를 만드는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "식물은 환경에 따라 생김새와 생활 방식이 달라집니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "생체모방기술은 생물의 특징을 모방하여 새로운 발명품을 만드는 기술입니다.",
-              "answer": true
-            }
-          ]
+          "type": "ox",
+          "prompt": "저울은 물체의 무게를 정확히 비교하기 위해 사용하는 도구입니다.",
+          "answer": true
         }
       ]
     },
     {
-      "id": "u4",
-      "title": "4. 생물의 한살이",
-      "videos": [
+      "id": "c3-1-science-k04",
+      "order": 4,
+      "term": "도구",
+      "meaning": "일을 할 때 쓰는 연장을 통틀어 이르는 말",
+      "example": "수레는 무거운 짐을 쉽게 나르는 도구이고, 거중기는 무거운 돌을 들어 올리는 도구",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/171706116_1800706237_mp4.mp4",
+      "videoTitle": "3-1 과학 04.도구",
+      "quiz": [
         {
-          "id": "c3-1-science-u4-v1",
-          "title": "번식과 식물",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "번식",
-              "meaning": "동물이나 식물의 수가 늘어 널리 퍼져나가는 것",
-              "example": "닭이 알을 낳아 번식하거나, 여왕벌이 1년에 약 20만 개의 알을 낳아 번식하는 것"
-            },
-            {
-              "term": "식물",
-              "meaning": "햇빛과 물을 이용하여 스스로 양분을 생산하며 씨나 포자로 번식하는 생물",
-              "example": "목련, 전나무, 연꽃, 선인장, 부레옥잠 등 다양한 환경에 사는 식물들"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "번식이란 동물이나 식물의 수가 늘어 널리 퍼져나가는 것을 말합니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "식물은 스스로 양분을 만들지 못하기 때문에 반드시 다른 생물을 먹어야 살 수 있습니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "도구를 이용하면 오히려 더 많은 힘이 필요해서 일하기 불편해집니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k05",
+      "order": 5,
+      "term": "관찰",
+      "meaning": "탐구하고자 하는 대상의 특징을 자세히 살펴보는 것",
+      "example": "사과의 색깔, 냄새, 맛, 소리, 촉감 등을 눈·코·귀·피부·입으로 자세히 살펴보는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/82960089_1829672108_mp4.mp4",
+      "videoTitle": "3-1 과학 05.관찰",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "관찰은 눈으로만 하는 것이 아니라 코, 귀, 피부, 입 등 여러 감각 기관을 이용합니다.",
+          "answer": true
         },
         {
-          "id": "c3-1-science-u4-v2",
-          "title": "생물의 한살이",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "한살이",
-              "meaning": "동물이나 식물이 태어나서 어린 시절을 거치며 성장하여 자손을 남기고 죽을 때까지의 과정",
-              "example": "배추흰나비의 한살이: 알 → 애벌레 → 번데기 → 나비"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "'한살이'는 동물뿐만 아니라 식물에게도 사용할 수 있는 말입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "하루살이의 실제 한살이는 하루 만에 끝납니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "눈에 보이지 않는 세균이나 바이러스는 어떤 도구를 써도 절대 관찰할 수 없습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k06",
+      "order": 6,
+      "term": "생김새",
+      "meaning": "생긴 모양새",
+      "example": "두 물건의 생김새가 너무 비슷해서 구분이 어렵거나, 파리지옥의 독특한 생김새",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/68693796_1809895096_mp4.mp4",
+      "videoTitle": "3-1 과학 07.생김새",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "생김새란 어떤 물건이나 생물이 겉으로 드러나는 모양새를 말합니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "생김새는 물건의 겉모습과는 아무런 상관이 없는 성질을 뜻합니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k07",
+      "order": 7,
+      "term": "서식",
+      "meaning": "생물들이 일정한 곳에 자리를 잡고 사는 것",
+      "example": "수달은 물 근처에서 서식하고, 개미는 땅속에서 서식하며, 해파리는 바다에 서식함",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/109646418_1820924200_mp4.mp4",
+      "videoTitle": "3-1 과학 06.서식",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "동물들이 일정한 곳에 자리를 잡고 사는 것을 '서식'이라고 하며, 그 장소를 '서식지'라고 합니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "건물이나 도로 개발로 동물들의 서식지가 파괴되어도 동물의 수에는 아무런 영향이 없습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k08",
+      "order": 8,
+      "term": "분류",
+      "meaning": "같은 성질을 가진 것끼리 종류별로 나누는 것",
+      "example": "교실 바구니를 크기에 따라 분류하거나, 도서관 책을 종류에 따라 분류하는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/66002853_1793246605_mp4.mp4",
+      "videoTitle": "3-1 과학 08.분류",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "분류란 같은 성질을 가진 것끼리 종류별로 나누는 것입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "도서관에서는 책을 무작위로 섞어 두기 때문에 분류와 전혀 관련이 없습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k09",
+      "order": 9,
+      "term": "환경",
+      "meaning": "생물에게 직접적, 간접적으로 영향을 주는 자연적, 사회적 상황",
+      "example": "물이 많은 환경, 건조한 환경, 눈이 많은 환경에 따라 식물의 생김새와 생활 방식이 다름",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/45301435_1867844852_mp4.mp4",
+      "videoTitle": "3-1 과학 09.환경",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "식물은 환경에 따라 생김새와 생활 방식이 달라집니다.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k10",
+      "order": 10,
+      "term": "모방",
+      "meaning": "다른 것을 본뜨거나 본받음",
+      "example": "도꼬마리 열매를 모방해 찍찍이 테이프를 만들고, 단풍나무 열매를 모방해 프로펠러를 만드는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/84998635_1841735791_mp4.mp4",
+      "videoTitle": "3-1 과학 10.모방",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "생체모방기술은 생물의 특징을 모방하여 새로운 발명품을 만드는 기술입니다.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k11",
+      "order": 11,
+      "term": "번식",
+      "meaning": "동물이나 식물의 수가 늘어 널리 퍼져나가는 것",
+      "example": "닭이 알을 낳아 번식하거나, 여왕벌이 1년에 약 20만 개의 알을 낳아 번식하는 것",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/74123860_1782812861_mp4.mp4",
+      "videoTitle": "3-1 과학 11.번식",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "번식이란 동물이나 식물의 수가 늘어 널리 퍼져나가는 것을 말합니다.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k12",
+      "order": 12,
+      "term": "식물",
+      "meaning": "햇빛과 물을 이용하여 스스로 양분을 생산하며 씨나 포자로 번식하는 생물",
+      "example": "목련, 전나무, 연꽃, 선인장, 부레옥잠 등 다양한 환경에 사는 식물들",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/49700660_1780736902_mp4.mp4",
+      "videoTitle": "3-1 과학 12.식물",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "식물은 스스로 양분을 만들지 못하기 때문에 반드시 다른 생물을 먹어야 살 수 있습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c3-1-science-k13",
+      "order": 13,
+      "term": "한살이",
+      "meaning": "동물이나 식물이 태어나서 어린 시절을 거치며 성장하여 자손을 남기고 죽을 때까지의 과정",
+      "example": "배추흰나비의 한살이: 알 → 애벌레 → 번데기 → 나비",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/56771783_1868901238_mp4.mp4",
+      "videoTitle": "3-1 과학 13.한살이",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "'한살이'는 동물뿐만 아니라 식물에게도 사용할 수 있는 말입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "하루살이의 실제 한살이는 하루 만에 끝납니다.",
+          "answer": false
         }
       ]
     }

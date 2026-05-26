@@ -2,238 +2,183 @@
   "grade": 4,
   "semester": 1,
   "subject": "math",
-  "units": [
+  "keywords": [
     {
-      "id": "u1",
-      "title": "1. 큰 수",
-      "videos": [
+      "id": "c4-1-math-k01",
+      "order": 1,
+      "term": "자릿값",
+      "meaning": "숫자가 위치하고 있는 자리에 따라 정해지는 값",
+      "example": "325에서 3은 백의 자리이므로 자릿값은 300, 2는 십의 자리이므로 20, 5는 일의 자리이므로 5",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/76607968_1822035194_mp4.mp4",
+      "videoTitle": "4-1 수학 37.자릿값",
+      "quiz": [
         {
-          "id": "c4-1-math-u1-v1",
-          "title": "자릿값과 0(영)",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "자릿값",
-              "meaning": "숫자가 위치하고 있는 자리에 따라 정해지는 값",
-              "example": "325에서 3은 백의 자리이므로 자릿값은 300, 2는 십의 자리이므로 20, 5는 일의 자리이므로 5"
-            },
-            {
-              "term": "0(영)",
-              "meaning": "아무것도 없음을 나타내는 수, 각 자리의 값이 없을 때 나타내는 수",
-              "example": "300을 나타낼 때 십의 자리와 일의 자리가 없다는 표시로 0을 써서 '300'으로 표현"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "358에서 5의 자릿값은 50입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "300을 쓸 때 0이 없으면 3만 쓰면 됩니다.",
-              "answer": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "u2",
-      "title": "2. 각도",
-      "videos": [
-        {
-          "id": "c4-1-math-u2-v1",
-          "title": "각, 직각, 각도기, 차",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "각",
-              "meaning": "한 점에서 시작하는 두 반직선으로 이루어진 도형",
-              "example": "두 변이 한 점에서 만나면 그 사이에 각이 생김. 삼각형은 각이 3개, 사각형은 4개"
-            },
-            {
-              "term": "직각",
-              "meaning": "종이를 반듯하게 두 번 접었을 때 생기는 각, 각도가 90°인 각",
-              "example": "교과서 모서리의 뾰족한 각이 직각, 직각임을 나타낼 때 □ 표시를 함"
-            },
-            {
-              "term": "각도기",
-              "meaning": "각의 크기를 잴 때 쓰는 도구",
-              "example": "각도기의 중심을 각의 꼭짓점에 맞추고, 밑금을 한 변에 맞춘 후 눈금을 읽음"
-            },
-            {
-              "term": "차",
-              "meaning": "어떤 값에서 다른 값을 뺐을 때 생기는 차이",
-              "example": "두 각도의 차는 큰 각도에서 작은 각도를 빼서 구하며, 결과에 °를 꼭 붙임"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "직각은 각도가 90°인 각입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "원에도 각이 있습니다.",
-              "answer": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "u3",
-      "title": "4. 평면도형의 이동",
-      "videos": [
-        {
-          "id": "c4-1-math-u3-v1",
-          "title": "위치, 평면도형, 방향, 시계 방향",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "위치",
-              "meaning": "물체, 점 등이 일정한 곳에 자리를 차지하는 것",
-              "example": "모눈종이 위에 점이 위치함, 물체가 움직이면 위치가 변함"
-            },
-            {
-              "term": "평면도형",
-              "meaning": "평면 위에 그려진 도형",
-              "example": "삼각형, 사각형, 원 등은 평면도형. 두께가 없고 길이와 넓이는 있음. 물통은 평면도형이 아님"
-            },
-            {
-              "term": "방향",
-              "meaning": "어떤 물체나 점이 움직이거나 바라보는 쪽",
-              "example": "화살표가 가리키는 쪽이 방향. 점을 위쪽 방향으로 2cm, 오른쪽 방향으로 3칸 이동"
-            },
-            {
-              "term": "시계 방향",
-              "meaning": "시계 바늘이 돌아가는 방향",
-              "example": "팽이가 시계 방향으로 돌거나, 운동장을 시계 방향으로 도는 것"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "평면도형은 두께가 없고 길이와 넓이가 있습니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "평면도형을 밀거나 돌리면 모양이 바뀝니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "358에서 5의 자릿값은 50입니다.",
+          "answer": true
         },
         {
-          "id": "c4-1-math-u3-v2",
-          "title": "평면도형의 이동",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "평면도형의 이동",
-              "meaning": "평면도형의 위치나 방향이 변하는 것",
-              "example": "테트리스처럼 도형을 밀기(위치 변화), 뒤집기(방향 변화), 돌리기(방향 변화)"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "평면도형이 이동해도 도형의 모양과 크기는 변하지 않습니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "평면도형을 이동하면 넓이가 바뀝니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "300을 쓸 때 0이 없으면 3만 쓰면 됩니다.",
+          "answer": false
         }
       ]
     },
     {
-      "id": "u4",
-      "title": "5. 막대그래프",
-      "videos": [
+      "id": "c4-1-math-k02",
+      "order": 2,
+      "term": "0(영)",
+      "meaning": "아무것도 없음을 나타내는 수, 각 자리의 값이 없을 때 나타내는 수",
+      "example": "300을 나타낼 때 십의 자리와 일의 자리가 없다는 표시로 0을 써서 '300'으로 표현",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/56244829_1859055418_mp4.mp4",
+      "videoTitle": "4-1 수학 38.0(영)",
+      "quiz": [
         {
-          "id": "c4-1-math-u4-v1",
-          "title": "눈금, 그래프, 물결선",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "눈금",
-              "meaning": "'수'나 '양'을 나타내는 선, 자·저울·시계 등에서 값을 나타내는 것",
-              "example": "자의 눈금으로 연필의 길이를 재고, 저울의 눈금으로 무게를 알 수 있음"
-            },
-            {
-              "term": "그래프",
-              "meaning": "표의 각 대상별 값을 한눈에 볼 수 있도록 그려서 나타낸 것",
-              "example": "그림그래프(그림으로 나타냄), 막대그래프(막대 모양으로 나타냄)"
-            },
-            {
-              "term": "물결선",
-              "meaning": "그래프에서 생략된 부분이 있다는 표시",
-              "example": "굳이 그릴 필요가 없는 부분을 물결선으로 줄여 그래프를 더 간단하게 표현"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "막대그래프에서 물결선은 그래프의 일부가 생략되었다는 표시입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "물결선이 있는 막대그래프는 눈금의 시작이 항상 0입니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "0은 아무것도 없음을 나타내거나 각 자리의 값이 없을 때 사용하는 수입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "0은 1부터 9까지의 숫자 중에서 가장 큰 값을 나타내는 수입니다.",
+          "answer": false
         }
       ]
     },
     {
-      "id": "u5",
-      "title": "6. 규칙과 관계",
-      "videos": [
+      "id": "c4-1-math-k03",
+      "order": 3,
+      "term": "각",
+      "meaning": "한 점에서 시작하는 두 반직선으로 이루어진 도형",
+      "example": "두 변이 한 점에서 만나면 그 사이에 각이 생김. 삼각형은 각이 3개, 사각형은 4개",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/82107728_1814264947_mp4.mp4",
+      "videoTitle": "4-1 수학 39.각",
+      "quiz": [
         {
-          "id": "c4-1-math-u5-v1",
-          "title": "규칙, 배열, 등호, 계산식",
-          "youtubeUrl": "",
-          "concepts": [
-            {
-              "term": "규칙",
-              "meaning": "수, 모양, 색깔, 크기 등이 일정하게 되풀이되는 것",
-              "example": "신호등 색이 규칙적으로 변하고, 달력에서 요일이 규칙적으로 반복됨"
-            },
-            {
-              "term": "배열",
-              "meaning": "일정한 규칙에 따라 수 또는 도형들이 순서대로 놓인 것",
-              "example": "2, 4, 6, 8, 10, … (2씩 커지는 규칙), 쌓기나무가 오른쪽·위쪽으로 1개씩 늘어나는 배열"
-            },
-            {
-              "term": "등호(=)",
-              "meaning": "두 값이 같음을 나타내는 기호",
-              "example": "2×5=10, 길이나 무게가 같을 때도 등호로 나타낼 수 있음"
-            },
-            {
-              "term": "계산식",
-              "meaning": "숫자와 계산 기호를 규칙에 따라 나타낸 식",
-              "example": "덧셈식, 뺄셈식, 곱셈식, 나눗셈식 모두 계산식. 20+5=★, 6×7=☆ 등"
-            }
-          ],
-          "quiz": [
-            {
-              "type": "ox",
-              "prompt": "등호(=)는 두 값이 같음을 나타내는 기호입니다.",
-              "answer": true
-            },
-            {
-              "type": "ox",
-              "prompt": "수 배열에서는 항상 수가 점점 커져야 합니다.",
-              "answer": false
-            }
-          ]
+          "type": "ox",
+          "prompt": "직각은 각도가 90°인 각입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "원에도 각이 있습니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k04",
+      "order": 4,
+      "term": "직각",
+      "meaning": "종이를 반듯하게 두 번 접었을 때 생기는 각, 각도가 90°인 각",
+      "example": "교과서 모서리의 뾰족한 각이 직각, 직각임을 나타낼 때 □ 표시를 함",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/108982626_1860200424_mp4.mp4",
+      "videoTitle": "4-1 수학 40.직각",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "종이를 반듯하게 두 번 접었을 때 생기는 90°인 각을 직각이라고 합니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "직각은 항상 뾰족한 모양을 하고 있으며 180°를 의미합니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k05",
+      "order": 5,
+      "term": "각도기",
+      "meaning": "각의 크기를 잴 때 쓰는 도구",
+      "example": "각도기의 중심을 각의 꼭짓점에 맞추고, 밑금을 한 변에 맞춘 후 눈금을 읽음",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/117147684_1841395146_mp4.mp4",
+      "videoTitle": "4-1 수학 41.각도기",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "각도기는 각의 크기를 잴 때 사용하는 도구입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "각도기는 물체의 길이나 무게를 잴 때 사용하는 도구입니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k06",
+      "order": 6,
+      "term": "차",
+      "meaning": "어떤 값에서 다른 값을 뺐을 때 생기는 차이",
+      "example": "두 각도의 차는 큰 각도에서 작은 각도를 빼서 구하며, 결과에 °를 꼭 붙임",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/81744017_1854590494_mp4.mp4",
+      "videoTitle": "4-1 수학 42.차",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "두 수의 차는 큰 수에서 작은 수를 뺀 값입니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "두 수의 차는 큰 수와 작은 수를 더해서 구하는 값입니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k07",
+      "order": 7,
+      "term": "눈금",
+      "meaning": "'수'나 '양'을 나타내는 선, 자·저울·시계 등에서 값을 나타내는 것",
+      "example": "자의 눈금으로 연필의 길이를 재고, 저울의 눈금으로 무게를 알 수 있음",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/86179465_1827404519_mp4.mp4",
+      "videoTitle": "4-1 수학 43.눈금",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "물결선이 있는 막대그래프는 눈금의 시작이 항상 0입니다.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k08",
+      "order": 8,
+      "term": "그래프",
+      "meaning": "표의 각 대상별 값을 한눈에 볼 수 있도록 그려서 나타낸 것",
+      "example": "그림그래프(그림으로 나타냄), 막대그래프(막대 모양으로 나타냄)",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/96632561_1853915892_mp4.mp4",
+      "videoTitle": "4-1 수학 44.그래프",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "막대그래프에서 물결선은 그래프의 일부가 생략되었다는 표시입니다.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "id": "c4-1-math-k09",
+      "order": 9,
+      "term": "물결선",
+      "meaning": "그래프에서 생략된 부분이 있다는 표시",
+      "example": "굳이 그릴 필요가 없는 부분을 물결선으로 줄여 그래프를 더 간단하게 표현",
+      "youtubeUrl": "https://vod.edunavi.kr/vod/edunavi/45739809_1801511689_mp4.mp4",
+      "videoTitle": "4-1 수학 45.물결선",
+      "quiz": [
+        {
+          "type": "ox",
+          "prompt": "그래프에서 생략된 부분이 있다는 것을 나타내기 위해 물결선을 사용합니다.",
+          "answer": true
+        },
+        {
+          "type": "ox",
+          "prompt": "물결선은 그래프의 모든 내용을 빠짐없이 다 그렸다는 표시입니다.",
+          "answer": false
         }
       ]
     }
