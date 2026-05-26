@@ -103,7 +103,7 @@ export default function Badges() {
       {/* Badge grid */}
       <div>
         <h2 className="font-black text-kidlg text-ink-800 mb-3">뱃지 목록</h2>
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-4 gap-2">
           {Object.entries(BADGES).map(([code, b]) => {
             const have = earned.includes(code);
             const ts = badgeTimes[code];
@@ -114,26 +114,26 @@ export default function Badges() {
               <div
                 key={code}
                 className={
-                  "rounded-4xl p-4 text-center transition-all " +
+                  "rounded-3xl px-2 py-3 text-center transition-all " +
                   (have ? "animate-pop-in" : "dim")
                 }
                 style={
                   have
                     ? {
                       background: "linear-gradient(135deg, #ffd54f, #fff9c4)",
-                      boxShadow: "0 5px 0 #c67a00",
+                      boxShadow: "0 4px 0 #c67a00",
                     }
                     : {
                       background: "#e0e0e0",
-                      boxShadow: "0 4px 0 #bdbdbd",
+                      boxShadow: "0 3px 0 #bdbdbd",
                     }
                 }
               >
-                <div className={"text-4xl " + (have ? "animate-bounce-in" : "")}>{b.emoji}</div>
-                <div className="font-black text-sm text-ink-900 mt-1">{b.name}</div>
-                <div className="text-xs text-ink-500 mt-0.5">{b.desc}</div>
+                <div className={"text-3xl " + (have ? "animate-bounce-in" : "")}>{b.emoji}</div>
+                <div className="font-black text-xs text-ink-900 mt-1 leading-tight">{b.name}</div>
+                <div className="text-[10px] text-ink-500 mt-0.5 leading-tight">{b.desc}</div>
                 {have && dateStr && (
-                  <div className="text-[10px] text-ink-400 mt-1.5 font-bold">{dateStr} 획득</div>
+                  <div className="text-[9px] text-ink-400 mt-1.5 font-bold">{dateStr} 획득</div>
                 )}
                 {!have && <div className="text-xs text-ink-300 mt-1">🔒</div>}
               </div>

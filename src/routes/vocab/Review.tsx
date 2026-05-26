@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { loadVocab } from "@/lib/content";
 import type { VocabBook } from "@content/schema";
 import { ChosungQuiz } from "@/components/ChosungQuiz";
-import { markReviewPassed } from "@/lib/badges";
+import { markReviewPassed, BADGES } from "@/lib/badges";
 import { patchProgress } from "@/lib/storage";
 
 export default function VocabReview() {
@@ -13,10 +13,17 @@ export default function VocabReview() {
   const nav = useNavigate();
   const [book, setBook] = useState<VocabBook | null>(null);
   const [phase, setPhase] = useState<"video" | "quiz" | "done">("video");
+  const [newBadges, setNewBadges] = useState<string[]>([]);
 
   useEffect(() => {
     loadVocab(grade).then(setBook).catch(() => null);
   }, [grade]);
+
+  useEffect(() => {
+    if (newBadges.length === 0) return;
+    const t = setTimeout(() => setNewBadges([]), 3500);
+    return () => clearTimeout(t);
+  }, [newBadges]);
 
   if (!book) {
     return (
@@ -40,11 +47,16 @@ export default function VocabReview() {
     );
   }
 
+  async function handleQuizComplete() {
+    setPhase("done");
+    await patchProgress("vocab", `g${grade}-review-${afterIndex}`, { done: true });
+    const added = await markReviewPassed(grade);
+    if (added.length > 0) {
+      setNewBadges(added);
+    }
+  }
+
   async function handleDone() {
-    await Promise.all([
-      patchProgress("vocab", `review-${afterIndex}`, { done: true }),
-      markReviewPassed(),
-    ]);
     if (nextWord) {
       nav(`/vocab/${grade}/${nextWord.id}`);
     } else {
@@ -118,7 +130,7 @@ export default function VocabReview() {
             <span className="w-8 h-8 rounded-xl bg-sky2-400/20 flex items-center justify-center text-lg">✍️</span>
             초성 퀴즈
           </h2>
-          <ChosungQuiz items={review.chosungQuiz} onComplete={() => setPhase("done")} />
+          <ChosungQuiz items={review.chosungQuiz} onComplete={handleQuizComplete} />
         </div>
       )}
 
@@ -134,6 +146,33 @@ export default function VocabReview() {
         </div>
       )}
       <Link to="/" className="btn-soft w-full">← 홈으로</Link>
+
+      {/* Badge toast */}
+      {newBadges.length > 0 && (
+        <div
+          className="fixed bottom-24 sm:bottom-6 inset-x-4 max-w-sm mx-auto rounded-4xl p-4 z-50 animate-bounce-in"
+          style={{
+            background: "linear-gradient(135deg, #f9a825, #ffd54f)",
+            boxShadow: "0 8px 0 #c67a00, 0 12px 30px rgba(0,0,0,0.2)",
+          }}
+        >
+          <div className="flex items-start gap-3">
+            <div className="text-4xl animate-wiggle">🏅</div>
+            <div>
+              <div className="font-black text-ink-900">뱃지 획득!</div>
+              <div className="text-sm text-ink-700">
+                {newBadges.map((c) => `${BADGES[c]?.emoji ?? ""} ${BADGES[c]?.name ?? c}`).join("  ")}
+              </div>
+            </div>
+            <button
+              onClick={() => setNewBadges([])}
+              className="ml-auto text-ink-600 text-xl leading-none"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </article>
   );
 }

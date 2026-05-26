@@ -156,6 +156,20 @@ export async function getAllProgressForStudent(studentId: string): Promise<Recor
   return out;
 }
 
+export async function getReviewWatchCount(studentId?: string): Promise<number> {
+  const sid = studentId ?? (await getActiveStudentId());
+  if (!sid) return 0;
+  return (await get<number>(`p|${sid}|review_watch_count`, store)) ?? 0;
+}
+
+export async function incrementReviewWatchCount(studentId?: string): Promise<number> {
+  const sid = studentId ?? (await getActiveStudentId()) ?? "default";
+  const cur = await getReviewWatchCount(sid);
+  const next = cur + 1;
+  await set(`p|${sid}|review_watch_count`, next, store);
+  return next;
+}
+
 // ── Recent ──────────────────────────────────────────────────────────
 export async function pushRecent(entry: Omit<RecentEntry, "at">, studentId?: string) {
   const sid = studentId ?? (await getActiveStudentId());

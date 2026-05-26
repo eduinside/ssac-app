@@ -183,7 +183,7 @@ export default function VocabIndex() {
             const startIdx = review.afterIndex - 3;
             const groupWords = book.words.slice(startIdx, review.afterIndex);
             const allDone = groupWords.every((w) => !!progress[w.id]?.done);
-            const reviewDone = !!progress[`review-${review.afterIndex}`]?.done;
+            const reviewDone = !!progress[`g${grade}-review-${review.afterIndex}`]?.done || !!progress[`review-${review.afterIndex}`]?.done;
 
             return (
               /* 낱말 3개 + 다섯고개 한 행 */
