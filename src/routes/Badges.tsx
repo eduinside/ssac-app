@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BADGES } from "@/lib/badges";
 import { getBadges, getBadgeTimes, getActiveStudent, getAllProgress } from "@/lib/storage";
 import { makeShareUrl, type SharePayload } from "@/lib/share";
+import { loadVocab, loadConcept, loadReading, loadEnglish } from "@/lib/content";
 
 export default function Badges() {
   const [earned, setEarned] = useState<string[]>([]);
@@ -31,17 +32,112 @@ export default function Badges() {
   }, []);
 
   async function share() {
-    const map = await getAllProgress("vocab");
-    const perGrade: SharePayload["vocab"]["perGrade"] = {};
-    for (const [id, v] of Object.entries(map)) {
+    const vocabMap = await getAllProgress("vocab");
+    const perGrade: SharePayload["vocab"]["perGrade"] = {
+      "1": { d: 0, s: 0, t: 60 },
+      "2": { d: 0, s: 0, t: 60 },
+      "3": { d: 0, s: 0, t: 42 },
+      "4": { d: 0, s: 0, t: 42 },
+    };
+
+    for (const [id, v] of Object.entries(vocabMap)) {
       const m = id.match(/^g(\d+)-/);
-      const g = m ? m[1] : "?";
-      perGrade[g] ??= { d: 0, s: 0, t: 0 };
-      perGrade[g].t++;
-      if (v.done) perGrade[g].d++;
-      if (v.starred) perGrade[g].s++;
+      if (m) {
+        const g = m[1];
+        if (perGrade[g]) {
+          if (v.done) perGrade[g].d++;
+          if (v.starred) perGrade[g].s++;
+        }
+      }
     }
-    const url = await makeShareUrl({ v: 1, name, grade, vocab: { ...stats, perGrade }, badges: earned, ts: Date.now() });
+
+    // Filter to only include grades they have studied or their current grade
+    const filteredPerGrade: Record<string, { d: number; s: number; t: number }> = {};
+    for (const [g, val] of Object.entries(perGrade)) {
+      if (val.d > 0 || Number(g) === grade) {
+        filteredPerGrade[g] = val;
+      }
+    }
+
+    const allVocabValues = Object.values(vocabMap);
+    const vocabStats = {
+      done: allVocabValues.filter((v) => v.done).length,
+      star: allVocabValues.filter((v) => v.starred).length,
+      total: Object.values(filteredPerGrade).reduce((acc, curr) => acc + curr.t, 0),
+    };
+
+    let conceptData: { done: number; total: number } | undefined;
+    if (grade >= 3) {
+      try {
+        const conceptMap = await getAllProgress("concept");
+        const subjects = ["social", "math", "science"];
+        const semesters = [1, 2];
+        let total = 0;
+        let done = 0;
+
+        for (const sem of semesters) {
+          for (const sub of subjects) {
+            try {
+              const b = await loadConcept(grade, sem, sub);
+              if (b && b.keywords) {
+                total += b.keywords.length;
+                done += b.keywords.filter(k => conceptMap[k.id]?.done).length;
+              }
+            } catch {}
+          }
+        }
+        if (total > 0) {
+          conceptData = { done, total };
+        }
+      } catch {}
+    }
+
+    let englishData: { done: number; total: number } | undefined;
+    if (grade >= 3) {
+      try {
+        const englishMap = await getAllProgress("english");
+        const book = await loadEnglish(grade);
+        if (book && book.items) {
+          englishData = {
+            done: book.items.filter(it => englishMap[it.id]?.done).length,
+            total: book.items.length,
+          };
+        }
+      } catch {}
+    }
+
+    let readingData: { done: number; total: number } | undefined;
+    if (grade >= 2) {
+      try {
+        const readingMap = await getAllProgress("reading");
+        const book = await loadReading(grade);
+        if (book && book.topics) {
+          readingData = {
+            done: book.topics.filter(t => readingMap[t.id]?.done).length,
+            total: book.topics.length,
+          };
+        }
+      } catch {}
+    }
+
+    const payload: SharePayload = {
+      v: 1,
+      name,
+      grade,
+      vocab: {
+        done: vocabStats.done,
+        star: vocabStats.star,
+        total: vocabStats.total,
+        perGrade: filteredPerGrade,
+      },
+      badges: earned,
+      ts: Date.now(),
+      concept: conceptData,
+      english: englishData,
+      reading: readingData,
+    };
+
+    const url = await makeShareUrl(payload);
     setShareUrl(url);
     setCopied(false);
     try {

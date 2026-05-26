@@ -18,6 +18,9 @@ export type SharePayload = {
   };
   badges: string[];
   ts: number;
+  concept?: { done: number; total: number };
+  english?: { done: number; total: number };
+  reading?: { done: number; total: number };
 };
 
 function toBase64Url(bytes: Uint8Array): string {

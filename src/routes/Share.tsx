@@ -70,16 +70,55 @@ export default function Share() {
         ))}
       </div>
 
-      {/* Per-grade breakdown */}
+      {/* Subject breakdown */}
+      {(p.concept || p.english || p.reading || p.vocab) && (
+        <div className="card space-y-3">
+          <h2 className="font-black text-kidlg text-ink-800">📖 과목별 학습 현황 ({p.grade}학년)</h2>
+          <div className="space-y-2.5">
+            {[
+              {
+                label: "🌱 어휘싹",
+                data: p.vocab?.perGrade?.[String(p.grade)]
+                  ? { d: p.vocab.perGrade[String(p.grade)].d, t: p.vocab.perGrade[String(p.grade)].t }
+                  : p.vocab
+                  ? { d: p.vocab.done, t: p.vocab.total }
+                  : null
+              },
+              { label: "💡 개념싹", data: p.concept ? { d: p.concept.done, t: p.concept.total } : null },
+              { label: "📖 독해싹", data: p.reading ? { d: p.reading.done, t: p.reading.total } : null },
+              { label: "🅰️ 영어싹", data: p.english ? { d: p.english.done, t: p.english.total } : null },
+            ].map((sub) => {
+              if (!sub.data || sub.data.t === 0) return null;
+              const pct = Math.round((sub.data.d / sub.data.t) * 100);
+              return (
+                <div key={sub.label} className="space-y-1">
+                  <div className="flex justify-between text-xs font-black text-ink-700">
+                    <span>{sub.label}</span>
+                    <span>{sub.data.d} / {sub.data.t} ({pct}%)</span>
+                  </div>
+                  <div className="h-3.5 bg-ink-100 rounded-full overflow-hidden relative">
+                    <div
+                      className="h-full bg-sprout-400 rounded-full transition-all duration-700"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* Per-grade vocab breakdown */}
       {Object.keys(p.vocab.perGrade).length > 0 && (
         <div className="card space-y-2">
-          <h2 className="font-black text-kidlg text-ink-800">📚 학년별 어휘</h2>
+          <h2 className="font-black text-kidlg text-ink-800">📚 학년별 어휘 누적 완료</h2>
           {Object.entries(p.vocab.perGrade).map(([g, s]) => (
             <div key={g} className="flex items-center gap-3">
               <span className="text-sm font-bold text-ink-500 w-10">{g}학년</span>
               <div className="flex-1 h-3 bg-ink-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-sprout-400 rounded-full transition-all duration-700"
+                  className="h-full bg-sky2-400 rounded-full transition-all duration-700"
                   style={{ width: s.t ? `${(s.d / s.t) * 100}%` : "0%" }}
                 />
               </div>
