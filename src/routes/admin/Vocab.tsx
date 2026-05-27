@@ -101,7 +101,7 @@ export default function AdminVocab() {
           onChange={(e) => setGrade(Number(e.target.value))}
           className="rounded-xl border-2 border-sprout-200 px-3 py-2"
         >
-          {[1, 2, 3, 4].map((g) => (
+          {[1, 2, 3, 4, 5, 6].map((g) => (
             <option key={g} value={g}>
               {g}학년
             </option>

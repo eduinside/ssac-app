@@ -8,3 +8,4 @@ tmp_pdf
 .DS_Store
 .env
 *.tsbuildinfo
+scripts/
