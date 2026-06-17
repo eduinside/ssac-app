@@ -2,13 +2,13 @@ name = "ssac-app"
 compatibility_date = "2025-01-01"
 pages_build_output_dir = "dist"
 
-# Bind D1. Create with:
-#   npx wrangler d1 create ssac-app
-# Then paste the database_id below.
+# D1: ssac-app 데이터(notices·shares·events)는 별도 DB 대신 edu-link-db에
+# ssac_ 접두사 테이블로 통합 운영한다 (D1 데이터베이스 개수 경감).
+# 스키마 적용: npx wrangler d1 execute edu-link-db --remote --file=./schema.sql
 [[d1_databases]]
-binding = "DB"
-database_name = "ssac-app"
-database_id = "47fca4a8-8993-428c-a693-5c0956067bf5"
+binding = "EDULINK_DB"
+database_name = "edu-link-db"
+database_id = "e5fa6f54-6063-48f9-9cf3-0517381dd005"
 
 # Workers AI binding (no API key needed)
 [ai]

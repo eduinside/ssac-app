@@ -1,5 +1,5 @@
 interface Env {
-  DB: D1Database;
+  EDULINK_DB: D1Database;
 }
 
 function nanoid(n = 8) {
@@ -12,22 +12,22 @@ function nanoid(n = 8) {
 }
 
 export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
-  if (!env.DB) return json({ error: "DB not bound" }, 500);
+  if (!env.EDULINK_DB) return json({ error: "DB not bound" }, 500);
   const body = await request.text();
   if (body.length > 50_000) return json({ error: "too large" }, 413);
   const id = nanoid();
-  await env.DB.prepare("INSERT INTO shares (id, payload, created_at) VALUES (?, ?, ?)")
+  await env.EDULINK_DB.prepare("INSERT INTO ssac_shares (id, payload, created_at) VALUES (?, ?, ?)")
     .bind(id, body, Date.now())
     .run();
   return json({ id });
 };
 
 export const onRequestGet: PagesFunction<Env> = async ({ request, env }) => {
-  if (!env.DB) return json({ error: "DB not bound" }, 500);
+  if (!env.EDULINK_DB) return json({ error: "DB not bound" }, 500);
   const url = new URL(request.url);
   const id = url.searchParams.get("id");
   if (!id) return json({ error: "missing id" }, 400);
-  const row = await env.DB.prepare("SELECT payload FROM shares WHERE id = ?")
+  const row = await env.EDULINK_DB.prepare("SELECT payload FROM ssac_shares WHERE id = ?")
     .bind(id)
     .first<{ payload: string }>();
   if (!row) return json({ error: "not found" }, 404);
