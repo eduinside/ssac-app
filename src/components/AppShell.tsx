@@ -40,7 +40,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const loc = useLocation();
   const [student, setStudent] = useState<Student | null>(null);
   const [showSwitcher, setShowSwitcher] = useState(false);
-  const [showDomainNotice, setShowDomainNotice] = useState(false);
 
   const loadStudent = useCallback(() => {
     getActiveStudent().then(setStudent);
@@ -49,9 +48,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const [recentSubjects, setRecentSubjects] = useState<string[]>(getRecentSubjects);
 
   useEffect(() => {
-    // ssac.pages.dev 접속 감지
+    // ssac.pages.dev 접속 시 새 도메인으로 즉시 이동
     if (window.location.hostname === 'ssac.pages.dev') {
-      setShowDomainNotice(true);
+      window.location.href = `https://ssac.dgedu.link${window.location.pathname}${window.location.search}`;
     }
   }, []);
 
@@ -88,28 +87,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* ── Domain Notice ── */}
-      {showDomainNotice && (
-        <div className="sticky top-0 z-40 bg-gradient-to-r from-coral-500 to-coral-600 text-white shadow-md">
-          <div className="mx-auto max-w-3xl px-4 py-4 flex items-center justify-between gap-4">
-            <div className="flex items-center gap-3 flex-1">
-              <span className="text-xl">⚠️</span>
-              <p className="text-sm sm:text-base font-medium">
-                이 페이지는 더 이상 업데이트되지 않습니다. 새로운 주소로 이동해주세요.
-              </p>
-            </div>
-            <button
-              onClick={() => {
-                window.location.href = `https://ssac.dgedu.link${window.location.pathname}${window.location.search}`;
-              }}
-              className="px-4 py-2 bg-white text-black font-bold rounded-lg hover:bg-gray-100 transition whitespace-nowrap text-sm"
-            >
-              이동하기
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* ── Header ── */}
       <header className={"sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-ink-100/80 shadow-sm" + (!student ? " hidden" : "")}>
         <div className="mx-auto max-w-3xl flex items-center justify-between px-4 py-3">
